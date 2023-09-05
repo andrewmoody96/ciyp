@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+#connectBG {
+  height: 100%;
+  /* max-height: 600px; */
+  width: 1000px;
+  background-color: hsla(200, 40%, 30%, 0.4);
+  background-image: url("https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png"),
+    url("https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png"),
+    url("https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png"),
+    url("https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png"),
+    url("https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png");
+  background-repeat: repeat-x;
+  background-position: 0 20%, 0 100%, 0 50%, 0 100%, 0 0;
+  background-size: 2500px, 800px, 500px 200px, 1000px, 400px 260px;
+  animation: 50s para infinite linear;
+}
+
+@keyframes para {
+  100% {
+    background-position: -5000px 20%, -800px 95%, 500px 50%, 1000px 100%,
+      400px 0;
+  }
+}
+
+/* sidebar Nav */
+
+.navBar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.navBar button {
+  cursor: pointer;
+  width: auto;
+  padding: 0, 10px, 0, 10px;
+}
+
+.menuNav {
+  height: auto;
+  overflow-y: scroll;
+  list-style: none;
+  position: absolute;
+  top: 75%;
+  background: #262626;
+  border-radius: 0.5rem;
+  margin: auto;
+  overflow: hidden;
+  max-width: auto;
+  z-index: 9;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+}
+
+.menuNav.showMenu {
+  width: 30vw;
+}
+
+.menuNav.hideMenu {
+  width: 0;
+}
+
+.menuNav li:first-child {
+  margin-top: 7rem;
+}
+
+/* .modal1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+} */
+
+/* .modal1 button {
+  cursor: pointer;
+  width: auto;
+  padding: 0, 10px, 0, 10px;
+} */
+
+.modal1Nav {
+  height: auto;
+  overflow-y: scroll;
+  z-index: 9;
+}
+
+/* .modal1Nav.showModal {
+  display: block;
+}
+
+.modal1Nav.hideModal {
+  display: none;
+} */
+
+/* .modal1Nav li:first-child {
+  margin-top: 7rem;
+} */
