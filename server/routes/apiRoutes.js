@@ -147,4 +147,32 @@ router.get("/homepage", (req, res) => {
   listFilesByPrefix().catch(console.error);
 });
 
+router.get("/lyrics", async (req, res) => {
+  console.log("/lyrics");
+  const getLyrics = async (get, send) => {
+    const lyricCheck = (data) => {
+      if (!data) {
+        res.send("Error fetching lyrics.");
+        console.error("Error fetching lyrics.");
+      } else {
+        console.log("Lyrics Found");
+        // console.log(data);
+        res.send(data);
+      }
+    };
+
+    try {
+      const database = client.db("ciyp_lyrics");
+      const lyrics = database.collection("lyrics");
+      const songs = await lyrics.find().toArray();
+      // console.log(songs);
+      lyricCheck(songs);
+    } catch (error) {
+      console.log(error);
+      send.status(500).send("Internal Server error Occured");
+    }
+  };
+  getLyrics(req, res);
+});
+
 module.exports = router;
