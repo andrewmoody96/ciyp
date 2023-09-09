@@ -119,6 +119,7 @@ export default function Project1LyricModal() {
               </button>
             </div>
           </div>
+          {/* Look at getting this to center in the div rather than trying to make it fixed position */}
           <Song
             className="fixed top-[15%] left-0 right-0 z-[10]"
             track={lyrics[0]}
