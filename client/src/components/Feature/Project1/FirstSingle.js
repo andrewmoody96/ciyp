@@ -1,76 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Header from "../../Header";
 import { Link } from "react-router-dom";
 import SinglesBG from "./SinglesBG.js";
 
 export default function FirstSingle() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch(`/api/homepage`);
-        const jsonData = await res.json();
-        let data = [];
-        // removes txt file from jsonData
-        jsonData.forEach((file) => {
-          if (file.name === "homepage/A-Art.jpeg") {
-            let name = file.name;
-            let trimmed = name.replace("homepage/", "");
-
-            data.push({ name: trimmed, link: file.mediaLink });
-          }
-        });
-        setData([...data]);
-        setIsLoaded(true);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-  }, [isLoaded]);
-
-  function renderPhotos(photos) {
-    if (photos.length !== 0) {
-      return (
-        <div className="my-5 m-3 flex flex-row justify-center items-center">
-          <section className="flex flex-col justify-center items-center mx-2 my-5 text-center text-white font-arvo drop-shadow-[0_1px_5px_rgba(0,0,0,0.6)] desktop:w-auto max-w-[50vw]">
-            <div className="flex flex-col items-center justify-center">
-              <div className="flex flex-row justify-center">
-                <button className="p-2 mx-4 my-10 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[40vw] tablet:w-[25vw] desktop:w-[14vw] wide:w-[12vw] hover:bg-red-300 hover:text-black">
-                  <a
-                    href="https://linktr.ee/chocolateinyourpocket"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mx-1 drop-shadow-[0_1px_2px_rgba(201,139,64,1)]"
-                  >
-                    Listen Now
-                  </a>
-                </button>
-                <button className="p-2 mx-4 my-10 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black desktop:text-lg text-center w-[40vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
-                  <Link
-                    className="mx-1 drop-shadow-[0_1px_2px_rgba(201,139,64,1)]"
-                    to="/contact"
-                  >
-                    Follow
-                  </Link>
-                </button>
-              </div>
-            </div>
-            <div className="invisible">Hello</div>
-          </section>
-        </div>
-      );
-    } else
-      return (
-        <h1 className="hidden desktop:block text-2xl mt-2 p-2 drop-shadow-[2px_2px_1px_rgba(0,0,0,1)]  flex-col justify-center items-center mx-2 my-5 text-center text-white font-arvo">
-          Everybody's gotta grow up.<br></br>
-          {`${process.env.REACT_APP_SINGLE1_TITLE}`}
-        </h1>
-      );
-  }
-
   return (
     <div className="flex flex-col w-[100%] justify-center items-center overflow-x-hidden">
       <SinglesBG />
@@ -80,13 +13,41 @@ export default function FirstSingle() {
       <Header />
       <h1 className="hidden desktop:block bg-[#B36551] rounded-lg text-2xl mt-2 p-2 flex-col justify-center items-center mx-2 my-5 text-center text-white font-arvo">
         Everybody's gotta grow up.<br></br>
+        <br></br>
         {`${process.env.REACT_APP_SINGLE1_TITLE}`}
       </h1>
       <h1 className="visible desktop:hidden bg-[#B36551] rounded-lg text-2xl mt-2 p-2 flex-col justify-center items-center mx-2 my-5 text-center text-white font-arvo">
         Everybody's gotta grow up.<br></br>
+        <br></br>
         {`${process.env.REACT_APP_SINGLE1_TITLE}`}
       </h1>
-      <>{!isLoaded ? <div>...loading</div> : renderPhotos(data)}</>
+      <div className="my-5 m-3 flex flex-row justify-center items-center">
+        <section className="flex flex-col justify-center items-center mx-2 my-5 text-center text-white font-arvo drop-shadow-[0_1px_5px_rgba(0,0,0,0.6)] desktop:w-auto max-w-[50vw]">
+          <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-row justify-center">
+              <button className="p-2 mx-4 my-10 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[40vw] tablet:w-[25vw] desktop:w-[14vw] wide:w-[12vw] hover:bg-red-300 hover:text-black">
+                <a
+                  href="https://distrokid.com/hyperfollow/chocolateinyourpocket/sometime-rewrapped"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mx-1 drop-shadow-[0_1px_2px_rgba(201,139,64,1)]"
+                >
+                  Listen Now
+                </a>
+              </button>
+              <button className="p-2 mx-4 my-10 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[40vw] tablet:w-[25vw] desktop:w-[14vw] wide:w-[12vw] hover:bg-red-300 hover:text-black">
+                <Link
+                  className="mx-1 drop-shadow-[0_1px_2px_rgba(201,139,64,1)]"
+                  to="/contact"
+                >
+                  Follow
+                </Link>
+              </button>
+            </div>
+          </div>
+          <div className="invisible">Hello</div>
+        </section>
+      </div>
     </div>
   );
 }
