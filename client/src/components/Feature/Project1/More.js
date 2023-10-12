@@ -17,7 +17,7 @@ export default function MoreProject1() {
             className={`Lyrics1Nav fixed left-0 right-0 top-0 bottom-0 z-[9]`}
           />
           <button
-            className={`fixed h-[5vh] desktop:h-[4vh] w-[15vw] desktop:w-[5vw] left-0 right-0 bottom-[5%] z-[9] font-arvo text-white bg-black p-1 rounded-lg hover:bg-[#e8B380] hover:text-black m-auto ${
+            className={`fixed w-[15vw] desktop:w-[5vw] left-0 right-0 bottom-0 z-[9] font-arvo text-xs tablet:text-sm text-black bg-[#B36551] p-[5px] rounded-lg rounded-b-none hover:bg-black hover:text-white m-auto ${
               view === "openLyrics" ? "block" : "hidden"
             } drop-shadow-[-1px_1px_5px_rgba(0,0,0,0.7)]`}
             onClick={() => {
@@ -122,12 +122,11 @@ export default function MoreProject1() {
 }
 
 
-// EoD 8.25 Notes:
-// SUCCESSES:
-// Header now changes between 1 and 2 columns based on various breakpoints
-// Nav buttons now activate no matter where you click on them
-// Home screen design finished
-// More page matches layout of Home Screen.
-// NEXT UP:
-// 1. fix lyric book sizing
-// 2. display lyrics properly for each song
+// 10.11 EoD Notes
+// Lyrics fit in all screen sizes
+// Lyric buttons moved based on iPhone SE size -- NEEDS TO BE CHANGED FOR TABLET/DESKTOP
+// Removed second page of "Notebook" container
+// -----------------------------------------------
+// Next Up:
+// Move lyric buttons based on screen size
+// apply CSS to make "Notebook" appear to be written on paper
