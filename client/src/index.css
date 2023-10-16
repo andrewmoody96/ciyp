@@ -88,6 +88,14 @@ body {
   z-index: 9;
 }
 
+/* #modalButtons {
+  position: absolute;
+} */
+
+/* .modalContainer {
+  position: absolute;
+} */
+
 /* .modal1Nav.showModal {
   display: block;
 }

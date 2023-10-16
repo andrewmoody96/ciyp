@@ -1,11 +1,34 @@
 import React, { useState, useEffect } from "react";
 import Song from "../modals/song";
+import LyricSelector from "./lyricSelector";
+import ModalClose from "./modalClose";
 
-export default function Project1LyricModal() {
-  const [view, setView] = useState("default");
+export default function Project1LyricModal({ toggleModal, open }) {
+  const [isOpen, setIsOpen] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
   const [lyrics, setLyrics] = useState("default");
+  const [selection, setSelection] = useState("song1");
 
+  // const offsetCalc = () => {
+  //   const modal = document.querySelector(".modalContainer");
+  //   const buttons = document.getElementById("modalButtons");
+  //   let position = modal.getBoundingClientRect();
+
+  //   const applyOffset = (val) => {
+  //     buttons.setAttribute(
+  //       "style",
+  //       `top:${val.top}; left:${val.left}; right:${val.right}`
+  //     );
+  //   };
+
+  //   let offset = {
+  //     top: position.top,
+  //     left: position.left,
+  //     right: position.right,
+  //   };
+  //   console.log(offset);
+  //   applyOffset(offset);
+  // };
   useEffect(() => {
     const fetchLyrics = async () => {
       try {
@@ -20,7 +43,6 @@ export default function Project1LyricModal() {
           jsonData.forEach((song) => {
             songs.push(song);
           });
-          console.log(songs);
           setLyrics([...songs]);
           setIsLoaded(true);
         }
@@ -31,63 +53,54 @@ export default function Project1LyricModal() {
     fetchLyrics();
   }, []);
 
-  const changeView = () => {
-    if (view === "song3") {
+  // const lyricButtons = () => {
+  //   // top-[1%] tablet:top-[16%] left-0 right-0 z-[10]
+
+  //   return (
+  //     <div
+  //       className="absolute top-0 left-0 right-0 z-10 w-[70vw] h-[10vh] desktop:w-[50vw] m-auto"
+  //     >
+  //       <div className="flex font-arvo text-white justify-center desktop:justify-center items-center">
+  //         <button
+  //           className="font-arvo bg-black mx-1 p-[5px] text-xs rounded-lg rounded-t-none hover:bg-[#e8B380] hover:text-black my-2 drop-shadow-[10px_5px_1px_rgba(255,255,255,1)]"
+  //           onClick={() => setSelection("song1")}
+  //         >
+  //           {process.env.REACT_APP_LYRIC1}
+  //         </button>
+  //         <button
+  //           className="font-arvo bg-black mx-1 p-[5px] text-xs rounded-lg rounded-t-none hover:bg-[#e8B380] hover:text-black my-2 drop-shadow-[10px_5px_1px_rgba(255,255,255,1)]"
+  //           onClick={() => setSelection("song2")}
+  //         >
+  //           {process.env.REACT_APP_LYRIC2}
+  //         </button>
+  //         <button
+  //           className="font-arvo bg-black mx-1 p-[5px] text-xs rounded-lg rounded-t-none hover:bg-[#e8B380] hover:text-black my-2 drop-shadow-[10px_5px_1px_rgba(255,255,255,1)]"
+  //           onClick={() => setSelection("song3")}
+  //         >
+  //           {process.env.REACT_APP_LYRIC3}
+  //         </button>
+  //       </div>
+  //     </div>
+  //   );
+  // };
+
+  const updateLyrics = (title) => {
+    setSelection(title);
+  };
+
+  const changeselection = () => {
+    if (selection === "song3") {
       return (
         <>
-          <div className="fixed top-0 left-0 right-0 z-[10] w-[70vw] h-[10vh] desktop:w-[50vw] m-auto">
-            <div className="flex font-arvo text-white justify-center desktop:justify-center items-center">
-              <button
-                className="font-arvo bg-black mx-1 p-[5px] text-xs rounded-lg rounded-t-none hover:bg-[#e8B380] hover:text-black my-2 drop-shadow-[10px_5px_1px_rgba(255,255,255,1)]"
-                onClick={() => setView("song1")}
-              >
-                {process.env.REACT_APP_LYRIC1}
-              </button>
-              <button
-                className="font-arvo bg-black mx-1 p-[5px] text-xs rounded-lg rounded-t-none hover:bg-[#e8B380] hover:text-black my-2 drop-shadow-[10px_5px_1px_rgba(255,255,255,1)]"
-                onClick={() => setView("song2")}
-              >
-                {process.env.REACT_APP_LYRIC2}
-              </button>
-              <button
-                className="font-arvo bg-black mx-1 p-[5px] text-xs rounded-lg rounded-t-none hover:bg-[#e8B380] hover:text-black my-2 drop-shadow-[10px_5px_1px_rgba(255,255,255,1)]"
-                onClick={() => setView("song3")}
-              >
-                {process.env.REACT_APP_LYRIC3}
-              </button>
-            </div>
-          </div>
           <Song
             className="fixed top-[15%] left-0 right-0 z-[10]"
             track={lyrics[2]}
           />
         </>
       );
-    } else if (view === "song2") {
+    } else if (selection === "song2") {
       return (
         <>
-          <div className="fixed top-[1%] left-0 right-0 z-[10] w-[70vw] h-[10vh] desktop:w-[50vw] m-auto">
-            <div className="flex font-arvo text-white justify-center desktop:justify-center items-center">
-              <button
-                className="font-arvo bg-black mx-1 p-[5px] text-xs rounded-lg rounded-t-none hover:bg-[#e8B380] hover:text-black my-2 drop-shadow-[10px_5px_1px_rgba(255,255,255,1)]"
-                onClick={() => setView("song1")}
-              >
-                {process.env.REACT_APP_LYRIC1}
-              </button>
-              <button
-                className="font-arvo bg-black mx-1 p-[5px] text-xs rounded-lg rounded-t-none hover:bg-[#e8B380] hover:text-black my-2 drop-shadow-[10px_5px_1px_rgba(255,255,255,1)]"
-                onClick={() => setView("song2")}
-              >
-                {process.env.REACT_APP_LYRIC2}
-              </button>
-              <button
-                className="font-arvo bg-black mx-1 p-[5px] text-xs rounded-lg rounded-t-none hover:bg-[#e8B380] hover:text-black my-2 drop-shadow-[10px_5px_1px_rgba(255,255,255,1)]"
-                onClick={() => setView("song3")}
-              >
-                {process.env.REACT_APP_LYRIC3}
-              </button>
-            </div>
-          </div>
           <Song
             className="fixed top-[15%] left-0 right-0 z-[10]"
             track={lyrics[1]}
@@ -97,29 +110,6 @@ export default function Project1LyricModal() {
     } else
       return (
         <>
-          <div className="fixed top-[1%] left-0 right-0 z-[10] w-[70vw] h-[10vh] desktop:w-[50vw] m-auto">
-            <div className="flex font-arvo text-white justify-center desktop:justify-center items-center">
-              <button
-                className="font-arvo bg-black mx-1 p-[5px] text-xs rounded-lg rounded-t-none hover:bg-[#e8B380] hover:text-black my-2 drop-shadow-[10px_5px_1px_rgba(255,255,255,1)]"
-                onClick={() => setView("song1")}
-              >
-                {process.env.REACT_APP_LYRIC1}
-              </button>
-              <button
-                className="font-arvo bg-black mx-1 p-[5px] text-xs rounded-lg rounded-t-none hover:bg-[#e8B380] hover:text-black my-2 drop-shadow-[10px_5px_1px_rgba(255,255,255,1)]"
-                onClick={() => setView("song2")}
-              >
-                {process.env.REACT_APP_LYRIC2}
-              </button>
-              <button
-                className="font-arvo bg-black mx-1 p-[5px] text-xs rounded-lg rounded-t-none hover:bg-[#e8B380] hover:text-black my-2 drop-shadow-[10px_5px_1px_rgba(255,255,255,1)]"
-                onClick={() => setView("song3")}
-              >
-                {process.env.REACT_APP_LYRIC3}
-              </button>
-            </div>
-          </div>
-          {/* Look at getting this to center in the div rather than trying to make it fixed position */}
           <Song
             className="fixed top-[15%] left-0 right-0 z-[10]"
             track={lyrics[0]}
@@ -130,39 +120,35 @@ export default function Project1LyricModal() {
 
   return (
     <>
-      <div
-        className={`modal1Nav fixed left-0 right-0 top-0 bottom-0 desktop:bottom-4 m-auto w-[98vw] desktop:w-[70vw] drop-shadow-[0_1px_5px_rgba(0,0,0,1)]`}
-      >
-        {/* CONTAINER */}
-        <>
-          <div className="flex justify-center items-center w-[100vw] desktop:w-[70vw] h-[100vh]">
-            <div className="bg-black rounded-lg fixed top-0 bottom-0 left-0 right-0 z-[2] w-[98vw] h-[98vh] tablet:w-[73vw] tablet:h-[73vw] m-auto"></div>
-            {/* <div className="hidden desktop:block bg-black rounded-lg fixed top-0 bottom-0 right-0 left-[50%] z-[2] w-[35vw] h-[100vh] desktop:h-[90vh] m-auto border border-[#F6EFE4]"></div> */}
-            <div className="bg-[#F6EFE4] rounded-lg fixed top-0 bottom-0 left-0 right-0 z-[3] w-[96vw] h-[96vh] tablet:w-[71vw] tablet:h-[71vw] m-auto drop-shadow-[-2px_1px_3px_rgba(246,239,228,1)]"></div>
-            {/* <div className="hidden desktop:block bg-[#F6EFE4] rounded-lg rounded-l-none fixed top-0 bottom-0 right-0 left-[48%] z-[3] w-[33vw] h-[98vh] desktop:h-[88vh] m-auto drop-shadow-[-2px_1px_3px_rgba(246,239,228,1)]"></div> */}
+      {/* CONTAINER */}
+      <>
+        <div
+          id="notebook"
+          className="absolute left-0 right-0 top-0 bottom-0 w-[100vw] desktop:w-[70vw] h-[100vh] tablet:w-[73vw] tablet:h-[73vw] m-auto"
+        >
+          <LyricSelector updateLyrics={updateLyrics} />
+          <div className="bg-black rounded-lg fixed top-0 bottom-0 left-0 right-0 z-[2] w-[98vw] h-[98vh] tablet:w-[73vw] tablet:h-[73vw] m-auto"></div>
+          <div className="bg-[#F6EFE4] rounded-lg fixed top-0 bottom-0 left-0 right-0 z-[3] w-[96vw] h-[96vh] tablet:w-[71vw] tablet:h-[71vw] m-auto drop-shadow-[-2px_1px_3px_rgba(246,239,228,1)]">
+            <ModalClose
+              id="modalCloseButton"
+              toggleModal={toggleModal}
+              open={open}
+            />
           </div>
-        </>
+        </div>
         {/* LYRICS */}
-        <>
-          <div className="fixed top-[25%] left-0 right-0 z-[9] m-auto w-[100vw] tablet:w-[70vw] h-[5vh] text-black">
-            {!isLoaded ? (
-              <p className="fixed top-[25vw] desktop:left-[25%] left-0 right-0 m-auto font-arvo text-3xl text-center">
-                loading...
-              </p>
-            ) : (
-              changeView()
-            )}
-          </div>
-        </>
-      </div>
+        <div className="absolute top-0 bottom-0 left-0 right-0 z-[5] m-auto w-[100vw] tablet:w-[70vw] h-[5vh] text-black">
+          {!isLoaded ? (
+            <p className="fixed top-[25vw] desktop:left-[25%] left-0 right-0 m-auto font-arvo text-3xl text-center">
+              loading...
+            </p>
+          ) : (
+            changeselection()
+          )}
+        </div>
+      </>
     </>
   );
 }
 
-// NEXT UP (IN ORDER) --
-// 6. Make book smaller in desktop mode.
-// 9. Keep polishing lyric formatting until it is correct.
-// look into StackOverflow solution for modal
-
-
-// chocolate in your "pockey"
+// CLOSE BUTTON NOT FIRING -- check z indexes

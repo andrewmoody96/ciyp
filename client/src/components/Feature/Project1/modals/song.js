@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Song({ track }) {
-  console.log(`SONG FUNCTION`);
   let song = {
     song: {
       id: track._id,
