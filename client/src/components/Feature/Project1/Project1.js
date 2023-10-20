@@ -19,7 +19,7 @@ export default function Project1() {
           {/* Hello */}
         </div>
         <section className="flex flex-col justify-center items-center my-8">
-          <h1 className="text-xl text-center font-arvo mt-2 p-2 rounded-lg drop-shadow-[5px_10px_1px_rgba(255,255,255,1)]">
+          <h1 className="text-xl text-center font-arvo mt-2 p-2 rounded-lg">
             <Project1Text />
           </h1>
           <Buttons />
