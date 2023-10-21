@@ -1,33 +1,12 @@
 import React, { useState } from "react";
 import Header from "../../Header";
 import SinglesBG from "./SinglesBG.js";
-import Lyrics from "./modals/lyrics";
-import ModalClose from "./modals/modalClose";
-// import MakingOf from "./modals/makingOf";
+import Lyrics from "./modals/Lyrics/lyrics";
+import MakingOf from "./modals/AboutEP/makingOf.js";
 // import Slideshow from "./modals/slideshow";
 
 export default function MoreProject1() {
   const [open, setOpen] = useState("closed");
-  // const offsetCalc = () => {
-  //   const modal = document.querySelector(".modalContainer");
-  //   const buttons = document.getElementById("modalButtons");
-  //   let position = modal.getBoundingClientRect();
-
-  //   const applyOffset = (val) => {
-  //     buttons.setAttribute(
-  //       "style",
-  //       `top:${val.top}; left:${val.left}; right:${val.right}`
-  //     );
-  //   };
-
-  //   let offset = {
-  //     top: position.top,
-  //     left: position.left,
-  //     right: position.right,
-  //   };
-  //   console.log(offset);
-  //   applyOffset(offset);
-  // };
 
   // Modal Toggles
   const toggleModal = (tOf) => {
@@ -42,56 +21,48 @@ export default function MoreProject1() {
           className={"fixed left-0 right-0 top-0 bottom-0 z-[9]"}
         >
           <Lyrics
-            className={`Lyrics1Nav fixed left-0 right-0 top-0 bottom-0 z-[9]`} toggleModal={toggleModal} open={open}
+            className={`Lyrics1Nav fixed left-0 right-0 top-0 bottom-0 z-[9]`}
+            toggleModal={toggleModal}
+            open={true}
           />
-          {/* <button
-            className={`fixed w-[15vw] desktop:w-[5vw] left-0 right-0 bottom-0 tablet:bottom-[20vh] z-[9] font-arvo text-xs tablet:text-sm text-black bg-[#B36551] p-[5px] rounded-lg rounded-b-none hover:bg-black hover:text-white m-auto ${
-              open === "openLyrics" ? "block" : "hidden"
-            } drop-shadow-[-1px_1px_5px_rgba(0,0,0,0.7)]`}
-            onClick={() => {
-              setOpen("closeLyrics");
-            }}
-          >
-            Close
-          </button> */}
           {/* <ModalClose id="modalCloseButton" toggleModal={toggleModal} open={open}/> */}
         </div>
       );
     } else if (open === "openMakingEP") {
-      // return (
-      //   <div className={"fixed right-0 top-0 bottom-0 z-[9]"}>
-      //     <MakingOf
-      //       className={`Lyrics1Nav fixed left-0 right-0 top-0 bottom-0 z-[9]`}
-      //     />
-      //     <ModalClose id="modalCloseButton" toggleModal={toggleModal} open={open}/>
-      //   </div>
-      // );
+      return (
+        <div
+          className={"fixed left-0 right-0 top-0 bottom-0 z-[9]"}
+        >
+          <MakingOf
+            className={`Lyrics1Nav fixed left-0 right-0 top-0 bottom-0 z-[9]`}
+            toggleModal={toggleModal}
+            open={true}
+          />
+          {/* <ModalClose id="modalCloseButton" toggleModal={toggleModal} open={open}/> */}
+        </div>
+      );
     } else if (open === "openPhotos") {
-      // return (
-      //   <div className={"fixed right-0 top-0 bottom-0 z-[9]"}>
+      // <div
+      //     className={"fixed left-0 right-0 top-0 bottom-0 z-[9]"}
+      //   >
       //     <Slideshow
       //       className={`Lyrics1Nav fixed left-0 right-0 top-0 bottom-0 z-[9]`}
+      //       toggleModal={toggleModal}
+      //       open={true}
       //     />
-      //     <ModalClose id="modalCloseButton" toggleModal={toggleModal} open={open}/>
+      //     {/* <ModalClose id="modalCloseButton" toggleModal={toggleModal} open={open}/> */}
       //   </div>
-      // );
     } else {
       console.log("closed");
     }
   };
-
-  // document.addEventListener("DOMContentLoaded", () => {
-  //   offsetCalc();
-  // });
-  // window.addEventListener("resize", () => {
-  //   offsetCalc();
-  // });
 
   return (
     <div className="container h-[100vh] absolute top-0">
       {whichModal()}
       <SinglesBG />
       <div className="my-5 m-3 flex flex-col justify-center items-center">
+        {/* send showMenu to Header to get rid of button if modal is open */}
         <Header />
         <div className="flex items-center justify-between mt-5">
           <h1 className="text-4xl text-center text-black font-bungee mt-2 p-1 rounded-lg">
@@ -124,7 +95,10 @@ export default function MoreProject1() {
               >
                 Lyric Book
               </button>
-              <button className="p-1 mx-2 my-6 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-md text-center h-[5vh] w-[30vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
+              <button
+                className="p-1 mx-2 my-6 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-md text-center h-[5vh] w-[30vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black"
+                onClick={() => setOpen("openMakingEP")}
+              >
                 Making the EP
               </button>
               <button className="p-1 mx-2 my-6 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-md text-center h-[5vh] w-[30vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
@@ -138,12 +112,3 @@ export default function MoreProject1() {
     </div>
   );
 }
-
-// 10.11 EoD Notes
-// Lyrics fit in all screen sizes
-// Lyric buttons moved based on iPhone SE size -- NEEDS TO BE CHANGED FOR TABLET/DESKTOP
-// Removed second page of "Notebook" container
-// -----------------------------------------------
-// Next Up:
-// Move lyric buttons based on screen size
-// apply CSS to make "Notebook" appear to be written on paper

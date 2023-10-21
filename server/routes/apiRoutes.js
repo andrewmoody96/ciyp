@@ -175,4 +175,32 @@ router.get("/lyrics", async (req, res) => {
   getLyrics(req, res);
 });
 
+router.get("/p1answers", async (req, res) => {
+  console.log("/p1answers");
+  const getAnswers = async (get, send) => {
+    const answerCheck = (data) => {
+      if (!data) {
+        res.send("Error fetching answers.");
+        console.error("Error fetching answers.");
+      } else {
+        console.log("Answers Found");
+        console.log(data);
+        res.send(data);
+      }
+    };
+
+    try {
+      const database = client.db("ciyp_p1");
+      const p1qa = database.collection("answers");
+      const answers = await p1qa.find().toArray();
+      console.log(answers);
+      answerCheck(answers);
+    } catch (error) {
+      console.log(error);
+      send.status(500).send("Internal Server error Occured");
+    }
+  };
+  getAnswers(req, res);
+});
+
 module.exports = router;

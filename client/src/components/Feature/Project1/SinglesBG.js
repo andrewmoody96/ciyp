@@ -16,7 +16,7 @@ export default function SinglesBG() {
         let data = [];
         // removes txt file from jsonData
         jsonData.forEach((file) => {
-          console.log(file.name);
+          // console.log(file.name);
           if (file.contentType !== "text/plain") {
             let name = file.name;
             let trimmed = name.replace("homepage/", "");

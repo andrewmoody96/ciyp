@@ -109,7 +109,7 @@ body {
 } */
 
 /*  */
-#notebook {
+.modalContainer {
   background: #fafafa;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
     0 0 300px 25px rgba(222, 198, 122, 0.7) inset;
@@ -119,8 +119,8 @@ body {
   border-width: 2px 2px 2px 2px;
 }
 
-#notebook:before,
-#notebook:after {
+.modalContainer:before,
+.modalContainer:after {
   content: "";
   background: #fafafa;
   border: rgba(0, 0, 0, 1);
@@ -135,22 +135,22 @@ body {
   transition: 0.1s;
 }
 
-#notebook:before {
+.modalContainer:before {
   transform: rotate(-1.5deg);
 }
 
-#notebook:after {
+.modalContainer:after {
   transform: rotate(2.4deg);
 }
 
-#notebook:hover:before {
+.modalContainer:hover:before {
   transform: rotate(0deg);
   border: rgba(0, 0, 0, 1);
   border-radius: 0.5rem;
   border-width: 2px 2px 2px 2px;
 }
 
-#notebook:hover:after {
+.modalContainer:hover:after {
   transform: rotate(0deg);
   border: solid rgba(0, 0, 0, 1);
   border-radius: 0.5rem;
@@ -163,7 +163,7 @@ body {
   border-radius: 0.5rem;
 }
 
-#notebook:hover #modalCloseButton {
+.modalContainer:hover #modalCloseButton {
   border-bottom: none;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -175,7 +175,7 @@ body {
   border-radius: 0.5rem;
 }
 
-#notebook:hover .lyricButton {
+.modalContainer:hover .lyricButton {
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;

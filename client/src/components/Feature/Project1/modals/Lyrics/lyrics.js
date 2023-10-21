@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Song from "../modals/song";
+import Song from "./song";
 import LyricSelector from "./lyricSelector";
-import ModalClose from "./modalClose";
+import ModalClose from "../modalClose";
 
 export default function Project1LyricModal({ toggleModal, open }) {
   const [isOpen, setIsOpen] = useState("");
@@ -9,26 +9,6 @@ export default function Project1LyricModal({ toggleModal, open }) {
   const [lyrics, setLyrics] = useState("default");
   const [selection, setSelection] = useState("song1");
 
-  // const offsetCalc = () => {
-  //   const modal = document.querySelector(".modalContainer");
-  //   const buttons = document.getElementById("modalButtons");
-  //   let position = modal.getBoundingClientRect();
-
-  //   const applyOffset = (val) => {
-  //     buttons.setAttribute(
-  //       "style",
-  //       `top:${val.top}; left:${val.left}; right:${val.right}`
-  //     );
-  //   };
-
-  //   let offset = {
-  //     top: position.top,
-  //     left: position.left,
-  //     right: position.right,
-  //   };
-  //   console.log(offset);
-  //   applyOffset(offset);
-  // };
   useEffect(() => {
     const fetchLyrics = async () => {
       try {
@@ -92,33 +72,28 @@ export default function Project1LyricModal({ toggleModal, open }) {
       {/* CONTAINER */}
       <>
         <div className="absolute left-0 right-0 top-0 bottom-0 w-[100vw] desktop:w-[70vw] h-[100vh] tablet:w-[73vw] tablet:h-[73vw] m-auto">
-          {/* <div className="bg-black/20 rounded-lg fixed top-0 bottom-0 left-0 right-0 z-[2] w-[98vw] h-[98vh] tablet:w-[73vw] tablet:h-[73vw] m-auto"> */}
-            <div
-              id="notebook"
-              className="rounded-lg absolute top-0 bottom-0 left-0 right-0 z-[3] w-[94vw] h-[96vh] tablet:w-[71vw] tablet:h-[71vw] m-auto drop-shadow-[-2px_1px_3px_rgba(246,239,228,1)]"
-            >
-              {/* LYRICS */}
-              <LyricSelector updateLyrics={updateLyrics} />
-              <ModalClose
-                className="z-[11]"
-                toggleModal={toggleModal}
-                open={open}
-              />
-              <div className="absolute top-0 bottom-0 left-0 right-0 z-[5] m-auto w-[100vw] tablet:w-[70vw] h-[5vh] text-black">
-                {!isLoaded ? (
-                  <p className="fixed top-[25vw] left-0 right-0 m-auto font-arvo text-3xl text-center">
-                    loading...
-                  </p>
-                ) : (
-                  changeselection()
-                )}
-              </div>
+          <div
+            className="modalContainer rounded-lg absolute top-0 bottom-0 left-0 right-0 z-[3] w-[94vw] h-[96vh] tablet:w-[71vw] tablet:h-[71vw] m-auto drop-shadow-[-2px_1px_3px_rgba(246,239,228,1)]"
+          >
+            {/* LYRICS */}
+            <LyricSelector updateLyrics={updateLyrics} />
+            <ModalClose
+              className="z-[11]"
+              toggleModal={toggleModal}
+              open={open}
+            />
+            <div className="absolute top-0 bottom-0 left-0 right-0 z-[5] m-auto w-[100vw] tablet:w-[70vw] h-[5vh] text-black">
+              {!isLoaded ? (
+                <p className="fixed top-[25vw] left-0 right-0 m-auto font-arvo text-3xl text-center">
+                  loading...
+                </p>
+              ) : (
+                changeselection()
+              )}
             </div>
           </div>
-        {/* </div> */}
+        </div>
       </>
     </>
   );
 }
-
-// CLOSE BUTTON NOT FIRING -- check z indexes
