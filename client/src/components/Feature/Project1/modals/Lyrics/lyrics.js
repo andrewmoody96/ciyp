@@ -3,8 +3,7 @@ import Song from "./song";
 import LyricSelector from "./lyricSelector";
 import ModalClose from "../modalClose";
 
-export default function Project1LyricModal({ toggleModal, open }) {
-  const [isOpen, setIsOpen] = useState("");
+export default function Project1LyricModal({ toggleModal }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [lyrics, setLyrics] = useState("default");
   const [selection, setSelection] = useState("song1");
@@ -80,7 +79,7 @@ export default function Project1LyricModal({ toggleModal, open }) {
             <ModalClose
               className="z-[11]"
               toggleModal={toggleModal}
-              open={open}
+              open={true}
             />
             <div className="absolute top-0 bottom-0 left-0 right-0 z-[5] m-auto w-[100vw] tablet:w-[70vw] h-[5vh] text-black">
               {!isLoaded ? (

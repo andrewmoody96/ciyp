@@ -184,7 +184,6 @@ router.get("/p1answers", async (req, res) => {
         console.error("Error fetching answers.");
       } else {
         console.log("Answers Found");
-        console.log(data);
         res.send(data);
       }
     };
@@ -193,7 +192,7 @@ router.get("/p1answers", async (req, res) => {
       const database = client.db("ciyp_p1");
       const p1qa = database.collection("answers");
       const answers = await p1qa.find().toArray();
-      console.log(answers);
+      // console.log(answers);
       answerCheck(answers);
     } catch (error) {
       console.log(error);
