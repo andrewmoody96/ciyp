@@ -29,7 +29,7 @@ export default function P1QandA({ toggleModal }) {
             let vals = arr.pop();
             questions.push(vals);
           });
-          console.log(questions);
+          // console.log(questions);
           jsonData.forEach((answer) => {
             let arr = Object.values(answer);
             let vals = arr.slice(0, 6);
@@ -56,8 +56,8 @@ export default function P1QandA({ toggleModal }) {
     fetchAnswers();
   });
 
-  const updateAnswers = (title) => {
-    setSelection(title);
+  const updateAnswers = (member) => {
+    setSelection(member);
   };
 
   const changeAnswers = () => {
@@ -67,7 +67,7 @@ export default function P1QandA({ toggleModal }) {
           <Answers
             className="fixed top-[15%] left-0 right-0 z-[10]"
             questions={questions}
-            answers={[...cole]}
+            answers={cole}
           />
         </>
       );
@@ -77,7 +77,7 @@ export default function P1QandA({ toggleModal }) {
           <Answers
             className="fixed top-[15%] left-0 right-0 z-[10]"
             questions={questions}
-            answers={[...hunter]}
+            answers={hunter}
           />
         </>
       );
@@ -87,7 +87,7 @@ export default function P1QandA({ toggleModal }) {
           <Answers
             className="fixed top-[15%] left-0 right-0 z-[10]"
             questions={questions}
-            answers={[...trace]}
+            answers={trace}
           />
         </>
       );
@@ -97,7 +97,7 @@ export default function P1QandA({ toggleModal }) {
           <Answers
             className="fixed top-[15%] left-0 right-0 z-[10]"
             questions={questions}
-            answers={[...andrew]}
+            answers={andrew}
           />
         </>
       );
@@ -142,3 +142,5 @@ export default function P1QandA({ toggleModal }) {
     </>
   );
 }
+
+// get answers to render
