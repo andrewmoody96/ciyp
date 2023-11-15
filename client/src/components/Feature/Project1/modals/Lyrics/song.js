@@ -13,6 +13,8 @@ export default function Song({ track }) {
   const data = Object.values(song);
   let words = data[0].lyrics.split("// ");
 
+  console.log(Array.isArray(words));
+
   const renderSong = () => {
     return words.map((lyric) => (
       <p className="flex flex-wrap text-xs desktop:text-sm font-arvo text-black text-center">

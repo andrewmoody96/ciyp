@@ -15,7 +15,7 @@ export default function ModalClose({ toggleModal, open }) {
         open === true ? "block" : "hidden"
       }`}
       onClick={() => {
-        clickHandler("closed");
+        clickHandler(false);
       }}
     >
       Close

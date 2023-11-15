@@ -26,3 +26,5 @@ module.exports = {
   },
   plugins: [],
 }
+
+// figure out modal height issue
