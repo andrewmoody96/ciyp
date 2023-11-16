@@ -11,7 +11,7 @@ export default function Answers({ qA }) {
         <>
           {qA.map((e) => {
             return (
-              <div className="flex flex-col flex-wrap justify-start text-left mx-2 my-[0.3rem] desktop:my-[0.5rem] overflow-y-scroll">
+              <div className="flex flex-col flex-wrap justify-start text-left mx-3 my-[0.3rem] desktop:my-[0.5rem]">
                 <h6 className="text-xs font-arvo font-bold text-black text-left">
                   {e.question}
                 </h6>
@@ -28,7 +28,7 @@ export default function Answers({ qA }) {
         <>
           {qA.map((e) => {
             return (
-              <div className="flex flex-col flex-wrap justify-start text-left mx-2 my-[0.3rem] desktop:my-[0.5rem]">
+              <div className="flex flex-col flex-wrap justify-start text-left mx-3 my-[0.3rem] desktop:my-[0.5rem]">
                 <h6 className="text-xs font-arvo font-bold text-black text-left">
                   {e.question}
                 </h6>
@@ -47,7 +47,7 @@ export default function Answers({ qA }) {
         <>
           {qA.map((e) => {
             return (
-              <div className="flex flex-col flex-wrap justify-start text-left mx-2 my-[0.3rem] desktop:my-[0.5rem]">
+              <div className="flex flex-col flex-wrap justify-start text-left mx-3 my-[0.3rem] desktop:my-[0.5rem]">
                 <h6 className="text-xs font-arvo font-bold text-black text-left">
                   {e.question}
                 </h6>
@@ -66,7 +66,7 @@ export default function Answers({ qA }) {
         <>
           {qA.map((e) => {
             return (
-              <div className="flex flex-col flex-wrap justify-start text-left mx-2 my-[0.3rem] desktop:my-[0.5rem]">
+              <div className="flex flex-col flex-wrap justify-start text-left mx-3 my-[0.3rem] desktop:my-[0.5rem]">
                 <h6 className="text-xs font-arvo font-bold text-black text-left">
                   {e.question}
                 </h6>
@@ -85,7 +85,7 @@ export default function Answers({ qA }) {
         <>
           {qA.map((e) => {
             return (
-              <div className="flex flex-col flex-wrap justify-start text-left mx-2 my-[0.3rem] desktop:my-[0.5rem]">
+              <div className="flex flex-col flex-wrap justify-start text-left mx-3 my-[0.3rem] desktop:my-[0.5rem]">
                 <h6 className="text-xs font-arvo font-bold text-black text-left">
                   {e.question}
                 </h6>
