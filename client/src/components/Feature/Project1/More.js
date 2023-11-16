@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Header from "../../Header";
 import SinglesBG from "./SinglesBG.js";
 import Lyrics from "./modals/Lyrics/lyrics";
-import QandA from "./modals/AboutEP/p1QandA"
-// import Slideshow from "./modals/slideshow";
+import QandA from "./modals/AboutEP/p1QandA";
+import Photos from "./modals/Photos/photos.js";
 
 export default function MoreProject1() {
   const [open, setOpen] = useState("closed");
@@ -25,33 +25,28 @@ export default function MoreProject1() {
             toggleModal={toggleModal}
             open={true}
           />
-          {/* <ModalClose id="modalCloseButton" toggleModal={toggleModal} open={open}/> */}
         </div>
       );
     } else if (open === "openQandA") {
       return (
-        <div
-          className={"fixed left-0 right-0 top-0 bottom-0 z-[9]"}
-        >
+        <div className={"fixed left-0 right-0 top-0 bottom-0 z-[9]"}>
           <QandA
             className={`Lyrics1Nav fixed left-0 right-0 top-0 bottom-0 z-[9]`}
             toggleModal={toggleModal}
             open={true}
           />
-          {/* <ModalClose id="modalCloseButton" toggleModal={toggleModal} open={open}/> */}
         </div>
       );
     } else if (open === "openPhotos") {
-      // <div
-      //     className={"fixed left-0 right-0 top-0 bottom-0 z-[9]"}
-      //   >
-      //     <Slideshow
-      //       className={`Lyrics1Nav fixed left-0 right-0 top-0 bottom-0 z-[9]`}
-      //       toggleModal={toggleModal}
-      //       open={true}
-      //     />
-      //     {/* <ModalClose id="modalCloseButton" toggleModal={toggleModal} open={open}/> */}
-      //   </div>
+      return (
+        <div className={"fixed left-0 right-0 top-0 bottom-0 z-[9]"}>
+          <Photos
+            className={`Lyrics1Nav fixed left-0 right-0 top-0 bottom-0 z-[9]`}
+            toggleModal={toggleModal}
+            open={true}
+          />
+        </div>
+      );
     } else {
       console.log("closed");
     }
@@ -101,7 +96,10 @@ export default function MoreProject1() {
               >
                 Q & A
               </button>
-              <button className="p-1 mx-2 my-6 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-md text-center h-[5vh] w-[30vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
+              <button
+                className="p-1 mx-2 my-6 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-md text-center h-[5vh] w-[30vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black"
+                onClick={() => setOpen("openPhotos")}
+              >
                 Photos
               </button>
             </div>
