@@ -70,45 +70,12 @@ body {
   margin-top: 7rem;
 }
 
-/* .modal1 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-} */
-
-/* .modal1 button {
-  cursor: pointer;
-  width: auto;
-  padding: 0, 10px, 0, 10px;
-} */
-
 .modal1Nav {
   height: auto;
   overflow-y: scroll;
   z-index: 9;
 }
 
-/* #modalButtons {
-  position: absolute;
-} */
-
-/* .modalContainer {
-  position: absolute;
-} */
-
-/* .modal1Nav.showModal {
-  display: block;
-}
-
-.modal1Nav.hideModal {
-  display: none;
-} */
-
-/* .modal1Nav li:first-child {
-  margin-top: 7rem;
-} */
-
-/*  */
 .modalContainer {
   background: #fafafa;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
