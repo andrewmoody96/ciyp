@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
+import SwiperNav from "./swiperNav.js";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./slideStyle.css";
@@ -35,7 +36,8 @@ export default function Videos({ videos }) {
           </button>
         </a>
         <div className="flex justify-center items-center">
-          <Swiper id="videosSlides" modules={[Navigation]} navigation={true}>
+          <Swiper id="videosSlides" modules={[Navigation]} navigation={false}>
+            <SwiperNav className="swiperNav" />
             {videos &&
               videos.map((video) => (
                 <SwiperSlide className="flex justify-center items-center align-middle">
