@@ -1,6 +1,6 @@
 {
   "name": "ciyp",
-  "version": "2.5.0",
+  "version": "3.0.0",
   "engines": {
     "node": "19.5.0",
     "npm": "9.6.7"

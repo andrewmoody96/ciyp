@@ -30,7 +30,7 @@ export default function Videos({ videos }) {
                         controls
                         playsInline
                         alt="video"
-                        className="object-contain w-auto tablet:w-[50%] desktop:w-auto max-h-[75vh] h-auto border-0 rounded-md"
+                        className="bg-static object-contain w-auto tablet:w-[50%] desktop:w-auto max-h-[75vh] h-auto border-0 rounded-md"
                       >
                         <source src={video.mediaLink} type="video/mp4" />
                       </video>
