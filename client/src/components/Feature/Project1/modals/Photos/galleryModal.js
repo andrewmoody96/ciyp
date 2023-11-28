@@ -53,7 +53,7 @@ export default function Project1GalleryModal({ toggleModal }) {
     <>
       {/* CONTAINER */}
       <>
-        <div className="absolute left-0 right-0 top-0 bottom-0 w-[100vw] desktop:w-[70vw] h-[95vh] tablet:w-[73vw] m-auto">
+        <div className="absolute left-0 right-0 top-0 bottom-0 w-[100vw] desktop:w-[70vw] h-[92vh] tablet:w-[73vw] m-auto">
           <div className="modalContainer rounded-lg absolute top-0 bottom-0 left-0 right-0 z-[3] w-[94vw] h-[92vh] tablet:w-[71vw] tablet:h-[71vw] desktop:h-auto m-auto">
             {/* GALLERY */}
             <ViewSelector updateView={updateView} />
