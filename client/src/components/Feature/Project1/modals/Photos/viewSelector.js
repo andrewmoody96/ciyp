@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function LyricSelector({ updateLyrics }) {
-  const clickHandler = (song) => {
-    updateLyrics(song);
+export default function ViewSelector({ updateView }) {
+  const clickHandler = (view) => {
+    updateView(view);
   };
 
   return (
@@ -10,21 +10,15 @@ export default function LyricSelector({ updateLyrics }) {
       <div className="flex font-arvo text-black justify-center desktop:justify-center items-center">
         <button
           className="modalButton font-arvo bg-[#e8B380] mx-1 p-[5px] text-xs hover:bg-black hover:text-white"
-          onClick={() => clickHandler("song1")}
+          onClick={() => clickHandler("photos")}
         >
-          {process.env.REACT_APP_LYRIC1}
+          Photos
         </button>
         <button
           className="modalButton font-arvo bg-[#e8B380] mx-1 p-[5px] text-xs hover:bg-black hover:text-white"
-          onClick={() => clickHandler("song2")}
+          onClick={() => clickHandler("videos")}
         >
-          {process.env.REACT_APP_LYRIC2}
-        </button>
-        <button
-          className="modalButton font-arvo bg-[#e8B380] mx-1 p-[5px] text-xs hover:bg-black hover:text-white"
-          onClick={() => clickHandler("song3")}
-        >
-          {process.env.REACT_APP_LYRIC3}
+          Videos
         </button>
       </div>
     </div>

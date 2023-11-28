@@ -78,8 +78,8 @@ body {
 
 .modalContainer {
   background: #fafafa;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
-    0 0 300px 25px rgba(222, 198, 122, 0.7) inset;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
+    0 0 300px 25px rgba(222, 198, 122, 0.7) inset; */
   margin: auto;
   border: rgba(0, 0, 0, 1);
   border-radius: 0.5rem;
@@ -136,7 +136,7 @@ body {
   border-bottom-right-radius: 0;
 }
 
-.lyricButton {
+.modalButton {
   border: solid rgba(0, 0, 0, 1);
   border-width: 2px 2px 2px 2px;
   border-radius: 0.5rem;

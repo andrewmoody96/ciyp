@@ -15,7 +15,7 @@ export default function Answers({ qA }) {
                 <h6 className="text-xs font-arvo font-bold text-black text-left">
                   {e.question}
                 </h6>
-                <p className="text-xs font-arvo text-black text-left">{e.cb}</p>
+                <p className="text-xs desktop:text-sm font-arvo text-black text-left">{e.cb}</p>
               </div>
             );
           })}
