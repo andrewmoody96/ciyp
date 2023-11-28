@@ -32,7 +32,7 @@ export default function Videos({ videos }) {
                         alt="video"
                         className="bg-static object-contain w-auto tablet:w-[50%] desktop:w-auto max-h-[75vh] h-auto border-0 rounded-md"
                       >
-                        <source src={video.mediaLink} type="video/mp4" />
+                        <source src={video.mediaLink} type="video/webm" />
                       </video>
                     </div>
                   </div>
