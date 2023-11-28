@@ -8,18 +8,20 @@ import Shows from "./components/Shows";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Epk from "./components/Epk";
+import Project1 from "./components/Feature/Project1/More";
 
 export default function App() {
   return (
     <Router className="overflow-x-hidden">
       <div className="h-[100vh] flex items-center justify-center">
-        <div className="h-[75vh] w-[85vw] flex items-start justify-center">
+        <div className="h-[75vh] w-[85vw] flex justify-center">
           <Routes className="overflow-y-auto">
             <Route path="/" element={<Home />} />
             <Route path="/shows" element={<Shows />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/epk" element={<Epk />} />
+            <Route path="/melting" element={<Project1 />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </div>

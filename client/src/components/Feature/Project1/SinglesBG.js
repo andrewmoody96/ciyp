@@ -4,6 +4,9 @@ import dayjs from "dayjs";
 export default function SinglesBG() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState(false);
+  const [project1, setProject1] = useState(false);
+
+  let now = dayjs().format("MM-DD-YYYY").toString();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -13,6 +16,7 @@ export default function SinglesBG() {
         let data = [];
         // removes txt file from jsonData
         jsonData.forEach((file) => {
+          // console.log(file.name);
           if (file.contentType !== "text/plain") {
             let name = file.name;
             let trimmed = name.replace("homepage/", "");
@@ -22,20 +26,30 @@ export default function SinglesBG() {
         });
         setData([...data]);
         setIsLoaded(true);
+        if (now >= process.env.REACT_APP_PROJECT1_DATE) {
+          setProject1(true);
+        }
       } catch (error) {
         console.log(error);
       }
     };
     fetchData();
-  }, [isLoaded]);
+  }, [isLoaded, now]);
 
   const renderRelease = (photos) => {
-    let now = dayjs().format("MM-DD-YYYY").toString();
     photos.sort(function (a, b) {
       return a.name.localeCompare(b.name);
     });
 
-    if (now >= process.env.REACT_APP_SINGLE3_DATE) {
+    if (now >= process.env.REACT_APP_PROJECT1_DATE) {
+      return (
+        <img
+          alt="album art background"
+          className="fixed top-[50vh] tablet:top-[36vh] desktop:top-[10vh] wide:top-0 left-0 right-0 z-[-1] drop-shadow-[5px_10px_1px_rgba(0,0,0,1)]"
+          src={photos[3].link}
+        ></img>
+      );
+    } else if (now >= process.env.REACT_APP_SINGLE3_DATE) {
       return (
         <img
           alt="album art background"
@@ -64,11 +78,15 @@ export default function SinglesBG() {
 
   return (
     <>
-      <div className="flex justify-center items-center w-[100vw]">
-        <div className="bg-black fixed top-0 left-0 right-0 z-[-2] w-[100vw] h-[100vh] desktop:z-[-1]">
+      <div
+        className={`${
+          !project1 ? "bg-black" : "bg-[#eca05e]"
+        } fixed top-0 bottom-0 right-0 left-0 z-[-1] desktop:z-[-1]`}
+      >
+        <div>
           {/* dummy div */}
+          <>{!isLoaded ? <div>...loading</div> : renderRelease(data)}</>
         </div>
-        <>{!isLoaded ? <div>...loading</div> : renderRelease(data)}</>
       </div>
     </>
   );

@@ -11,7 +11,8 @@ module.exports = {
         'londrina': ['Londrina Outline', 'cursive'],
         'rampart': ['Rampart One', 'cursive'],
         'rubik': ['Rubik Moonrocks', 'cursive'],
-        'monoton': ['Monoton', 'cursive']
+        'monoton': ['Monoton', 'cursive'],
+        'bungee': ['Bungee Shade', 'cursive']
       }
     },
     screens: {
@@ -25,3 +26,5 @@ module.exports = {
   },
   plugins: [],
 }
+
+// figure out modal height issue
