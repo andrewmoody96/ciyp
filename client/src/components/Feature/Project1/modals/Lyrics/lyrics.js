@@ -70,8 +70,8 @@ export default function Project1LyricModal({ toggleModal }) {
     <>
       {/* CONTAINER */}
       <>
-        <div className="absolute left-0 right-0 top-0 bottom-0 w-[100vw] desktop:w-[70vw] h-[100vh] tablet:w-[73vw] m-auto">
-          <div className="modalContainer rounded-lg absolute top-0 bottom-0 left-0 right-0 z-[3] w-[94vw] h-[96vh] tablet:w-[71vw] tablet:h-[71vw] desktop:h-auto m-auto drop-shadow-[-2px_1px_3px_rgba(246,239,228,1)]">
+        <div className="absolute left-0 right-0 top-0 bottom-0 w-[100vw] desktop:w-[70vw] h-[95vh] tablet:w-[73vw] m-auto">
+          <div className="modalContainer rounded-lg absolute top-0 bottom-0 left-0 right-0 z-[3] w-[94vw] h-[92vh] tablet:w-[71vw] tablet:h-[71vw] desktop:h-auto m-auto drop-shadow-[-2px_1px_3px_rgba(246,239,228,1)]">
             {/* LYRICS */}
             <LyricSelector updateLyrics={updateLyrics} />
             <ModalClose
