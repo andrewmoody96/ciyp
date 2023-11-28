@@ -53,7 +53,7 @@ export default function SinglesBG() {
       return (
         <img
           alt="album art background"
-          className="fixed top-[35vh] bottom-0 tablet:top-[32vh] desktop:top-[16vh] wide:top-[11vh] z-[-1] w-[200%]"
+          className="fixed top-[30vh] bottom-0 tablet:top-[40vh] desktop:top-0 z-[-1] w-[200%]"
           src={photos[2].link}
         ></img>
       );
@@ -61,7 +61,7 @@ export default function SinglesBG() {
       return (
         <img
           alt="album art background"
-          className="fixed top-[30vh] bottom-0 tablet:top-[40vh] desktop:top-[30vh] wide:top-[20vh] z-[-1] w-[200%]"
+          className="fixed top-[30vh] bottom-0 tablet:top-[40vh] desktop:top-0 z-[-1] w-[200%]"
           src={photos[1].link}
         ></img>
       );
