@@ -1,59 +1,44 @@
-import React, { useState, useEffect } from "react";
-import Slideshow from "./slideshow.js";
-import ModalClose from "../modalClose";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "./slideStyle.css";
 
-export default function Project1LyricModal({ toggleModal }) {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [photos, setPhotos] = useState([]);
+export default function Photos({ photos }) {
+  const slideImages = [];
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch(`/api/p1photos`);
-        const jsonData = await res.json();
-        const pictures = [];
-        // removes txt file from jsonData
-        jsonData.forEach((file) => {
-          if (file.contentType !== "text/plain") {
-            pictures.push(file);
-          }
-        });
-        setPhotos([...pictures]);
-        console.log(photos);
-        setIsLoaded(true);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-  }, []);
+  console.log(photos);
 
-  return (
-    <>
-      {/* CONTAINER */}
+  if (!photos.length) {
+    return <h3 className="text-white">No Photos Yet</h3>;
+  } else {
+    photos.forEach((photo) => {
+      slideImages.push(photo.mediaLink);
+    });
+
+    console.log(slideImages);
+
+    return (
       <>
-        <div className="absolute left-0 right-0 top-0 bottom-0 w-[100vw] desktop:w-[70vw] h-[100vh] tablet:w-[73vw] m-auto">
-          <div className="modalContainer rounded-lg absolute top-0 bottom-0 left-0 right-0 z-[3] w-[94vw] h-[96vh] tablet:w-[71vw] tablet:h-[71vw] desktop:h-auto m-auto drop-shadow-[-2px_1px_3px_rgba(246,239,228,1)]">
-            {/* LYRICS */}
-            <ModalClose
-              className="z-[11]"
-              toggleModal={toggleModal}
-              open={true}
-            />
-            <div className="absolute top-0 bottom-0 left-0 right-0 z-[5] m-auto w-[100vw] tablet:w-[70vw] h-[5vh] text-black">
-              {!isLoaded ? (
-                <p className="fixed top-[25vw] left-0 right-0 m-auto font-arvo text-3xl text-center">
-                  loading...
-                </p>
-              ) : (
-                // renderPhotos()
-                // <Slideshow photos={photos} />
-                <>Hello</>
-              )}
-            </div>
+        <div className="fixed top-0 left-0 right-0 bottom-0 desktop:top-0 desktop:bottom-0 w-[94vw] desktop:w-[70vw] h-[100vh] m-auto flex justify-center items-center">
+            <Swiper id="photoSlides" modules={[Autoplay]} autoplay={true}>
+              {slideImages.map((slideImage, index) => (
+                <SwiperSlide className="flex justify-center items-center align-middle">
+                  <div key={index} className="flex justify-center">
+                    <div className="flex justify-center m-3">
+                      <img
+                        src={slideImage}
+                        alt="slideshow"
+                        className="object-contain w-auto tablet:w-[50%] desktop:w-auto max-h-[75vh] h-auto border-2 border-black"
+                      ></img>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
-        </div>
       </>
-    </>
-  );
+    );
+  }
 }
