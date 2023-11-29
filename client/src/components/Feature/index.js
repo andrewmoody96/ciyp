@@ -1,7 +1,5 @@
 import React from "react";
 import dayjs from "dayjs";
-import FirstSingle from "./Project1/FirstSingle";
-import SecondSingle from "./Project1/SecondSingle";
 import ThirdSingle from "./Project1/ThirdSingle";
 import Project1 from "./Project1/Project1";
 
@@ -11,13 +9,9 @@ export default function Feature() {
 
     if (now >= process.env.REACT_APP_PROJECT1_DATE) {
       return <Project1 />;
-    } else if (now >= process.env.REACT_APP_SINGLE3_DATE) {
+    } else {
       return <ThirdSingle />;
-    } else if (now >= process.env.REACT_APP_SINGLE2_DATE) {
-      return <SecondSingle />;
-    } else if (now >= process.env.REACT_APP_SINGLE1_DATE) {
-      return <FirstSingle />;
-    }
+    } 
   };
 
   return <>{renderRelease()}</>;
