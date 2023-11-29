@@ -46,6 +46,7 @@ export default function Videos({ videos }) {
                     className="flex flex-col justify-center items-center"
                   >
                     <video
+                      muted
                       controls
                       playsInline
                       alt="video"

@@ -27,6 +27,7 @@ export default function Videos({ videos }) {
                   <div key={video.mediaLink} className="flex justify-center">
                     <div className="flex justify-center items-center m-3">
                       <video
+                        muted
                         controls
                         playsInline
                         alt="video"
