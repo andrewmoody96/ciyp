@@ -20,7 +20,7 @@ export default function Project1GalleryModal({ toggleModal }) {
         // removes txt file from jsonData
         jsonData.forEach((file) => {
           if (file.contentType !== "text/plain") {
-            if (file.contentType === "video/webm") {
+            if (file.contentType === "video/mp4") {
               videos.push(file);
             } else {
               pictures.push(file);

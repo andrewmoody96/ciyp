@@ -27,13 +27,12 @@ export default function Videos({ videos }) {
                   <div key={video.mediaLink} className="flex justify-center">
                     <div className="flex justify-center items-center m-3">
                       <video
-                        src={video.mediaLink}
                         controls
                         playsInline
                         alt="video"
                         className="bg-static object-contain w-auto tablet:w-[50%] desktop:w-auto max-h-[75vh] h-auto border-0 rounded-md"
                       >
-                        {/* <source src={video.mediaLink} type="video/webm" /> */}
+                        <source src={video.mediaLink} type="video/mp4" />
                       </video>
                     </div>
                   </div>
