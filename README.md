@@ -15,7 +15,9 @@ Chocolate In Your Pocket's official webpage. Use it to connect with Chocolate, j
 ## Usage: 
 There is no circumstance in which you may distribute or copy this code without my express written consent. You may contact me if you can think of a reason you may need it, but I will not make any promises on granting you permission. 
 
-### changes in v2.5:
-- Homepage updates for releases
-- improved button functionality
-- smaller video size on desktop
+### changes in v3:
+- melting. (rewrapped) release is live
+  - Q&A
+  - Lyrics
+  - Photo/Video Gallery
+- improved video playback on EPK page
