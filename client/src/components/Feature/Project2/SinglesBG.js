@@ -41,7 +41,8 @@ export default function SinglesBG() {
       return a.name.localeCompare(b.name);
     });
 
-    if (now >= process.env.REACT_APP_PROJECT2_DATE) {
+    // MODIFY LOGIC TO GRAB CORRECT PHOTOS
+    if (now >= process.env.REACT_APP_SINGLE7_DATE) {
       return (
         <img
           alt="album art background"
@@ -49,7 +50,7 @@ export default function SinglesBG() {
           src={photos[3].link}
         ></img>
       );
-    } else if (now >= process.env.REACT_APP_SINGLE3_DATE) {
+    } else if (now >= process.env.REACT_APP_SINGLE6_DATE) {
       return (
         <img
           alt="album art background"
@@ -57,7 +58,7 @@ export default function SinglesBG() {
           src={photos[2].link}
         ></img>
       );
-    } else if (now >= process.env.REACT_APP_SINGLE2_DATE) {
+    } else if (now >= process.env.REACT_APP_SINGLE5_DATE) {
       return (
         <img
           alt="album art background"
@@ -65,7 +66,7 @@ export default function SinglesBG() {
           src={photos[1].link}
         ></img>
       );
-    } else if (now >= process.env.REACT_APP_SINGLE1_DATE) {
+    } else if (now >= process.env.REACT_APP_SINGLE4_DATE) {
       return (
         <img
           alt="album art background"
@@ -78,6 +79,7 @@ export default function SinglesBG() {
 
   return (
     <>
+    {/* update styling to reflect new color scheme */}
       <div
         className={`${
           !project ? "bg-black" : "bg-[#eca05e]"
@@ -93,3 +95,4 @@ export default function SinglesBG() {
 }
 
 // MODIFY LOGIC TO GRAB CORRECT PHOTOS
+// update styling to reflect new color scheme
