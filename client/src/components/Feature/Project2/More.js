@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../../Header";
 import SinglesBG from "./SinglesBG.js";
 import Lyrics from "./modals/Lyrics/lyrics";
-import QandA from "./modals/AboutEP/p1QandA";
+import QandA from "./modals/AboutEP/p2QandA.js";
 import Photos from "./modals/Photos/galleryModal.js";
 
 export default function MoreProject2() {

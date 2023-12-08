@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 export default function SinglesBG() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState(false);
-  const [project2, setProject2] = useState(false);
+  const [project, setProject] = useState(false);
 
   let now = dayjs().format("MM-DD-YYYY").toString();
 
@@ -26,8 +26,8 @@ export default function SinglesBG() {
         });
         setData([...data]);
         setIsLoaded(true);
-        if (now >= process.env.REACT_APP_PROject2_DATE) {
-          setProject2(true);
+        if (now >= process.env.REACT_APP_PROJECT2_DATE) {
+          setProject(true);
         }
       } catch (error) {
         console.log(error);
@@ -41,7 +41,7 @@ export default function SinglesBG() {
       return a.name.localeCompare(b.name);
     });
 
-    if (now >= process.env.REACT_APP_PROject2_DATE) {
+    if (now >= process.env.REACT_APP_PROJECT2_DATE) {
       return (
         <img
           alt="album art background"
@@ -80,7 +80,7 @@ export default function SinglesBG() {
     <>
       <div
         className={`${
-          !project2 ? "bg-black" : "bg-[#eca05e]"
+          !project ? "bg-black" : "bg-[#eca05e]"
         } fixed top-0 bottom-0 right-0 left-0 z-[-1] desktop:z-[-1]`}
       >
         <div>
@@ -91,3 +91,5 @@ export default function SinglesBG() {
     </>
   );
 }
+
+// MODIFY LOGIC TO GRAB CORRECT PHOTOS
