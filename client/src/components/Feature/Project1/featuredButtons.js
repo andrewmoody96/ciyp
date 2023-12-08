@@ -1,25 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import dayjs from "dayjs";
 
 export default function Buttons() {
-  let importantDate = dayjs(`${process.env.REACT_APP_ALBUM_DATE}`)
-    .format("MM-DD-YYYY")
-    .toString();
-
   const linkRender = () => {
-    let now = dayjs().format("MM-DD-YYYY").toString();
-    if (now >= importantDate) {
-      // return <Link to="/backtolife">Lyrics & More</Link>;
-    } else {
-      return (
-        <Link to="/melting">
-          <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[30vw] tablet:w-[20vw] desktop:w-[20vw] hover:bg-red-300 hover:text-black">
-            Lyrics & More
-          </button>
-        </Link>
-      );
-    }
+    return (
+      <Link to="/melting">
+        <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[30vw] tablet:w-[20vw] desktop:w-[20vw] hover:bg-red-300 hover:text-black">
+          Lyrics & More
+        </button>
+      </Link>
+    );
   };
 
   return (

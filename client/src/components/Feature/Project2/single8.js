@@ -3,7 +3,7 @@ import Header from "../../Header/index.js";
 import { Link } from "react-router-dom";
 import SinglesBG from "./SinglesBG.js";
 
-export default function Single7() {
+export default function Single8() {
   return (
     <div className="flex flex-col w-[100%] justify-center items-center overflow-x-hidden">
       <SinglesBG />
@@ -12,14 +12,14 @@ export default function Single7() {
       </h1>
       <Header />
       <h1 className="hidden desktop:block bg-[#B36551] rounded-lg text-2xl mt-2 p-2 flex-col justify-center items-center mx-2 my-5 text-center text-white font-arvo">
-        I'm just on my way up still.<br></br>
+        I talked to Hades...<br></br>
         <br></br>
-        {`${process.env.REACT_APP_SINGLE7_TITLE}`}
+        {`${process.env.REACT_APP_SINGLE8_TITLE}`}
       </h1>
       <h1 className="visible desktop:hidden bg-[#B36551] rounded-lg text-2xl mt-2 p-2 flex-col justify-center items-center mx-2 my-5 text-center text-white font-arvo">
-        I'm just on my way up still.<br></br>
+        I talked to Hades...<br></br>
         <br></br>
-        {`${process.env.REACT_APP_SINGLE7_TITLE}`}
+        {`${process.env.REACT_APP_SINGLE8_TITLE}`}
       </h1>
       <div className="my-5 m-3 flex flex-row justify-center items-center">
         <section className="flex flex-col justify-center items-center mx-2 my-5 text-center text-white font-arvo drop-shadow-[0_1px_5px_rgba(0,0,0,0.6)] desktop:w-auto max-w-[50vw]">
