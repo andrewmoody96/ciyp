@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../Header";
 import Project1Text from "./Project1Text";
-import Buttons from "../featuredButtons";
+import Buttons from "./featuredButtons";
 import SinglesBG from "./SinglesBG";
 
 export default function Project1() {
