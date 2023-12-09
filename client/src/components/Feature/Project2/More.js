@@ -70,7 +70,7 @@ export default function MoreProject2() {
         <div className="flex flex-col justify-center items-center my-8">
           <section className="bg-white/60 border border-[#262626] rounded-lg flex-col justify-center items-center mt-10 mb-7 mx-auto text-center text-black font-arvo drop-shadow-[0_1px_5px_rgba(0,0,0,0.6)]">
             <h1 className="text-xl text-center text-black font-arvo mt-2 p-2 rounded-lg">
-              Learn more about how we made our first EP.<br></br>open lyrics,
+              View bonus features for Back To Life.<br></br>View lyrics,
               photos, and read stories below.
             </h1>
             <div className="grid desktop:flex justify-center items-center">

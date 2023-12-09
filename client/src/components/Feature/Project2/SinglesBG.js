@@ -45,7 +45,16 @@ export default function SinglesBG() {
     });
 
     // MODIFY LOGIC TO GRAB CORRECT PHOTOS
-    if (dayjs(now).isSameOrAfter(process.env.REACT_APP_SINGLE8_DATE)) {
+    if (dayjs(now).isSameOrAfter(process.env.REACT_APP_PROJECT2_DATE)) {
+      return (
+        <>Album BG</>
+        // <img
+        //   alt="album art background"
+        //   className="fixed top-[50vh] tablet:top-[36vh] desktop:top-[10vh] wide:top-0 left-0 right-0 z-[-1] drop-shadow-[5px_10px_1px_rgba(0,0,0,1)]"
+        //   src={photos[3].link}
+        // ></img>
+      );
+    } else if (dayjs(now).isSameOrAfter(process.env.REACT_APP_SINGLE8_DATE)) {
       return (
         <>Eurydice BG</>
         // <img
@@ -61,33 +70,6 @@ export default function SinglesBG() {
         //   alt="album art background"
         //   className="fixed top-[50vh] tablet:top-[36vh] desktop:top-[10vh] wide:top-0 left-0 right-0 z-[-1] drop-shadow-[5px_10px_1px_rgba(0,0,0,1)]"
         //   src={photos[3].link}
-        // ></img>
-      );
-    } else if (dayjs(now).isSameOrAfter(process.env.REACT_APP_SINGLE6_DATE)) {
-      return (
-        <>Confetti BG</>
-        // <img
-        //   alt="album art background"
-        //   className="fixed top-[30vh] bottom-0 tablet:top-[40vh] desktop:top-0 z-[-1] w-[200%]"
-        //   src={photos[2].link}
-        // ></img>
-      );
-    } else if (dayjs(now).isSameOrAfter(process.env.REACT_APP_SINGLE5_DATE)) {
-      return (
-        <>Flatline BG</>
-        // <img
-        //   alt="album art background"
-        //   className="fixed top-[30vh] bottom-0 tablet:top-[40vh] desktop:top-0 z-[-1] w-[200%]"
-        //   src={photos[1].link}
-        // ></img>
-      );
-    } else if (dayjs(now).isSameOrAfter(process.env.REACT_APP_SINGLE4_DATE)) {
-      return (
-        <>Back and Forth BG</>
-        // <img
-        //   alt="album art background"
-        //   className="fixed top-[30vh] bottom-0 tablet:top-[40vh] desktop:top-0 z-[-1] w-[200%]"
-        //   src={photos[0].link}
         // ></img>
       );
     }
