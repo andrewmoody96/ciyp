@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Event({ description }) {
   return (
-    <div className="flex flex-col w-[80vw] tablet:w-[50vw]">
+    <div className="flex flex-col w-[80vw] tablet:w-[50vw] desktop:w-[30vw]">
       <div className="m-2 px-2 rounded-2xl shadow-[inset_0_1px_5px_0_rgb(0,0,0);] items-center bg-[#B36551]/90 border-4 border-black">
         <span className="p-2 rounded-md flex flex-col" href="">
           <div className="flex flex-col justify-center tablet:flex-row">

@@ -5,7 +5,8 @@ import Videos from "./videos.js";
 import Press from "./press.js";
 import Bio from "./bio.js";
 import Music from "./music.js";
-const GalleryMain = "https://storage.googleapis.com/ciyp-photos/epk/galleryMain-new.webp";
+const GalleryMobile = "https://storage.googleapis.com/ciyp-photos/epk/galleryMain-new.webp";
+const GalleryMain = "https://storage.googleapis.com/ciyp-photos/epk/galleryMain.webp"
 
 export default function Epk() {
   const [view, setView] = useState("default");
@@ -110,13 +111,18 @@ export default function Epk() {
       <div className="flex items-center justify-center">
         <Header />
       </div>
-      <div className="w-auto relative">
+      <div className="w-auto relative top-0 right-0 left-0">
+        <img
+          src={GalleryMobile}
+          alt="the band"
+          className="m-auto rounded-lg shadow-[0_20px_50px_rgba(255,255,255,0.1)] tablet:h-[60vh] tablet:hidden"
+        ></img>
         <img
           src={GalleryMain}
           alt="the band"
-          className="rounded-lg shadow-[0_20px_50px_rgba(255,255,255,0.1)]"
+          className="m-auto rounded-lg shadow-[0_20px_50px_rgba(255,255,255,0.1)] hidden tablet:h-[60vh] tablet:block"
         ></img>
-        <h1 className="absolute bottom-0 text-white text-center font-monoton m-2 text-3xl">
+        <h1 className="absolute bottom-0 text-white text-center font-monoton m-2 text-3xl desktop:static desktop:m-auto">
           Chocolate In Your Pocket
         </h1>
       </div>

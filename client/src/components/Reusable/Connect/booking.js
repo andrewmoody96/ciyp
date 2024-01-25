@@ -43,9 +43,9 @@ export default function Booking() {
 
   return (
     <>
-      <div className="flex flex-col justify-between items-center tablet:flex-row tablet:justify-between tablet:items-center">
+      <div className="flex flex-col justify-between items-center desktop:w-[45vw]">
         {/* BOOKING EMAIL FORM */}
-        <div className="drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)] flex flex-col bg-white/90 rounded-lg justify-center pt-5 m-2">
+        <div className="flex flex-col bg-white/90 rounded-lg justify-center pt-5 m-2">
           {!emailSent ? (
             <>
               <h2 className="text-2xl font-arvo mx-2 text-center">
@@ -60,7 +60,7 @@ export default function Booking() {
               <form
                 ref={form}
                 onSubmit={sendEmail}
-                className="flex flex-col justify-center font-arvo p-4 w-[90vw]"
+                className="flex flex-col justify-center font-arvo p-4 w-[90vw] desktop:w-[45vw]"
               >
                 <label>Name</label>
                 <input

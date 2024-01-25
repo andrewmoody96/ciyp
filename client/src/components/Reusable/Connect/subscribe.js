@@ -3,9 +3,9 @@ import React from "react";
 export default function Subscribe() {
   return (
     <>
-      <div className="flex flex-col justify-between items-center tablet:flex-row tablet:justify-between tablet:items-center">
+      <div className="flex flex-col justify-between items-center desktop:w-[45vw]">
         {/* EMAIL SIGNUP */}
-        <div className="drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)] flex flex-col bg-white/90 rounded-lg justify-center m-2">
+        <div className="flex flex-col bg-white/90 rounded-lg justify-center m-2">
           <div className="rounded-lg bg-transparent">
             {/* TODO: onClick to display "Thanks for signing up." ACTION CAN CALL METHOD WHICH CAN PERFORM THE POST?*/}
             <form
@@ -13,7 +13,7 @@ export default function Subscribe() {
               method="post"
               id="mc-embedded-subscribe-form"
               name="mc-embedded-subscribe-form"
-              className="validate p-3 w-[90vw]"
+              className="validate p-3 w-[90vw] desktop:w-[45vw]"
               noValidate
             >
               <div id="mc_embed_signup_scroll" className="flex flex-col justify-center items-center">

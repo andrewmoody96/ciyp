@@ -87,17 +87,16 @@ export default function Shows() {
   return (
     <>
       {!isUpcoming ? (
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center desktop:w-[45vw]">
           <div className="h-[10vh] invisible">dummy div for spacing</div>
-          <div className="w-100 bg-white/90 rounded-lg justify-center text-center">
-            {/* fix this to display in the center instead of a 2 column */}
+          <div className="w-100 desktop:w-[45vw] bg-white/90 rounded-lg justify-center text-center">
             <h3 className="flex flex-col w-auto font-arvo text-xl text-center visible p-2">
               No upcoming events.
             </h3>
           </div>
         </div>
       ) : (
-        <div className="flex flex-col justify-center items-center tablet:grid tablet:grid-cols-2">
+        <div className="flex flex-col justify-center items-center tablet:grid tablet:grid-cols-2 desktop:flex desktop:flex-col">
           {/* only display in col view if events.length < 1? */}
           {events?.map((event) => (
             <div key={event.id}>

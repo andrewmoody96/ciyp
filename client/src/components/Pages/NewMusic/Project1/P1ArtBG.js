@@ -1,5 +1,5 @@
 import React from "react";
-const p1Art = 'https://storage.googleapis.com/ciyp-photos/homepage/project1cover.webp'
+const p1Art = 'https://storage.googleapis.com/ciyp-photos/Album%20Art/melting.%20(rewrapped)%20-%20ARTWORK.webp'
 
 export default function P1ArtBG() {
   

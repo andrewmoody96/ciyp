@@ -16,57 +16,59 @@ export default function NewMusic() {
             New Music
           </span>
         </h1>
-        {/* NEW SINGLES */}
-        <section className="mb-2">
-          <p className="text-lg text-center text-black font-arvo p-1">
-            Back and Forth
-          </p>
-          <img
-            alt="Featured Artwork - Click to Learn More"
-            className="border rounded-lg"
-            src={featuredSingle}
-          ></img>
-          <div className="flex justify-center items-center text-sm">
-            <a
-              href="https://linktr.ee/chocolateinyourpocket"
-              target="_blank"
-              rel="noreferrer"
-              className="mx-1"
-            >
-              <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[20vw] hover:bg-red-300 hover:text-black">
-                Listen
-              </button>
-            </a>
-          </div>
-        </section>
-        {/* MELTING */}
-        <section className="mb-2">
-          <p className="text-lg text-center text-black font-arvo p-1">
-            melting. (rewrapped)
-          </p>
-          <img
-            alt="Featured Artwork - Click to Learn More"
-            className="border rounded-lg"
-            src={featuredProject}
-          ></img>
-          <div className="flex justify-center items-center text-sm">
-            <a
-              href="https://linktr.ee/chocolateinyourpocket"
-              target="_blank"
-              rel="noreferrer"
-              className="mx-1"
-            >
-              <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[20vw] hover:bg-red-300 hover:text-black">
-                Listen
-              </button>
-            </a>
-            <Link to="/melting">
-              <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[29vw] tablet:w-[20vw] desktop:w-[20vw] hover:bg-red-300 hover:text-black">
-                Lyrics & More
-              </button>
-            </Link>
-          </div>
-          <div className="h-[10vh] invisible"></div>
+        <section className="desktop:grid desktop:grid-cols-2">
+          {/* NEW SINGLES */}
+          <section className="m-2">
+            <p className="text-lg text-center text-black font-arvo p-1">
+              Back and Forth
+            </p>
+            <img
+              alt="Featured Artwork - Click to Learn More"
+              className="border rounded-lg desktop:w-[40vw]"
+              src={featuredSingle}
+            ></img>
+            <div className="flex justify-center items-center text-sm">
+              <a
+                href="https://linktr.ee/chocolateinyourpocket"
+                target="_blank"
+                rel="noreferrer"
+                className="mx-1"
+              >
+                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
+                  Listen
+                </button>
+              </a>
+            </div>
+          </section>
+          {/* MELTING */}
+          <section className="m-2">
+            <p className="text-lg text-center text-black font-arvo p-1">
+              melting. (rewrapped)
+            </p>
+            <img
+              alt="Featured Artwork - Click to Learn More"
+              className="border rounded-lg desktop:w-[40vw]"
+              src={featuredProject}
+            ></img>
+            <div className="flex justify-center items-center text-sm">
+              <a
+                href="https://linktr.ee/chocolateinyourpocket"
+                target="_blank"
+                rel="noreferrer"
+                className="mx-1"
+              >
+                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
+                  Listen
+                </button>
+              </a>
+              <Link to="/melting">
+                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[29vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
+                  Lyrics & More
+                </button>
+              </Link>
+            </div>
+            <div className="h-[10vh] invisible"></div>
+          </section>
         </section>
       </div>
     </>
