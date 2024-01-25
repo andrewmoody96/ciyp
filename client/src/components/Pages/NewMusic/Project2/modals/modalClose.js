@@ -3,7 +3,6 @@ import React from "react";
 export default function ModalClose({ toggleModal, open }) {
   const clickHandler = (tOf) => {
     toggleModal(tOf);
-    console.log(tOf);
   };
 
   console.log(open);

@@ -8,16 +8,12 @@ import "./slideStyle.css";
 export default function Photos({ photos }) {
   const slideImages = [];
 
-  console.log(photos);
-
   if (!photos.length) {
     return <h3 className="text-white">No Photos Yet</h3>;
   } else {
     photos.forEach((photo) => {
       slideImages.push(photo.mediaLink);
     });
-
-    console.log(slideImages);
 
     return (
       <>

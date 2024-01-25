@@ -31,3 +31,4 @@ export default function NotFound() {
   );
 }
 
+// UPDATE FOR NEW STYLE

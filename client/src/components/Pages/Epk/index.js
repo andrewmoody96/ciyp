@@ -5,7 +5,7 @@ import Videos from "./videos.js";
 import Press from "./press.js";
 import Bio from "./bio.js";
 import Music from "./music.js";
-import GalleryMain from "../../../imagesAndVideos/galleryMain-new.jpeg";
+const GalleryMain = "https://storage.googleapis.com/ciyp-photos/epk/galleryMain-new.webp";
 
 export default function Epk() {
   const [view, setView] = useState("default");

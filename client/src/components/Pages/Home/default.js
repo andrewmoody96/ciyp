@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // components
-import featuredArt from "../../../imagesAndVideos/Back And Forth - ARTWORK.jpg";
 import Contact from "../../Reusable/Connect";
 import Shows from "../../Pages/Shows";
+const featuredArt = "https://storage.googleapis.com/ciyp-photos/Album%20Art/Back%20And%20Forth%20-%20ARTWORK.webp";
 
 export default function Default() {
   const [view, setView] = useState("shows");

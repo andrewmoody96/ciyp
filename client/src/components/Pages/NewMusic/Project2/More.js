@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Header from "../../Header";
-import SinglesBG from "./SinglesBG.js";
+import P2ArtBG from "./P2ArtBG.js";
 import Lyrics from "./modals/Lyrics/lyrics";
-import QandA from "./modals/AboutEP/p2QandA.js";
+import QandA from "./modals/AboutAlbum/p2QandA.js";
 import Photos from "./modals/Photos/galleryModal.js";
 
 export default function MoreProject2() {
@@ -55,7 +55,7 @@ export default function MoreProject2() {
   return (
     <div className="container h-[100vh] absolute top-0">
       {whichModal()}
-      <SinglesBG />
+      <P2ArtBG />
       <div className="my-5 m-3 flex flex-col justify-center items-center">
         {/* send showMenu to Header to get rid of button if modal is open */}
         <Header />

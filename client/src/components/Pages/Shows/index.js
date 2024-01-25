@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import moment from "moment-timezone";
 import Event from "./Event";
 
+// REPLACE MOMENT WITH DAYJS
+// import dayjs from "dayjs";
+// var isSameOrAfter = require("dayjs/plugin/isSameOrAfter");
+// dayjs.extend(isSameOrAfter);
+
 let dateToFormat = "";
 let eventLocation = "";
 let name = "";

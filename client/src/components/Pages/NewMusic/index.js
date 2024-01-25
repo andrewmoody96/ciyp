@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../../Reusable/Header";
-import featuredSingle from "../../../imagesAndVideos/Back And Forth - ARTWORK.jpg";
-import featuredProject from "../../../imagesAndVideos/melting - ARTWORK.webp";
+const featuredSingle = "https://storage.googleapis.com/ciyp-photos/Album%20Art/Back%20And%20Forth%20-%20ARTWORK.webp";
+const featuredProject = "https://storage.googleapis.com/ciyp-photos/Album%20Art/melting.%20(rewrapped)%20-%20ARTWORK.webp";
 
 export default function NewMusic() {
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../../Reusable/Header";
-import SinglesBG from "./P1ArtBG.js";
+import P1ArtBG from "./P1ArtBG.js";
 import Lyrics from "./modals/Lyrics/lyrics.js";
 import QandA from "./modals/AboutEP/p1QandA.js";
 import Photos from "./modals/Photos/galleryModal.js";
@@ -55,7 +55,7 @@ export default function MoreProject1() {
   return (
     <div className="container h-[100vh] absolute top-0">
       {whichModal()}
-      <SinglesBG />
+      <P1ArtBG />
       <div className="my-5 m-3 flex flex-col justify-center items-center">
         <Header />
         <div className="flex items-center justify-between mt-5">

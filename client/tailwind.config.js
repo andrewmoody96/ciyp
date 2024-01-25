@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'static': "url('./imagesAndVideos/tvStatic.gif')"
+        'static': "url('https://storage.googleapis.com/ciyp-photos/tvStatic.gif')"
       },
       fontFamily: {
         'arvo': ['Arvo', 'serif'],
