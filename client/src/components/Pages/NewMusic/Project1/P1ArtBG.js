@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 const p1Art = 'https://storage.googleapis.com/ciyp-photos/homepage/project1cover.webp'
 
 export default function P1ArtBG() {

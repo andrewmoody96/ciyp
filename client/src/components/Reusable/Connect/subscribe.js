@@ -16,13 +16,13 @@ export default function Subscribe() {
               className="validate p-3 w-[90vw]"
               noValidate
             >
-              <div id="mc_embed_signup_scroll">
+              <div id="mc_embed_signup_scroll" className="flex flex-col justify-center items-center">
                 <h2 className="text-2xl font-arvo text-center">Subscribe</h2>
                 <div className="indicates-required text-center mb-5">
                   <span className="asterisk text-[#B36551]">*</span> required
                 </div>
-                <div className="mc-field-group mb-2">
-                  <label htmlFor="mce-EMAIL" className="font-arvo">
+                <div className="mc-field-group mb-2 flex justify-center items-center">
+                  <label htmlFor="mce-EMAIL" className="font-arvo text-sm">
                     Email Address
                     <span className="asterisk text-[#B36551]">*</span>
                   </label>

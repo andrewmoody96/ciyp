@@ -18,7 +18,7 @@ export default function Default() {
 
   return (
     <>
-      <div className="bg-[#f5eddc] fixed top-0 left-0 right-0 z-[-1] w-[100vw] h-[100%] tablet:h-auto tablet:-top-80 desktop:h-auto desktop:fixed desktop:-top-96 desktop:z-[-1] wide:top-[-700px]"></div>
+      <div className="bg-[#f5eddc] fixed top-0 left-0 right-0 z-[-1] w-[100vw] h-[100%]"></div>
       <div className="my-5 m-3 flex flex-col justify-center items-center">
         <h1 className="text-4xl text-center text-black font-monoton mt-2 p-1">
           CIYP

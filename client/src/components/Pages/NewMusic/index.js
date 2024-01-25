@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import dayjs from "dayjs";
 import Header from "../../Reusable/Header";
 import featuredSingle from "../../../imagesAndVideos/Back And Forth - ARTWORK.jpg";
 import featuredProject from "../../../imagesAndVideos/melting - ARTWORK.webp";
@@ -73,5 +72,3 @@ export default function NewMusic() {
     </>
   );
 }
-
-// add dummy div

@@ -5,15 +5,13 @@ import Videos from "./videos.js";
 import Press from "./press.js";
 import Bio from "./bio.js";
 import Music from "./music.js";
+import GalleryMain from "../../../imagesAndVideos/galleryMain-new.jpeg";
 
 export default function Epk() {
   const [view, setView] = useState("default");
   const [isLoaded, setIsLoaded] = useState(false);
   const [photos, setPhotos] = useState([]);
   const [movies, setMovies] = useState([]);
-
-  const GalleryMain =
-    "https://storage.googleapis.com/ciyp-photos/galleryMain.webp";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -112,17 +110,17 @@ export default function Epk() {
       <div className="flex items-center justify-center">
         <Header />
       </div>
-      <h1 className="text-white text-center font-monoton m-2 text-3xl">
-        Chocolate In Your Pocket
-      </h1>
-      <div className="w-auto">
+      <div className="w-auto relative">
         <img
           src={GalleryMain}
           alt="the band"
           className="rounded-lg shadow-[0_20px_50px_rgba(255,255,255,0.1)]"
         ></img>
+        <h1 className="absolute bottom-0 text-white text-center font-monoton m-2 text-3xl">
+          Chocolate In Your Pocket
+        </h1>
       </div>
-      {/* buttons */}
+      {/* BUTTONS */}
       <div className="flex justify-center tablet:justify-evenly mt-2">
         <button
           onClick={() => setView("default")}
@@ -156,9 +154,7 @@ export default function Epk() {
         </button>
       </div>
       <div className="text-center mx-2 font-arvo">{changeView()}</div>
-      <div className="h-[5vh] tablet:h-[5vh] w-[100vw] invisible">
-        {/* dummy div for spacing */}
-      </div>
+      <div className="h-[10vh] tablet:h-[5vh] w-[100vw] invisible"></div>
     </div>
   );
 }
