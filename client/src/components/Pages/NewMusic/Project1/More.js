@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Header from "../../Header";
-import SinglesBG from "./SinglesBG.js";
+import Header from "../../../Reusable/Header";
+import SinglesBG from "./P1ArtBG.js";
 import Lyrics from "./modals/Lyrics/lyrics.js";
 import QandA from "./modals/AboutEP/p1QandA.js";
 import Photos from "./modals/Photos/galleryModal.js";

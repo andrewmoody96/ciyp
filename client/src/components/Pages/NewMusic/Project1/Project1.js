@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Header from "../../../Reusable/Header/index";
 import Project1Text from "./Project1Text";
 import Buttons from "./featuredButtons";
-import SinglesBG from "./SinglesBG";
+import SinglesBG from "./P1ArtBG";
 
 export default function Project1() {
   <Outlet />
