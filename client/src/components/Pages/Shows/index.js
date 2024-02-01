@@ -27,7 +27,6 @@ function stateCheck(stateZIP) {
 // Address Formatter
 function addressCheck(address) {
   // check if BOOKCLUB
-  console.log(address);
   let commas = address.split(",");
   if (address.includes(BOOKCLUB)) {
     if (commas.length > 4) {
