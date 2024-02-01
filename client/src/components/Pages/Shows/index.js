@@ -7,6 +7,8 @@ import Event from "./Event";
 // var isSameOrAfter = require("dayjs/plugin/isSameOrAfter");
 // dayjs.extend(isSameOrAfter);
 
+const BOOKCLUB = process.env.REACT_APP_BOOKCLUB;
+
 let dateToFormat = "";
 let eventLocation = "";
 let name = "";
@@ -24,20 +26,41 @@ function stateCheck(stateZIP) {
 
 // Address Formatter
 function addressCheck(address) {
+  // check if BOOKCLUB
+  console.log(address);
   let commas = address.split(",");
-  if (commas.length > 4) {
-    commas.shift();
-    let city = `${commas[1]},`;
-    let stateZIP = `${commas[2]}`;
-    stateCheck(stateZIP);
-    let location = `${city} ${state}`;
-    return location;
+  if (address.includes(BOOKCLUB)) {
+    if (commas.length > 4) {
+      commas.shift();
+      let city = `${commas[1]},`;
+      let stateZIP = `${commas[2]}`;
+      stateCheck(stateZIP);
+      let location = `${city} ${state} - DM for Address`;
+      return location;
+    } else {
+      let city = `${commas[1]},`;
+      let stateZIP = `${commas[2]}`;
+      stateCheck(stateZIP);
+      let location = `${city} ${state} - DM for Address`;
+      return location;
+    }
   } else {
-    let city = `${commas[1]},`;
-    let stateZIP = `${commas[2]}`;
-    stateCheck(stateZIP);
-    let location = `${city} ${state}`;
-    return location;
+    if (commas.length > 4) {
+      commas.shift();
+      let street = `${commas[0]},`;
+      let city = `${commas[1]},`;
+      let stateZIP = `${commas[2]}`;
+      stateCheck(stateZIP);
+      let location = `${street} ${city} ${state}`;
+      return location;
+    } else {
+      let street = `${commas[0]},`;
+      let city = `${commas[1]},`;
+      let stateZIP = `${commas[2]}`;
+      stateCheck(stateZIP);
+      let location = `${street} ${city} ${state}`;
+      return location;
+    }
   }
 }
 
@@ -104,7 +127,7 @@ export default function Shows() {
                 <div id="hiddenJS" className="hidden">
                   {(dateToFormat = `${event.start.dateTime}`)}
                   {(name = event.summary)}
-                  {(date = moment(dateToFormat).format("MMM Do"))}
+                  {(date = moment(dateToFormat).format("M/D"))}
                   {(time = moment(dateToFormat).format("LT"))}
                   {(eventLocation = `${event.location}`)}
                   {(location = `${addressCheck(eventLocation)}`)};
