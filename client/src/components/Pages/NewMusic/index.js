@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../../Reusable/Header";
-const featuredSingle = "https://storage.googleapis.com/ciyp-photos/Album%20Art/Flatline%20-%20ARTWORK.webp"
+const featuredSingle = "https://storage.googleapis.com/ciyp-photos/Album%20Art/Confetti%20-%20ARTWORK.webp"
 const Single0 = "https://storage.googleapis.com/ciyp-photos/Album%20Art/Back%20And%20Forth%20-%20ARTWORK.webp";
+const Single1 = "https://storage.googleapis.com/ciyp-photos/Album%20Art/Flatline%20-%20ARTWORK.webp";
 const featuredProject = "https://storage.googleapis.com/ciyp-photos/Album%20Art/melting.%20(rewrapped)%20-%20ARTWORK.webp";
 
 export default function NewMusic() {
@@ -21,12 +22,34 @@ export default function NewMusic() {
           {/* NEW SINGLES */}
           <section className="m-2">
             <p className="text-lg text-center text-black font-arvo p-1">
-              Flatline
+              Confetti
             </p>
             <img
               alt="Featured Artwork - Click to Learn More"
               className="border rounded-lg desktop:w-[40vw]"
               src={featuredSingle}
+            ></img>
+            <div className="flex justify-center items-center text-sm">
+              <a
+                href="https://linktr.ee/chocolateinyourpocket"
+                target="_blank"
+                rel="noreferrer"
+                className="mx-1"
+              >
+                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
+                  Listen
+                </button>
+              </a>
+            </div>
+          </section>
+          <section className="m-2">
+            <p className="text-lg text-center text-black font-arvo p-1">
+              Flatline
+            </p>
+            <img
+              alt="Featured Artwork - Click to Learn More"
+              className="border rounded-lg desktop:w-[40vw]"
+              src={Single1}
             ></img>
             <div className="flex justify-center items-center text-sm">
               <a
