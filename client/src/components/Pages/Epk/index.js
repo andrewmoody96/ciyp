@@ -5,7 +5,7 @@ import Videos from "./videos.js";
 import Press from "./press.js";
 import Bio from "./bio.js";
 import Music from "./music.js";
-const GalleryMobile = "https://storage.googleapis.com/ciyp-photos/epk/galleryMain-new.webp";
+const GalleryMobile = "https://storage.googleapis.com/ciyp-photos/epk/galleryMain-Mobile.webp";
 const GalleryMain = "https://storage.googleapis.com/ciyp-photos/epk/galleryMain.webp"
 
 export default function Epk() {
