@@ -23,6 +23,6 @@
     "http-proxy-middleware": "^2.0.6",
     "mongodb": "^5.6.0",
     "mongoose": "^7.3.0",
-    "nodemon": "^2.0.19"
+    "nodemon": "^3.1.0"
   }
 }
