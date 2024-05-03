@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Contact from "../../Reusable/Connect";
 import Shows from "../../Pages/Shows";
 const featuredArt =
-  "https://storage.googleapis.com/ciyp-photos/Album%20Art/Uphill%20-%20ARTWORK.webp";
+  "https://storage.googleapis.com/ciyp-photos/Album%20Art/Eurydice%20-%20ARTWORK.webp";
 
 export default function Default() {
   const [view, setView] = useState("shows");
@@ -30,7 +30,7 @@ export default function Default() {
           {/* FEATURED PANE */}
           <section className="relative flex flex-col justify-between items-center desktop:w-[45vw]">
             <p className="text-xl text-center text-black font-arvo p-1">
-              Uphill<br></br>
+              Eurydice<br></br>
               <span className="text-lg">Out Now!</span>
             </p>
             <img
