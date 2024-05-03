@@ -9,15 +9,20 @@
 ![heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
 
-Chocolate In Your Pocket's official webpage. Use it to connect with Chocolate, join our email list, or see a list of our upcoming shows. Keep an eye out for other improvements in the future. 
+Chocolate In Your Pocket's official webpage. Use it to connect with Chocolate, join our email list, or see a list of our upcoming shows. Keep an eye out for other improvements in the future.  
 
-
+## Changed in 5/3 update:
+- New Music
+  - Singles
+    - "Eurydice" 
+    - "Uphill"
+    - "Confetti"
+    - "Flatline"
+  - *melting. (rewrapped)*
+    - *melting.* Q&A
+    - Lyrics
+    - Photo/Video Gallery
+- improved video playback across the site
+------
 ## Usage: 
-There is no circumstance in which you may distribute or copy this code without my express written consent. You may contact me if you can think of a reason you may need it, but I will not make any promises on granting you permission. 
-
-### changes in v3:
-- melting. (rewrapped) release is live
-  - Q&A
-  - Lyrics
-  - Photo/Video Gallery
-- improved video playback on EPK page
+There is no circumstance in which you may distribute or copy this code without my express written consent. You may contact me if you can think of a reason you may need it, but I will not make any promises to grant permission.
