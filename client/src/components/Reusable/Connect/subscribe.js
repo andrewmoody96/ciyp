@@ -16,9 +16,14 @@ export default function Subscribe() {
               className="validate p-3 w-[90vw] desktop:w-[45vw]"
               noValidate
             >
-              <div id="mc_embed_signup_scroll" className="flex flex-col justify-center items-center">
-                <h2 className="text-2xl font-arvo text-center">Subscribe</h2>
-                <div className="indicates-required text-center mb-5">
+              <div
+                id="mc_embed_signup_scroll"
+                className="flex flex-col justify-center items-center"
+              >
+                <h2 className="text-xl font-arvo text-center">
+                  Let's keep in touch.
+                </h2>
+                <div className="indicates-required text-center mb-2">
                   <span className="asterisk text-[#B36551]">*</span> required
                 </div>
                 <div className="mc-field-group mb-2 flex justify-center items-center">
@@ -101,11 +106,10 @@ export default function Subscribe() {
                     rel="noreferrer"
                   >
                     <i
-                      className="fab fa-tiktok m-3 fa-4x hover:text-[#B36551]"
+                      className="fab fa-tiktok m-3 fa-2x hover:text-[#B36551]"
                       aria-hidden="true"
                     />
                   </a>
-                  <h4>TikTok</h4>
                 </div>
                 <div
                   id="instaContainer"
@@ -119,11 +123,10 @@ export default function Subscribe() {
                     rel="noreferrer"
                   >
                     <i
-                      className="fa fa-instagram m-3 fa-4x hover:text-[#B36551]"
+                      className="fa fa-instagram m-3 fa-2x hover:text-[#B36551]"
                       aria-hidden="true"
                     />
                   </a>
-                  <h4>Instagram</h4>
                 </div>
                 <div
                   id="fbContainer"
@@ -137,14 +140,13 @@ export default function Subscribe() {
                     rel="noreferrer"
                   >
                     <i
-                      className="fa fa-facebook m-3 fa-4x hover:text-[#B36551]"
+                      className="fa fa-facebook m-3 fa-2x hover:text-[#B36551]"
                       aria-hidden="true"
                     />
                   </a>
-                  <h4>Facebook</h4>
                 </div>
               </div>
-              <h4 className="text-xl flex justify-center m-4">
+              <h4 className="text-xl flex justify-center mx-4 my-2">
                 @chocolateinyourpocket
               </h4>
             </article>

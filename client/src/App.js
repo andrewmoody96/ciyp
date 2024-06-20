@@ -14,7 +14,7 @@ export default function App() {
         <div className="h-[75vh] w-[85vw] flex justify-center">
           <Routes className="overflow-y-auto">
             <Route path="/" element={<Home />} />
-            <Route path="/epk" element={<Epk />} />
+            <Route path="/about" element={<Epk />} />
             <Route path="/newmusic" element={<NewMusic />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
