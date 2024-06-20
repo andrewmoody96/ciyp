@@ -8,8 +8,28 @@ export default function Footer() {
     >
       <div className="logo-footer text-center mt-1 w-100">
         <div className="w-100 flex flex-row text-xs items-center justify-evenly">
-          &copy; 2024 CIYP
-          <div>
+          {/* &copy; 2024 CIYP */}
+          <div className="flex flex-row text-center items-center justify-center">
+            <a
+              aria-label="{null}"
+              href="https://open.spotify.com/artist/5DvIfRy1pnzSyggT6XLCbr"
+              title="Link to Spotify"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-[#B36551] text-base"
+            >
+              <i className="fa fa-spotify mx-4" aria-hidden="true" />
+            </a>
+            <a
+              aria-label="{null}"
+              href="https://music.apple.com/us/artist/chocolate-in-your-pocket/1437178872"
+              title="Link to Apple Music"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-[#B36551] text-base"
+            >
+              <i className="fab fa-apple mx-4" aria-hidden="true" />
+            </a>
             <a
               aria-label="{null}"
               href="https://www.tiktok.com/@chocolateinyourpocket?is_from_webapp=1&sender_device=pc"
@@ -18,7 +38,7 @@ export default function Footer() {
               rel="noreferrer"
               className="hover:text-[#B36551] text-base"
             >
-              <i className="fab fa-tiktok mx-3" aria-hidden="true" />
+              <i className="fab fa-tiktok mx-4" aria-hidden="true" />
             </a>
             <a
               aria-label="{null}"
@@ -28,7 +48,7 @@ export default function Footer() {
               rel="noreferrer"
               className="hover:text-[#B36551] text-base"
             >
-              <i className="fa fa-instagram mx-3" aria-hidden="true" />
+              <i className="fa fa-instagram mx-4" aria-hidden="true" />
             </a>
             <a
               aria-label="{null}"
@@ -38,18 +58,17 @@ export default function Footer() {
               rel="noreferrer"
               className="hover:text-[#B36551] text-base"
             >
-              <i className="fa fa-facebook mx-3" aria-hidden="true" />
+              <i className="fa fa-facebook mx-4" aria-hidden="true" />
+            </a>
+            <a
+              href="https://github.com/andrewmoody96"
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs hover:text-[#B36551]"
+            >
+              <i className="fa fa-github mx-4" aria-hidden="true" />
             </a>
           </div>
-          <a
-            href="https://github.com/andrewmoody96"
-            target="_blank"
-            rel="noreferrer"
-            className="text-xs hover:text-[#B36551]"
-          >
-            <i className="fa fa-github mx-[2px]" aria-hidden="true" />
-            A. Moody
-          </a>
         </div>
       </div>
       <div className="logo-footer w-100 flex flex-row justify-between pt-[5px]"></div>
