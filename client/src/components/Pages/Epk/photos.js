@@ -23,7 +23,7 @@ export default function Photos({ photos }) {
           rel="noreferrer"
           className="mb-2"
         >
-          <button className="m-2 mb-1 text-center text-white bg-auto bg-[#B36551]/90 font-arvo w-auto rounded-md text-sm p-1 hover:bg-[#262626]/90 drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]">
+          <button className="m-2 mb-1 text-center text-white bg-auto bg-[#B36551]/90 font-moda w-auto rounded-md text-sm p-1 hover:bg-[#262626]/90 drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]">
             View More on Instagram
           </button>
         </a>

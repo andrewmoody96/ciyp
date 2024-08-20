@@ -3,9 +3,9 @@ import React from "react";
 export default function Subscribe() {
   return (
     <>
-      <div className="flex flex-col justify-between items-center desktop:w-[45vw]">
+      <div className="flex flex-col justify-center items-center desktop:w-[45vw]">
         {/* EMAIL SIGNUP */}
-        <div className="flex flex-col bg-white/90 rounded-lg justify-center m-2">
+        <div className="flex flex-col bg-white/90 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.6)] justify-center m-2">
           <div className="rounded-lg bg-transparent">
             {/* TODO: onClick to display "Thanks for signing up." ACTION CAN CALL METHOD WHICH CAN PERFORM THE POST?*/}
             <form
@@ -20,21 +20,18 @@ export default function Subscribe() {
                 id="mc_embed_signup_scroll"
                 className="flex flex-col justify-center items-center"
               >
-                <h2 className="text-xl font-arvo text-center">
+                <h2 className="text-xl font-moda text-center">
                   Let's keep in touch.
                 </h2>
-                <div className="indicates-required text-center mb-2">
-                  <span className="asterisk text-[#B36551]">*</span> required
-                </div>
                 <div className="mc-field-group mb-2 flex justify-center items-center">
-                  <label htmlFor="mce-EMAIL" className="font-arvo text-sm">
+                  <label htmlFor="mce-EMAIL" className="font-moda text-sm">
                     Email Address
                     <span className="asterisk text-[#B36551]">*</span>
                   </label>
                   <input
                     type="email"
                     name="EMAIL"
-                    className="required email border-stone-500 border-2 rounded-md p-1 m-2 font-arvo"
+                    className="required email border-stone-500 border-2 rounded-md p-1 m-2 font-moda"
                     id="mce-EMAIL"
                     placeholder="email@email.com"
                   />
@@ -62,6 +59,9 @@ export default function Subscribe() {
                     defaultValue
                   />
                 </div>
+                <div className="font-moda indicates-required text-center text-xs mb-2">
+                  <span className="asterisk text-[#B36551]">*</span> required
+                </div>
                 <div className="optionalParent">
                   <div className="clear foot flex flex-row items-center justify-between w-full">
                     <input
@@ -69,7 +69,7 @@ export default function Subscribe() {
                       defaultValue="Subscribe"
                       name="subscribe"
                       id="mc-embedded-subscribe"
-                      className="button cursor-pointer font-arvo bg-[#B36551] rounded-lg p-2 text-white hover:bg-red-300 hover:text-black"
+                      className="button cursor-pointer font-moda bg-[#B36551] rounded-lg p-2 text-white hover:bg-red-300 hover:text-black"
                     />
                     <p className="brandingLogo">
                       <a
@@ -88,7 +88,7 @@ export default function Subscribe() {
               </div>
             </form>
           </div>
-          <div className="w-full font-arvo">
+          <div className="w-full font-moda">
             <article className="mx-2 h-auto">
               <div
                 id="socialContainer"

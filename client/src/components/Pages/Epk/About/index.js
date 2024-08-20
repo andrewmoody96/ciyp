@@ -38,7 +38,7 @@ export default function About() {
       return (
         <div
           id="memberButtons"
-          className="phone:flex phone:flex-col border-4 border-[#B36551]/90 rounded-lg bg-[#262626]/75 mt-5 tablet:flex-row gap-2 text-xl text-center text-white font-arvo justify-center max-w-[75vw]"
+          className="phone:flex phone:flex-col border-4 border-[#B36551]/90 rounded-lg bg-[#262626]/75 mt-5 tablet:flex-row gap-2 text-xl text-center text-white font-moda justify-center max-w-[75vw]"
         >
           <button onClick={() => setMember("rick")} className="m-5">
             <img
@@ -95,7 +95,7 @@ export default function About() {
         <div className="flex flex-col items-center">
           <button
             onClick={() => setMember("none")}
-            className="mt-1 text-center text-white bg-[#B36551]/90 font-arvo w-[30vw] rounded-md text-sm p-1 hover:bg-[#262626]"
+            className="mt-1 text-center text-white bg-[#B36551]/90 font-moda w-[30vw] rounded-md text-sm p-1 hover:bg-[#262626]"
           >
             All Members
           </button>
@@ -107,7 +107,7 @@ export default function About() {
         <div className="flex flex-col items-center">
           <button
             onClick={() => setMember("none")}
-            className="mt-1 text-center text-white bg-[#B36551]/90 font-arvo w-[30vw] rounded-md text-sm p-1 hover:bg-[#262626]"
+            className="mt-1 text-center text-white bg-[#B36551]/90 font-moda w-[30vw] rounded-md text-sm p-1 hover:bg-[#262626]"
           >
             All Members
           </button>
@@ -119,7 +119,7 @@ export default function About() {
         <div className="flex flex-col items-center">
           <button
             onClick={() => setMember("none")}
-            className="mt-1 text-center text-white bg-[#B36551]/90 font-arvo w-[30vw] rounded-md text-sm p-1 hover:bg-[#262626]"
+            className="mt-1 text-center text-white bg-[#B36551]/90 font-moda w-[30vw] rounded-md text-sm p-1 hover:bg-[#262626]"
           >
             All Members
           </button>
@@ -131,7 +131,7 @@ export default function About() {
         <div className="flex flex-col items-center">
           <button
             onClick={() => setMember("none")}
-            className="mt-1 text-center text-white bg-[#B36551]/90 font-arvo w-[30vw] rounded-md text-sm p-1 hover:bg-[#262626]"
+            className="mt-1 text-center text-white bg-[#B36551]/90 font-moda w-[30vw] rounded-md text-sm p-1 hover:bg-[#262626]"
           >
             All Members
           </button>
@@ -143,7 +143,7 @@ export default function About() {
         <div className="flex flex-col items-center">
           <button
             onClick={() => setMember("none")}
-            className="mt-1 text-center text-white bg-[#B36551]/90 font-arvo w-[30vw] rounded-md text-sm p-1 hover:bg-[#262626]"
+            className="mt-1 text-center text-white bg-[#B36551]/90 font-moda w-[30vw] rounded-md text-sm p-1 hover:bg-[#262626]"
           >
             All Members
           </button>
@@ -155,7 +155,7 @@ export default function About() {
         <div className="flex flex-col items-center">
           <button
             onClick={() => setMember("none")}
-            className="mt-1 text-center text-white bg-[#B36551]/90 font-arvo w-[30vw] rounded-md text-sm p-1 hover:bg-[#262626]"
+            className="mt-1 text-center text-white bg-[#B36551]/90 font-moda w-[30vw] rounded-md text-sm p-1 hover:bg-[#262626]"
           >
             All Members
           </button>
@@ -182,7 +182,7 @@ export default function About() {
         <div className="flex items-center justify-center">
           <Header />
         </div>
-        <h2 className="m-2 text-2xl text-center text-white font-arvo bg-[#262626]/75 mt-2 p-1 rounded-lg">
+        <h2 className="m-2 text-2xl text-center text-white font-moda bg-[#262626]/75 mt-2 p-1 rounded-lg">
           Made from the finest ingredients.
         </h2>
         <div className="drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]">

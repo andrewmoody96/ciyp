@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="fixed bottom-0 left-0 right-0 bg-[#262626]/75 text-white font-arvo p-2"
+      className="fixed bottom-0 left-0 right-0 bg-[#262626]/75 text-white font-moda p-2"
     >
       <div className="logo-footer text-center mt-1 w-100">
         <div className="w-100 flex flex-row text-xs items-center justify-evenly">

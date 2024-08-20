@@ -54,7 +54,7 @@ export default function Contact() {
     <>
       <div className="flex justify-center items-center">
         <button
-          className="p-2 mx-2 my-4 rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)] bg-[#B36551] border border-black font-arvo text-white text-sm text-center  w-[25vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black"
+          className="p-2 mx-2 my-4 rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)] bg-[#B36551] border border-black font-moda text-white text-sm text-center  w-[25vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black"
           onClick={() => {
             setView("subscribe");
           }}
@@ -62,7 +62,7 @@ export default function Contact() {
           Subscribe
         </button>
         <button
-          className="p-2 mx-2 my-4 rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)] bg-[#B36551] border border-black font-arvo text-white text-sm text-center w-[25vw] tablet:w-[25vs] desktop:w-[10vw] hover:bg-red-300 hover:text-black"
+          className="p-2 mx-2 my-4 rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)] bg-[#B36551] border border-black font-moda text-white text-sm text-center w-[25vw] tablet:w-[25vs] desktop:w-[10vw] hover:bg-red-300 hover:text-black"
           onClick={() => {
             setView("booking");
           }}

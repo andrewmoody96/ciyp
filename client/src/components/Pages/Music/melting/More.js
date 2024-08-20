@@ -57,8 +57,8 @@ export default function MoreProject1() {
       <ProjectArt />
       <div className="my-5 m-3 flex flex-col justify-center items-center">
         <div className="flex items-center justify-between mt-5">
-          <h1 className="text-4xl text-center text-black font-monoton mt-8 p-1 rounded-lg">
-            melting.
+          <h1 className="text-4xl text-center text-black font-moda mt-2 p-1 rounded-lg">
+            Chocolate In Your Pocket
           </h1>
         </div>
         <div className="desktop:mb-10 tablet:mt-4 h-[10vh] hidden tablet:block tablet:invisible">

@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="container h-[100vh] absolute top-0">{homeView()}</div>
+      <div className="container h-[100vh] absolute top-0 flex flex-col items-center">{homeView()}</div>
     </>
   );
 }

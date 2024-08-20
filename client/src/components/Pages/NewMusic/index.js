@@ -14,9 +14,9 @@ export default function NewMusic() {
       <div className="bg-[#f5eddc] fixed top-0 left-0 right-0 z-[-1] w-[100vw] h-[100%]"></div>
       <Header />
       <div className="relative top-0 mb-5 mx-3 flex flex-col justify-start items-center">
-        <h1 className="text-4xl text-center text-black font-monoton p-1">
+        <h1 className="text-4xl text-center text-black font-moda p-1">
           CIYP<br></br>
-          <span className="text-2xl text-center text-black font-arvo p-1">
+          <span className="text-2xl text-center text-black font-moda p-1">
             New Music
           </span>
         </h1>
@@ -38,7 +38,7 @@ export default function NewMusic() {
                 rel="noreferrer"
                 className="mx-1"
               >
-                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
+                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-moda text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
                   Listen
                 </button>
               </a>
@@ -73,7 +73,7 @@ export default function NewMusic() {
             <img
               alt="Featured Artwork - Click to Learn More"
               className="border rounded-lg desktop:w-[40vw]"
-              src={single3}
+              src={single4}
             ></img>
             <div className="flex justify-center items-center text-sm">
               <a
@@ -104,14 +104,14 @@ export default function NewMusic() {
                 rel="noreferrer"
                 className="mx-1"
               >
-                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
+                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-moda text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
                   Listen
                 </button>
               </a>
             </div>
           </section>
           <section className="m-2">
-            <p className="text-lg text-center text-black font-arvo p-1">
+            <p className="text-lg text-center text-black font-moda p-1">
               Flatline
             </p>
             <img
@@ -126,14 +126,14 @@ export default function NewMusic() {
                 rel="noreferrer"
                 className="mx-1"
               >
-                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
+                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-moda text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
                   Listen
                 </button>
               </a>
             </div>
           </section>
           <section className="m-2">
-            <p className="text-lg text-center text-black font-arvo p-1">
+            <p className="text-lg text-center text-black font-moda p-1">
               Back and Forth
             </p>
             <img
@@ -148,7 +148,7 @@ export default function NewMusic() {
                 rel="noreferrer"
                 className="mx-1"
               >
-                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
+                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-moda text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
                   Listen
                 </button>
               </a>
@@ -156,7 +156,7 @@ export default function NewMusic() {
           </section>
           {/* MELTING */}
           <section className="m-2">
-            <p className="text-lg text-center text-black font-arvo p-1">
+            <p className="text-lg text-center text-black font-moda p-1">
               melting. (rewrapped)
             </p>
             <img
@@ -171,7 +171,7 @@ export default function NewMusic() {
                 rel="noreferrer"
                 className="mx-1"
               >
-                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
+                <button className="p-1 mx-2 my-2 desktop:my-5 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-moda text-black text-sm desktop:text-lg text-center w-[28vw] tablet:w-[20vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
                   Listen
                 </button>
               </a>

@@ -111,7 +111,7 @@ export default function Shows() {
         <div className="flex flex-col justify-center items-center desktop:w-[45vw]">
           <div className="h-[10vh] invisible">dummy div for spacing</div>
           <div className="w-100 desktop:w-[45vw] bg-white/90 rounded-lg justify-center text-center">
-            <h3 className="flex flex-col w-auto font-arvo text-xl text-center visible p-2">
+            <h3 className="flex flex-col w-auto font-moda text-xl text-center visible p-2">
               No upcoming events.
             </h3>
           </div>

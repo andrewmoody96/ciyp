@@ -5,7 +5,7 @@ const headshotAndrew =
 export default function Andrew() {
   return (
     <div className="my-5 m-3 flex flex-col justify-center items-center">
-      <h2 className="m-2 text-3xl text-center text-white font-arvo bg-[#262626]/75 mt-2 p-1 rounded-lg">
+      <h2 className="m-2 text-3xl text-center text-white font-moda bg-[#262626]/75 mt-2 p-1 rounded-lg">
         Andrew
       </h2>
       <div className="aboutPic flex flex-col justify-center items-center tablet:flex-row tablet:justify-evenly mt-2 border-4 border-[#B36551]/90 rounded-lg bg-[#262626]/75 max-w-[75vw]">
@@ -16,7 +16,7 @@ export default function Andrew() {
             className="h-48 max-w-max rounded-lg mt-2 tablet:h-96 tablet:w-auto tablet:rounded-none tablet:rounded-l-lg tablet:mt-0"
           ></img>
         </div>
-        <article className="m-2 font-arvo text-white">
+        <article className="m-2 font-moda text-white">
           <p className="text-center tablet:text-left">
             <br></br>
             Andrew joined CIYP thinking he could get them into the sugar-free

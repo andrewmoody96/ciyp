@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Music() {
   return (
-    <article className="text-center mx-2 mb-1 font-arvo text-lg">
+    <article className="text-center mx-2 mb-1 font-moda text-lg">
       <p className="my-2 text-white">Featured Tracks</p>
       <iframe
         title="featuredTrack"
