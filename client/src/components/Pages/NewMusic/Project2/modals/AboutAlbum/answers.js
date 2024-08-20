@@ -12,10 +12,10 @@ export default function Answers({ qA }) {
           {qA.map((e) => {
             return (
               <div className="flex flex-col flex-wrap justify-start text-left mx-3 my-[0.3rem] desktop:my-[0.5rem]">
-                <h6 className="text-xs font-arvo font-bold text-black text-left">
+                <h6 className="text-xs font-moda font-bold text-black text-left">
                   {e.question}
                 </h6>
-                <p className="text-xs desktop:text-sm font-arvo text-black text-left">{e.cb}</p>
+                <p className="text-xs desktop:text-sm font-moda text-black text-left">{e.cb}</p>
               </div>
             );
           })}
@@ -29,10 +29,10 @@ export default function Answers({ qA }) {
           {qA.map((e) => {
             return (
               <div className="flex flex-col flex-wrap justify-start text-left mx-3 my-[0.3rem] desktop:my-[0.5rem]">
-                <h6 className="text-xs font-arvo font-bold text-black text-left">
+                <h6 className="text-xs font-moda font-bold text-black text-left">
                   {e.question}
                 </h6>
-                <p className="text-xs desktop:text-sm font-arvo text-black text-left">
+                <p className="text-xs desktop:text-sm font-moda text-black text-left">
                   {e.hs}
                 </p>
               </div>
@@ -48,10 +48,10 @@ export default function Answers({ qA }) {
           {qA.map((e) => {
             return (
               <div className="flex flex-col flex-wrap justify-start text-left mx-3 my-[0.3rem] desktop:my-[0.5rem]">
-                <h6 className="text-xs font-arvo font-bold text-black text-left">
+                <h6 className="text-xs font-moda font-bold text-black text-left">
                   {e.question}
                 </h6>
-                <p className="text-xs desktop:text-sm font-arvo text-black text-left">
+                <p className="text-xs desktop:text-sm font-moda text-black text-left">
                   {e.td}
                 </p>
               </div>
@@ -67,10 +67,10 @@ export default function Answers({ qA }) {
           {qA.map((e) => {
             return (
               <div className="flex flex-col flex-wrap justify-start text-left mx-3 my-[0.3rem] desktop:my-[0.5rem]">
-                <h6 className="text-xs font-arvo font-bold text-black text-left">
+                <h6 className="text-xs font-moda font-bold text-black text-left">
                   {e.question}
                 </h6>
-                <p className="text-xs desktop:text-sm font-arvo text-black text-left">
+                <p className="text-xs desktop:text-sm font-moda text-black text-left">
                   {e.am}
                 </p>
               </div>
@@ -86,10 +86,10 @@ export default function Answers({ qA }) {
           {qA.map((e) => {
             return (
               <div className="flex flex-col flex-wrap justify-start text-left mx-3 my-[0.3rem] desktop:my-[0.5rem]">
-                <h6 className="text-xs font-arvo font-bold text-black text-left">
+                <h6 className="text-xs font-moda font-bold text-black text-left">
                   {e.question}
                 </h6>
-                <p className="text-xs desktop:text-sm font-arvo text-black text-left">
+                <p className="text-xs desktop:text-sm font-moda text-black text-left">
                   {e.ae}
                 </p>
               </div>

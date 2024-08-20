@@ -11,7 +11,7 @@ export default function Project1() {
       <div className="my-5 m-3 flex flex-col justify-center items-center">
         <Header />
         <div className="flex items-center justify-between mt-5">
-          <h1 className="text-4xl text-center text-black font-bungee mt-2 p-1 rounded-lg">
+          <h1 className="text-4xl text-center text-black font-moda mt-2 p-1 rounded-lg">
             Chocolate In Your Pocket
           </h1>
         </div>
@@ -19,7 +19,7 @@ export default function Project1() {
           {/* Hello */}
         </div>
         <section className="flex flex-col justify-center items-center my-8">
-          <h1 className="text-xl text-center font-arvo mt-2 p-2 rounded-lg">
+          <h1 className="text-xl text-center font-moda mt-2 p-2 rounded-lg">
             <Project2Text />
           </h1>
           <Buttons />

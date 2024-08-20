@@ -10,11 +10,15 @@ module.exports = {
       fontFamily: {
         arvo: ["Arvo", "serif"],
         londrina: ["Londrina Outline", "cursive"],
-        rampart: ["Rampart One", "cursive"],
         rubik: ["Rubik Moonrocks", "cursive"],
         monoton: ["Monoton", "cursive"],
         bungee: ["Bungee Shade", "cursive"],
-        rocksalt: ["Rock Salt", "cursive"],
+        aoboshi: ["Aoboshi One", "serif"],
+        della: ["Della Respira", "serif"],
+        eagle: ["Eagle Lake", "serif"],
+        righteous: ["Righteous", "sans-serif"],
+        moda: ["Bodoni Moda", "serif"],
+        modaCaps: ["Bodoni Moda SC", "serif"]
       },
     },
     screens: {

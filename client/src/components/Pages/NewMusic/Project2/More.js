@@ -60,7 +60,7 @@ export default function MoreProject2() {
         {/* send showMenu to Header to get rid of button if modal is open */}
         <Header />
         <div className="flex items-center justify-between mt-5">
-          <h1 className="text-4xl text-center text-black font-bungee mt-2 p-1 rounded-lg">
+          <h1 className="text-4xl text-center text-black font-moda mt-2 p-1 rounded-lg">
             Chocolate In Your Pocket
           </h1>
         </div>
@@ -68,13 +68,13 @@ export default function MoreProject2() {
           {/* Hello */}
         </div>
         <div className="flex flex-col justify-center items-center my-8">
-          <section className="bg-white/60 border border-[#262626] rounded-lg flex-col justify-center items-center mt-10 mb-7 mx-auto text-center text-black font-arvo drop-shadow-[0_1px_5px_rgba(0,0,0,0.6)]">
-            <h1 className="text-xl text-center text-black font-arvo mt-2 p-2 rounded-lg">
+          <section className="bg-white/60 border border-[#262626] rounded-lg flex-col justify-center items-center mt-10 mb-7 mx-auto text-center text-black font-moda drop-shadow-[0_1px_5px_rgba(0,0,0,0.6)]">
+            <h1 className="text-xl text-center text-black font-moda mt-2 p-2 rounded-lg">
               View bonus features for Back To Life.<br></br>View lyrics,
               photos, and read stories below.
             </h1>
             <div className="grid desktop:flex justify-center items-center">
-              <button className="p-1 mx-2 my-6 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-md text-center h-[5vh] w-[30vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
+              <button className="p-1 mx-2 my-6 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-moda text-black text-sm desktop:text-md text-center h-[5vh] w-[30vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black">
                 <a
                   href="https://linktr.ee/chocolateinyourpocket"
                   target="_blank"
@@ -85,19 +85,19 @@ export default function MoreProject2() {
                 </a>
               </button>
               <button
-                className="p-1 mx-2 my-6 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-md text-center w-[30vw] tablet:w-[25vw] h-[5vh] desktop:w-[10vw] hover:bg-red-300 hover:text-black"
+                className="p-1 mx-2 my-6 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-moda text-black text-sm desktop:text-md text-center w-[30vw] tablet:w-[25vw] h-[5vh] desktop:w-[10vw] hover:bg-red-300 hover:text-black"
                 onClick={() => setOpen("openLyrics")}
               >
                 Lyric Book
               </button>
               <button
-                className="p-1 mx-2 my-6 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-md text-center h-[5vh] w-[30vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black"
+                className="p-1 mx-2 my-6 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-moda text-black text-sm desktop:text-md text-center h-[5vh] w-[30vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black"
                 onClick={() => setOpen("openQandA")}
               >
                 Q & A
               </button>
               <button
-                className="p-1 mx-2 my-6 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-arvo text-black text-sm desktop:text-md text-center h-[5vh] w-[30vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black"
+                className="p-1 mx-2 my-6 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,225,0.4)] bg-[#B36551] font-moda text-black text-sm desktop:text-md text-center h-[5vh] w-[30vw] tablet:w-[25vw] desktop:w-[10vw] hover:bg-red-300 hover:text-black"
                 onClick={() => setOpen("openPhotos")}
               >
                 Photos

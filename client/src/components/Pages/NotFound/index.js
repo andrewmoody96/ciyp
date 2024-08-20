@@ -10,8 +10,8 @@ export default function NotFound() {
         <div>
           <div className="text-white mb-10 bg-[#B36551]/90 rounded-lg drop-shadow-[0_1px_10px_rgba(0,0,0,1)]">
             <section className="p-2 text-center">
-              <h2 className="m-2 text-4xl font-arvo drop-shadow-[0_1px_2px_rgba(0,0,0,1)]">404: Not Found</h2>
-              <h3 className="text-xl font-arvo text-center drop-shadow-[0_1px_2px_rgba(0,0,0,1)]">
+              <h2 className="m-2 text-4xl font-moda drop-shadow-[0_1px_2px_rgba(0,0,0,1)]">404: Not Found</h2>
+              <h3 className="text-xl font-moda text-center drop-shadow-[0_1px_2px_rgba(0,0,0,1)]">
                 Welcome to Trace's Place. If you're here, you're not supposed to be.
                 Check your signal flow and try again.
               </h3>

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Bio() {
   return (
-    <article className="text-center mx-2 mb-1 font-arvo text-white">
+    <article className="text-center mx-2 mb-1 font-moda text-white">
       <br></br>
       Like a cold glass of water on a summer's day, Chocolate In Your Pocket
       provides a refreshing mix of rock, jazz, pop, and electronic to create a

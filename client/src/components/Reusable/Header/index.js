@@ -10,7 +10,7 @@ export default function Header() {
     <header>
       <nav className="navBar text-white">
         <button
-          className="text-lg font-arvo drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)] bg-[#262626] mb-5 p-[5px] rounded-b-lg hover:bg-[#B36551] hover:text-black"
+          className="text-lg font-moda drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)] bg-[#262626] mb-5 p-[5px] rounded-b-lg hover:bg-[#B36551] hover:text-black"
           onClick={handleToggle}
         >
           {navbarOpen ? `Close` : `Menu`}
@@ -20,10 +20,10 @@ export default function Header() {
             navbarOpen ? " showMenu" : " hideMenu"
           }`}
         >
-          <button className="font-arvo bg-[#B36551] mx-1 p-[5px] rounded-lg hover:bg-white hover:text-black my-3">
+          <button className="font-moda bg-[#B36551] mx-1 p-[5px] rounded-lg hover:bg-white hover:text-black my-3">
             <Link to="/">Home</Link>
           </button>
-          <button className="font-arvo bg-[#B36551] mx-1 p-[5px] rounded-lg hover:bg-white hover:text-black my-3">
+          <button className="font-moda bg-[#B36551] mx-1 p-[5px] rounded-lg hover:bg-white hover:text-black my-3">
             <Link to="/epk">EPK</Link>
           </button>
         </ul>

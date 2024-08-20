@@ -23,13 +23,13 @@ export default function SwiperNav() {
   return (
     <div className="swiperButtons">
       <button
-        className="modalButton font-arvo bg-[#e8B380] mx-2 p-[5px] text-xs hover:bg-black hover:text-white"
+        className="modalButton font-moda bg-[#e8B380] mx-2 p-[5px] text-xs hover:bg-black hover:text-white"
         onClick={() => prevPause()}
       >
         Prev
       </button>
       <button
-        className="modalButton font-arvo bg-[#e8B380] mx-2 p-[5px] text-xs hover:bg-black hover:text-white"
+        className="modalButton font-moda bg-[#e8B380] mx-2 p-[5px] text-xs hover:bg-black hover:text-white"
         onClick={() => nextPause()}
       >
         Next

@@ -15,7 +15,7 @@ export default function Song({ track }) {
 
   const renderSong = () => {
     return words.map((lyric) => (
-      <p className="flex flex-wrap text-xs desktop:text-sm font-arvo text-black text-center">
+      <p className="flex flex-wrap text-xs desktop:text-sm font-moda text-black text-center">
         {lyric}
       </p>
     ));

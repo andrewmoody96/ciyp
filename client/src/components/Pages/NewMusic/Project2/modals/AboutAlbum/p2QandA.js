@@ -57,7 +57,7 @@ export default function P1QandA({ toggleModal }) {
             />
             <div className="absolute top-0 bottom-0 left-0 right-0 z-[5] m-auto w-[100vw] tablet:w-[70vw] h-[5vh] text-black">
               {!isLoaded ? (
-                <p className="fixed top-[25vw] left-0 right-0 m-auto font-arvo text-3xl text-center">
+                <p className="fixed top-[25vw] left-0 right-0 m-auto font-moda text-3xl text-center">
                   loading...
                 </p>
               ) : (

@@ -47,7 +47,7 @@ export default function Epk() {
         <>
           <button
             onClick={() => setView("default")}
-            className="m-2 text-center text-white bg-[#262626]/90 font-arvo w-auto rounded-md text-xs p-1 hover:bg-[#B36551]/90"
+            className="m-2 text-center text-white bg-[#262626]/90 font-moda w-auto rounded-md text-xs p-1 hover:bg-[#B36551]/90"
           >
             back
           </button>
@@ -59,11 +59,11 @@ export default function Epk() {
         <>
           <button
             onClick={() => setView("default")}
-            className="m-2 text-center text-white bg-[#262626]/90 font-arvo w-auto rounded-md text-xs p-1 hover:bg-[#B36551]/90"
+            className="m-2 text-center text-white bg-[#262626]/90 font-moda w-auto rounded-md text-xs p-1 hover:bg-[#B36551]/90"
           >
             back
           </button>
-          <article className="rounded-lg text-center mx-2 mb-1 font-arvo text-lg">
+          <article className="rounded-lg text-center mx-2 mb-1 font-moda text-lg">
             {!isLoaded ? (
               <div className="text-white">Loading...</div>
             ) : (
@@ -79,11 +79,11 @@ export default function Epk() {
         <>
           <button
             onClick={() => setView("default")}
-            className="m-2 text-center text-white bg-auto bg-[#262626]/90 font-arvo w-auto rounded-md text-xs p-1 hover:bg-[#B36551]/90"
+            className="m-2 text-center text-white bg-auto bg-[#262626]/90 font-moda w-auto rounded-md text-xs p-1 hover:bg-[#B36551]/90"
           >
             back
           </button>
-          <article className="flex justify-center text-center mx-2 mb-1 font-arvo text-lg">
+          <article className="flex justify-center text-center mx-2 mb-1 font-moda text-lg">
             <Videos videos={movies} setMovies={setMovies} />
           </article>
         </>
@@ -93,11 +93,11 @@ export default function Epk() {
         <>
           <button
             onClick={() => setView("default")}
-            className="m-2 text-center text-white bg-[#262626]/90 font-arvo w-auto rounded-md text-xs p-1 hover:bg-[#B36551]/90"
+            className="m-2 text-center text-white bg-[#262626]/90 font-moda w-auto rounded-md text-xs p-1 hover:bg-[#B36551]/90"
           >
             back
           </button>
-          <article className="text-center mx-2 mb-1 font-arvo text-lg text-white">
+          <article className="text-center mx-2 mb-1 font-moda text-lg text-white">
             <Press />
           </article>
         </>
@@ -122,7 +122,7 @@ export default function Epk() {
           alt="the band"
           className="m-auto rounded-lg shadow-[0_20px_50px_rgba(255,255,255,0.1)] hidden tablet:h-[60vh] tablet:block"
         ></img>
-        <h1 className="absolute bottom-0 text-white text-center font-monoton m-2 text-3xl desktop:static desktop:m-auto">
+        <h1 className="absolute bottom-0 text-white text-center font-moda m-2 text-3xl desktop:static desktop:m-auto">
           Chocolate In Your Pocket
         </h1>
       </div>
@@ -130,36 +130,36 @@ export default function Epk() {
       <div className="flex justify-center tablet:justify-evenly mt-2">
         <button
           onClick={() => setView("default")}
-          className="m-2 text-center text-white bg-[#B36551] font-arvo tablet:w-[10vw] rounded-md text-xs tablet:text-sm p-2 hover:bg-[#262626]/70 drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
+          className="m-2 text-center text-white bg-[#B36551] font-moda tablet:w-[10vw] rounded-md text-xs tablet:text-sm p-2 hover:bg-[#262626]/70 drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
         >
           Bio
         </button>
         <button
           onClick={() => setView("music")}
-          className="m-2 text-center text-white bg-[#B36551] font-arvo tablet:w-[10vw] rounded-md text-xs tablet:text-sm p-2 hover:bg-[#262626] drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
+          className="m-2 text-center text-white bg-[#B36551] font-moda tablet:w-[10vw] rounded-md text-xs tablet:text-sm p-2 hover:bg-[#262626] drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
         >
           Music
         </button>
         <button
           onClick={() => setView("photos")}
-          className="m-2 text-center text-white bg-[#B36551] font-arvo tablet:w-[10vw] rounded-md text-xs tablet:text-sm p-2 hover:bg-[#262626]/70 drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
+          className="m-2 text-center text-white bg-[#B36551] font-moda tablet:w-[10vw] rounded-md text-xs tablet:text-sm p-2 hover:bg-[#262626]/70 drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
         >
           Photos
         </button>
         <button
           onClick={() => setView("videos")}
-          className="m-2 text-center text-white bg-[#B36551] font-arvo tablet:w-[10vw] rounded-md text-xs tablet:text-sm p-2 hover:bg-[#262626]/70 drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
+          className="m-2 text-center text-white bg-[#B36551] font-moda tablet:w-[10vw] rounded-md text-xs tablet:text-sm p-2 hover:bg-[#262626]/70 drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
         >
           Videos
         </button>
         <button
           onClick={() => setView("press")}
-          className="m-2 text-center text-white bg-[#B36551] font-arvo tablet:w-[10vw] rounded-md text-xs tablet:text-sm p-2 hover:bg-[#262626]/70 drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
+          className="m-2 text-center text-white bg-[#B36551] font-moda tablet:w-[10vw] rounded-md text-xs tablet:text-sm p-2 hover:bg-[#262626]/70 drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
         >
           Press
         </button>
       </div>
-      <div className="text-center mx-2 font-arvo">{changeView()}</div>
+      <div className="text-center mx-2 font-moda">{changeView()}</div>
       <div className="h-[10vh] tablet:h-[5vh] w-[100vw] invisible"></div>
     </div>
   );
