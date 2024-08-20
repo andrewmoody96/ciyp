@@ -11,18 +11,6 @@
 
 Chocolate In Your Pocket's official webpage. Use it to connect with Chocolate, join our email list, or see a list of our upcoming shows. Keep an eye out for other improvements in the future.  
 
-## Changed in 5/3 update:
-- New Music
-  - Singles
-    - "Eurydice" 
-    - "Uphill"
-    - "Confetti"
-    - "Flatline"
-  - *melting. (rewrapped)*
-    - *melting.* Q&A
-    - Lyrics
-    - Photo/Video Gallery
-- improved video playback across the site
 ------
 ## Usage: 
 There is no circumstance in which you may distribute or copy this code without my express written consent. You may contact me if you can think of a reason you may need it, but I will not make any promises to grant permission.
