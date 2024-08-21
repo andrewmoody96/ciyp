@@ -43,5 +43,8 @@ This template comes with [Tailwind CSS](https://tailwindcss.com/) already config
 _____________
 
 ### Moody's Issues
-- [ ] use Environment Variables for FA Link
-- [ ] tweak CSS/Tailwind Config file(s)
+- [x] tweak CSS/Tailwind Config file(s) to build
+- [ ] fix losing all CSS after building (styles work in dev but not the build)
+- [ ] investigate useState equivalent in Remix for modals, etc. 
+- [ ] learn how to declare props to get rid of lint messages
+- [ ] change to TypeScript if necessary

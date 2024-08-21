@@ -7,10 +7,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import Footer from "./Reusable/Footer";
-import appStylesHref from "../app/styles.css";
+const styles = "../app/styles.css";
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: appStylesHref },
+  { rel: "stylesheet", href: styles },
   {
     rel: "stylesheet",
     href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
