@@ -2,8 +2,8 @@
   "name": "ciyp",
   "version": "3.0.0",
   "engines": {
-    "node": "19.5.0",
-    "npm": "9.6.7"
+    "node": ">=19.5.0",
+    "npm": ">=9.6.7"
   },
   "description": "The Official Website of Chocolate in Your Pocket",
   "main": "index.js",
