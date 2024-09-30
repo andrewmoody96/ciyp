@@ -32,7 +32,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
-    "body-parser": "^1.20.1",
+    "body-parser": "^1.20.3",
     "dayjs": "^1.11.9",
     "dotenv": "^16.0.3",
     "express-minify": "^1.0.0",
