@@ -7,8 +7,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import Footer from "./Reusable/Footer";
-const styles = "../app/styles.css";
 
+import styles from "./styles.css";
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
   {
@@ -35,7 +35,10 @@ export default function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
-        <script src="https://kit.fontawesome.com/8c50fad431.js" crossOrigin="anonymous"></script>
+        <script
+          src="https://kit.fontawesome.com/8c50fad431.js"
+          crossOrigin="anonymous"
+        ></script>
       </head>
       <body>
         <Outlet />
