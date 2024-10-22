@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         static:
-          "url('https://storage.googleapis.com/ciyp-photos/tvStatic.gif')",
+          "url('https://storage.googleapis.com/ciyp-photos/tvStatic.webp')",
       },
       fontFamily: {
         arvo: ["Arvo", "serif"],

@@ -23,10 +23,6 @@ export default function Nav() {
           </button>
           {/* Scroll to Shows Section */}
           <button className="font-moda m-2 p-[5px] rounded-lg hover:text-[#B36551]">
-            <Link to="/about">About</Link>
-          </button>
-          {/* Bio, link to EPK, Member Info */}
-          <button className="font-moda m-2 p-[5px] rounded-lg hover:text-[#B36551]">
             <Link to="/contact">Booking</Link>
           </button>
           {/* Email Booking, Instagram Link */}

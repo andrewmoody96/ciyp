@@ -47,5 +47,8 @@
     "react-scripts": "^5.0.1",
     "swiper": "^9.2.2",
     "web-vitals": "^3.1.0"
+  },
+  "devDependencies": {
+    "compression-webpack-plugin": "^11.1.0"
   }
 }

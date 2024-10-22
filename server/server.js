@@ -11,12 +11,12 @@ const mongoose = require("mongoose");
 // const uri = process.env.ATLAS_CONNECTION;
 // const client = new MongoClient(uri);
 
-// const compression = require("compression");
+const compression = require("compression");
 // const minify = require("express-minify");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// app.use(compression({ level: 3 }));
+app.use(compression({ level: 3 }));
 // app.use(minify());
 
 // MongoDB for Lyric Retrieval
