@@ -72,6 +72,7 @@ export default function Footer() {
             </a>
             <a
               href="https://github.com/andrewmoody96"
+              title="Link to GitHub"
               target="_blank"
               rel="noreferrer"
               className="text-xs hover:text-[#B36551]"

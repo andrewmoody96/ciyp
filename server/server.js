@@ -13,12 +13,10 @@ const path = require("path");
 
 const compression = require("compression");
 // const minify = require("express-minify");
-// const compression = require("compression");
-// const minify = require("express-minify");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// app.use(compression({ level: 3 }));
+app.use(compression({ level: 3 }));
 // app.use(minify());
 
 // MongoDB for Lyric Retrieval

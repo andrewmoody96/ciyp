@@ -23,10 +23,10 @@ export default function Subscribe() {
                 <h2 className="text-xl font-moda text-center">
                   Let's keep in touch.
                 </h2>
-                <div className="mc-field-group mb-2 flex justify-center items-center">
+                <div className="mc-field-group flex justify-center items-center">
                   <label htmlFor="mce-EMAIL" className="font-moda text-sm">
                     Email Address
-                    <span className="asterisk text-[#B36551]">*</span>
+                    <span className="asterisk text-[#C89184]">*</span>
                   </label>
                   <input
                     type="email"
@@ -60,7 +60,7 @@ export default function Subscribe() {
                   />
                 </div>
                 <div className="font-moda indicates-required text-center text-xs mb-2">
-                  <span className="asterisk text-[#B36551]">*</span> required
+                  <span className="asterisk text-[#C89184]">*</span> required
                 </div>
                 <div className="optionalParent">
                   <div className="clear foot flex flex-row items-center justify-between w-full">
@@ -69,7 +69,7 @@ export default function Subscribe() {
                       defaultValue="Subscribe"
                       name="subscribe"
                       id="mc-embedded-subscribe"
-                      className="button cursor-pointer font-moda bg-[#B36551] rounded-lg p-2 text-white hover:bg-red-300 hover:text-black"
+                      className="button cursor-pointer font-moda bg-[#C89184] rounded-lg p-2 text-white hover:bg-red-300 hover:text-black"
                     />
                     <p className="brandingLogo">
                       <a
@@ -89,14 +89,14 @@ export default function Subscribe() {
             </form>
           </div>
           <div className="w-full font-moda">
-            <article className="mx-2 h-auto">
+            <article className="mx-1 h-auto">
               <div
                 id="socialContainer"
-                className="flex flex-row justify-center"
+                className="flex flex-row justify-center text-xs"
               >
                 <div
                   id="tiktokContainer"
-                  className="flex flex-col items-center justify-center mx-2"
+                  className="flex flex-col items-center justify-center mx-1"
                 >
                   <a
                     aria-label="{null}"
@@ -106,14 +106,14 @@ export default function Subscribe() {
                     rel="noreferrer"
                   >
                     <i
-                      className="fab fa-tiktok m-3 fa-2x hover:text-[#B36551]"
+                      className="fab fa-tiktok m-2 fa-2x hover:text-[#C89184]"
                       aria-hidden="true"
                     />
                   </a>
                 </div>
                 <div
                   id="instaContainer"
-                  className="flex flex-col items-center justify-center mx-2"
+                  className="flex flex-col items-center justify-center mx-1"
                 >
                   <a
                     aria-label="{null}"
@@ -123,14 +123,14 @@ export default function Subscribe() {
                     rel="noreferrer"
                   >
                     <i
-                      className="fa fa-instagram m-3 fa-2x hover:text-[#B36551]"
+                      className="fa fa-instagram m-2 fa-2x hover:text-[#C89184]"
                       aria-hidden="true"
                     />
                   </a>
                 </div>
                 <div
                   id="fbContainer"
-                  className="flex flex-col items-center justify-center mx-2"
+                  className="flex flex-col items-center justify-center mx-1"
                 >
                   <a
                     aria-label="{null}"
@@ -140,15 +140,18 @@ export default function Subscribe() {
                     rel="noreferrer"
                   >
                     <i
-                      className="fa fa-facebook m-3 fa-2x hover:text-[#B36551]"
+                      className="fa fa-facebook m-2 fa-2x hover:text-[#C89184]"
                       aria-hidden="true"
                     />
                   </a>
                 </div>
-              </div>
-              <h4 className="text-xl flex justify-center mx-4 my-2">
+              <h3 className="text-sm flex justify-center items-center">
                 @chocolateinyourpocket
-              </h4>
+              </h3>
+              </div>
+              <br></br>
+              <p className="text-sm text-center flex justify-center mx-4 mb-2">
+                Booking: &nbsp;<a href="mailto:ciypmanagement@gmail.com" target="_blank" rel="noreferrer">ciypmanagement@gmail.com</a></p>
             </article>
           </div>
         </div>

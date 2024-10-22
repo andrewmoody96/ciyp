@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Reusable/Footer";
 import Home from "./components/Pages/Home";
 import NotFound from "./components/Pages/NotFound";
-import Epk from "./components/Pages/Epk";
+// import Epk from "./components/Pages/Epk";
 import NewMusic from "./components/Pages/NewMusic";
 
 export default function App() {
