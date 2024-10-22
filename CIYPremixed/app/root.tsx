@@ -7,23 +7,27 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import Footer from "./Reusable/Footer";
+import styles from "../styles.css";
 
-import styles from "./styles.css";
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
+  { type: "module", rel: "stylesheet", href: styles },
   {
-    rel: "stylesheet",
+    type: "module", rel: "stylesheet",
     href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
   },
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
+  { type: "module", rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
-    rel: "preconnect",
+    type: "module", rel: "preconnect",
     href: "https://fonts.gstatic.com",
     crossOrigin: "anonymous",
   },
   {
-    rel: "stylesheet",
+    type: "module", rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Monoton&family=Bungee+Shade&display=swap",
+  },
+  {
+    type: "module", rel: "stylesheet",
+    href: styles,
   },
 ];
 
@@ -36,6 +40,7 @@ export default function App() {
         <Meta />
         <Links />
         <script
+          type="module"
           src="https://kit.fontawesome.com/8c50fad431.js"
           crossOrigin="anonymous"
         ></script>

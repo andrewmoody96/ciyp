@@ -25,7 +25,6 @@
     "isbot": "^4.1.0",
     "lodash": "^4.17.21",
     "morgan": "^1.10.0",
-    "npm": "^10.8.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "swiper": "^9.2.2"
@@ -46,7 +45,8 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "tailwindcss": "^3.4.13",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.1.8",
     "typescript": "^5.1.6",
     "vite": "^5.4.8",
     "vite-tsconfig-paths": "^4.3.2"
