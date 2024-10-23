@@ -11,15 +11,15 @@ export default function Event({ description }) {
       <div className="m-2 px-2 rounded-2xl shadow-[inset_0_1px_5px_0_rgb(0,0,0);] items-center bg-[#B36551]/90 border-4 border-black">
         <span className="p-2 rounded-md flex flex-col" href="">
           <div className="flex flex-col justify-center">
-            <h3 className="m-1 text-center text-lg tablet:text-lg text-white font-moda">
+            <h2 className="m-1 text-center text-lg tablet:text-lg text-white font-moda">
               {venue}
-            </h3>
-            <h3 className="m-1 text-center text-md text-white font-moda">
+            </h2>
+            <h2 className="m-1 text-center text-md text-white font-moda">
               {date} at {time}
-            </h3>
-            <h3 className="m-1 text-center text-sm text-white font-moda">
+            </h2>
+            <h2 className="m-1 text-center text-sm text-white font-moda">
               {location}
-            </h3>
+            </h2>
           </div>
         </span>
       </div>

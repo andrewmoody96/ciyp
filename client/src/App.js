@@ -4,8 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Reusable/Footer";
 import Home from "./components/Pages/Home";
 import NotFound from "./components/Pages/NotFound";
-// import Epk from "./components/Pages/Epk";
-import NewMusic from "./components/Pages/NewMusic";
+// import Music from "./components/Pages/Music";
 
 export default function App() {
   return (
@@ -14,8 +13,8 @@ export default function App() {
         <div className="h-[75vh] w-[85vw] flex justify-center">
           <Routes className="overflow-y-auto">
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<Epk />} />
-            <Route path="/newmusic" element={<NewMusic />} />
+            <Route path="/music" element={<NotFound />} />
+            <Route path="/backtolife" element={<NotFound />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </div>

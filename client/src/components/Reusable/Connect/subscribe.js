@@ -77,6 +77,8 @@ export default function Subscribe() {
                         title="Mailchimp - email marketing made easy and fun"
                       >
                         <img
+                          width="220px"
+                          height="42px"
                           src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"
                           className="h-5"
                           alt="Mailchimp Logo"
@@ -145,13 +147,21 @@ export default function Subscribe() {
                     />
                   </a>
                 </div>
-              <h3 className="text-sm flex justify-center items-center">
-                @chocolateinyourpocket
-              </h3>
+                <h3 className="text-sm flex justify-center items-center">
+                  @chocolateinyourpocket
+                </h3>
               </div>
               <br></br>
               <p className="text-sm text-center flex justify-center mx-4 mb-2">
-                Booking: &nbsp;<a href="mailto:ciypmanagement@gmail.com" target="_blank" rel="noreferrer">ciypmanagement@gmail.com</a></p>
+                Booking: &nbsp;
+                <a
+                  href="mailto:ciypmanagement@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  ciypmanagement@gmail.com
+                </a>
+              </p>
             </article>
           </div>
         </div>

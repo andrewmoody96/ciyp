@@ -4,7 +4,7 @@ import HomeVideo from "./homeVideo.js";
 import Nav from "../../Reusable/Menu/nav.js";
 import Signup from "../../Reusable/Connect/signupForm.js";
 import Shows from "../../Pages/Shows";
-const featuredArt = "https://storage.googleapis.com/ciyp-photos/Album%20Art/Album%20Art_B2LArt.webp"
+import featuredArt from "./featuredArt.webp";
 
 export default function Default() {
   return (
@@ -18,6 +18,9 @@ export default function Default() {
       >
         <div className="relative w-[85vw] tablet:w-[75vw] desktop:w-[50vw] flex justify-center items-center">
           <img
+            width="2044"
+            height="2044"
+            fetchpriority="high"
             alt="Back To Life Artwork"
             className="rounded-lg border border-white drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
             src={featuredArt}
@@ -28,27 +31,17 @@ export default function Default() {
                 href="https://linktr.ee/chocolateinyourpocket"
                 target="_blank"
                 rel="noreferrer"
-                className="mx-1"
+                className="mx-auto p-2"
               >
                 Stream
               </a>
             </button>
-            {/* <button className="p-1 mx-2 rounded-xl font-moda text-white text-base text-center w-[20vw] tablet:w-[10vw] desktop:w-[15vw] invisible">
-              <a
-                href="/"
-                target="_blank"
-                rel="noreferrer"
-                className="mx-1"
-              >
-                
-              </a>
-            </button> */}
             <button className="p-1 mx-2 rounded-xl bg-[#B36551] border border-white font-moda text-white text-base text-center w-[20vw] tablet:w-[25vw] desktop:w-[15vw] hover:bg-red-300 hover:text-black">
               <a
                 href="https://linktr.ee/chocolateinyourpocket"
                 target="_blank"
                 rel="noreferrer"
-                className="mx-1"
+                className="mx-auto p-2"
               >
                 Bonus
               </a>
