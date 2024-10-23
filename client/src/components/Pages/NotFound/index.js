@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import goBack from "./goBack.jpeg";
+import goBack from "./goBack.webp";
 
 export default function NotFound() {
   return (
