@@ -11,21 +11,23 @@ const BOOKCLUB = process.env.REACT_APP_BOOKCLUB;
 
 let dateToFormat = "";
 let eventLocation = "";
+let ogURL = null;
 let name = "";
 let date = null;
 let time = null;
 let state = ``;
 let location = null;
+let url = null;
 
 // State Formatter
-function stateCheck(stateZIP) {
+const stateCheck = (stateZIP) => {
   let stateArr = stateZIP.split(" ");
   state = `${stateArr[0]}${stateArr[1]}`;
   return state;
-}
+};
 
 // Address Formatter
-function addressCheck(address) {
+const addressCheck = (address) => {
   let commas = address.split(",");
   if (address.includes(BOOKCLUB)) {
     if (commas.length > 4) {
@@ -60,7 +62,41 @@ function addressCheck(address) {
       return location;
     }
   }
-}
+};
+
+// Event Renderer - renders based on presence of event URL
+const eventLoader = (url) => {
+  console.log("STARTED: eventLoader()");
+  if (url === null) {
+    console.log("NULL");
+    console.log(url);
+    return (
+      <Event className="w-100" description={[date, name, time, location]} />
+    );
+  } else {
+    console.log("NOT NULL");
+    console.log(url);
+    return (
+      <Event
+        className="w-100"
+        description={[date, name, time, location, url]}
+      />
+    );
+  }
+};
+
+// URL Formatter
+const eventLinkFormatter = (string) => {
+  if (string !== undefined) {
+    let ogLink = string.split('"');
+    url = ogLink[1];
+    // console.log("IF: returning URL for this event");
+  } else {
+    url = null;
+    // console.log("ELSE: no URL for this event");
+  }
+  return url;
+};
 
 export default function Shows() {
   const [events, setEvents] = useState([]);
@@ -129,12 +165,12 @@ export default function Shows() {
                   {(time = moment(dateToFormat).format("LT"))}
                   {(eventLocation = `${event.location}`)}
                   {(location = `${addressCheck(eventLocation)}`)};
+                  {/* LINK RENDERING */}
+                  {(ogURL = event.description)}
+                  {(url = `${eventLinkFormatter(ogURL)}`)}
                 </div>
-                <Event
-                  className="w-100"
-                  description={[date, name, time, location]}
-                />
               </div>
+              {eventLoader(url)}
             </div>
           ))}
         </div>

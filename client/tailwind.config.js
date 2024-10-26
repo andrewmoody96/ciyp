@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        static: "url('/src/components/Reusable/tvStatic.webm')",
+        static: "url('/src/components/Reusable/tvStatic.gif')",
       },
       fontFamily: {
-        arvo: ["Arvo", "serif"],
+        // arvo: ["Arvo", "serif"],
         monoton: ["Monoton", "cursive"],
         moda: ["Bodoni Moda", "serif"],
         modaCaps: ["Bodoni Moda SC", "serif"],

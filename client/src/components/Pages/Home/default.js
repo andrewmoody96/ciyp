@@ -67,7 +67,7 @@ export default function Default() {
           <div className="overflow-x-scroll">{<Shows />}</div>
         </section>
         <div
-          id="signup"
+          id="subscribe"
           className="h-[8vh] tablet:h-[5vh] w-[100vw] invisible"
         ></div>
         <section className="flex flex-col justify-center items-center w-[97vw] desktop:w-[45vw]">
