@@ -66,10 +66,8 @@ const addressCheck = (address) => {
 
 // Event Renderer - renders based on presence of event URL
 const eventLoader = (url) => {
-  console.log("STARTED: eventLoader()");
-  if (url === null) {
+  if (url === "null") {
     console.log("NULL");
-    console.log(url);
     return (
       <Event className="w-100" description={[date, name, time, location]} />
     );
@@ -90,10 +88,8 @@ const eventLinkFormatter = (string) => {
   if (string !== undefined) {
     let ogLink = string.split('"');
     url = ogLink[1];
-    // console.log("IF: returning URL for this event");
   } else {
     url = null;
-    // console.log("ELSE: no URL for this event");
   }
   return url;
 };
