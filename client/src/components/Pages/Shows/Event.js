@@ -5,10 +5,9 @@ export default function Event({ description }) {
   let venue = description[1];
   let time = description[2];
   let location = description[3];
-  let url = null;
-  if (description.length < 4) {
-    url = description[4];
-  }
+  let url = description[4];
+  let length = description.length;
+
   console.log(description);
 
   return (
@@ -25,13 +24,18 @@ export default function Event({ description }) {
             <h2 className="m-1 text-center text-sm text-white font-moda">
               {location}
             </h2>
-            {url !== null && (
-              <h2 className="m-1 text-center text-md text-white font-moda">
-                <a target="_blank" rel="noreferrer" href={url}>
-                  TICKETS
+            {length === 5 ? (
+              <h2 className="m-1 text-center text-md text-black font-moda">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={url}
+                  className="hover:text-white hover:underline"
+                >
+                  &#127903; BUY TICKETS
                 </a>
               </h2>
-            )}
+            ) : null}
           </div>
         </span>
       </div>
