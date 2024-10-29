@@ -1,7 +1,6 @@
 import React from "react";
 // components
 import HomeVideo from "./homeVideo.js";
-import Nav from "../../Reusable/Menu/nav.js";
 import Signup from "../../Reusable/Connect/signupForm.js";
 import Shows from "../../Pages/Shows";
 import featuredArt from "./featuredArt.webp";
@@ -10,7 +9,6 @@ export default function Default() {
   return (
     <>
       <HomeVideo />
-      <Nav />
       <div className="h-[100px] my-10 invisible">dummy div</div>
       <div
         className="my-5 m-3 flex flex-col 
@@ -18,11 +16,11 @@ export default function Default() {
       >
         <div className="relative w-[85vw] tablet:w-[75vw] desktop:w-[50vw] flex justify-center items-center">
           <img
-            width="2044"
-            height="2044"
-            fetchpriority="high"
+            width="1200"
+            height="1200"
+            fetchpriority="high"          
             alt="Back To Life Artwork"
-            className="rounded-lg border border-white drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
+            className="rounded-lg border-2 border-[#B36551] drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
             src={featuredArt}
           ></img>
           <div className="absolute bottom-[-5%]">

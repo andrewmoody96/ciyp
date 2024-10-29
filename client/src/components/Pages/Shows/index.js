@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import moment from "moment-timezone";
 import Event from "./Event";
-
-// REPLACE MOMENT WITH DAYJS
-// import dayjs from "dayjs";
-// var isSameOrAfter = require("dayjs/plugin/isSameOrAfter");
-// dayjs.extend(isSameOrAfter);
+import dayjs from "dayjs";
+import utc from 'dayjs/plugin/utc'
+import localizedFormat from 'dayjs/plugin/localizedFormat'
+import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
+dayjs.extend(localizedFormat)
+dayjs.extend(utc);
+dayjs.extend(isSameOrAfter);
 
 const BOOKCLUB = process.env.REACT_APP_BOOKCLUB;
 
@@ -114,12 +115,12 @@ export default function Shows() {
           const events = Object.keys(eventObj).map((key) => eventObj[key]);
 
           let upcoming = [];
-          let getNow = moment.utc().toISOString();
+          let getNow = dayjs.utc().toISOString()
           let now = getNow.slice(".");
 
           events.forEach((event) => {
-            let end = moment(event.end.dateTime).toISOString();
-            let compare = moment(now).isAfter(end);
+            let end = dayjs(event.end.dateTime).toISOString();
+            let compare = dayjs(now).isAfter(end);
 
             if (compare === false) {
               upcoming.push(event);
@@ -157,8 +158,8 @@ export default function Shows() {
                 <div id="hiddenJS" className="hidden">
                   {(dateToFormat = `${event.start.dateTime}`)}
                   {(name = event.summary)}
-                  {(date = moment(dateToFormat).format("M/D"))}
-                  {(time = moment(dateToFormat).format("LT"))}
+                  {(date = dayjs(dateToFormat).format("M/D"))}
+                  {(time = dayjs(dateToFormat).format("LT"))}
                   {(eventLocation = `${event.location}`)}
                   {(location = `${addressCheck(eventLocation)}`)};
                   {/* LINK RENDERING */}
