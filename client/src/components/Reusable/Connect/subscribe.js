@@ -5,7 +5,7 @@ export default function Subscribe() {
     <>
       <div className="flex flex-col justify-center items-center desktop:w-[45vw]">
         {/* EMAIL SIGNUP */}
-        <div className="flex flex-col bg-white/90 border border-black rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.6)] justify-center m-2">
+        <div className="flex flex-col bg-white/90 border-2 border-[#B36551] rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.6)] justify-center m-2">
           <div className="rounded-lg bg-transparent">
             {/* TODO: onClick to display "Thanks for signing up." ACTION CAN CALL METHOD WHICH CAN PERFORM THE POST?*/}
             <form
@@ -34,6 +34,7 @@ export default function Subscribe() {
                     className="required email border-stone-500 border-2 rounded-md p-1 m-2 font-moda"
                     id="mce-EMAIL"
                     placeholder="email@email.com"
+                    autocomplete="off"
                   />
                 </div>
                 <div
