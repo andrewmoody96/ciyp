@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { addressCheck, eventLinkFormatter } from "./formatters";
 import Event from "./Event";
 import dayjs from "dayjs";
 import utc from 'dayjs/plugin/utc'
@@ -8,62 +9,14 @@ dayjs.extend(localizedFormat)
 dayjs.extend(utc);
 dayjs.extend(isSameOrAfter);
 
-const BOOKCLUB = process.env.REACT_APP_BOOKCLUB;
-
 let dateToFormat = "";
 let eventLocation = "";
 let ogURL = null;
 let name = "";
 let date = null;
 let time = null;
-let state = ``;
 let location = null;
 let url = null;
-
-// State Formatter
-const stateCheck = (stateZIP) => {
-  let stateArr = stateZIP.split(" ");
-  state = `${stateArr[0]}${stateArr[1]}`;
-  return state;
-};
-
-// Address Formatter
-const addressCheck = (address) => {
-  let commas = address.split(",");
-  if (address.includes(BOOKCLUB)) {
-    if (commas.length > 4) {
-      commas.shift();
-      let city = `${commas[1]},`;
-      let stateZIP = `${commas[2]}`;
-      stateCheck(stateZIP);
-      let location = `${city} ${state} - DM for Address`;
-      return location;
-    } else {
-      let city = `${commas[1]},`;
-      let stateZIP = `${commas[2]}`;
-      stateCheck(stateZIP);
-      let location = `${city} ${state} - DM for Address`;
-      return location;
-    }
-  } else {
-    if (commas.length > 4) {
-      commas.shift();
-      let street = `${commas[0]},`;
-      let city = `${commas[1]},`;
-      let stateZIP = `${commas[2]}`;
-      stateCheck(stateZIP);
-      let location = `${street} ${city} ${state}`;
-      return location;
-    } else {
-      let street = `${commas[0]},`;
-      let city = `${commas[1]},`;
-      let stateZIP = `${commas[2]}`;
-      stateCheck(stateZIP);
-      let location = `${street} ${city} ${state}`;
-      return location;
-    }
-  }
-};
 
 // Event Renderer - renders based on presence of event URL
 const eventLoader = (url) => {
@@ -82,17 +35,6 @@ const eventLoader = (url) => {
       />
     );
   }
-};
-
-// URL Formatter
-const eventLinkFormatter = (string) => {
-  if (string !== undefined) {
-    let ogLink = string.split('"');
-    url = ogLink[1];
-  } else {
-    url = null;
-  }
-  return url;
 };
 
 export default function Shows() {

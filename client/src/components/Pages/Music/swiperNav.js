@@ -1,11 +1,23 @@
 import React, { useState } from "react";
 import { useSwiper } from "swiper/react";
 
-export default function SwiperNav() {
+export default function SwiperNav({ projects }) {
   const swiper = useSwiper();
   const [noPrev, setNoPrev] = useState(true);
   const [noNext, setNoNext] = useState(false);
 
+  let releases = projects;
+
+  let links = [];
+  let streaming = [];
+  let bonus = [];
+  releases.forEach((release) => {
+    streaming.push(release.streaming);
+    bonus.push(release.bonus);
+  });
+
+  links.push(streaming, bonus)
+  console.log(links);
   const prev = () => {
     swiper.slidePrev();
     if (swiper.activeIndex === 1) {
@@ -14,7 +26,6 @@ export default function SwiperNav() {
       setNoNext(false);
       setNoPrev(true);
       console.log("Beginning of Slideshow");
-      
     }
   };
 
@@ -24,7 +35,7 @@ export default function SwiperNav() {
       setNoPrev(false);
     } else if (swiper.activeIndex === 2) {
       setNoNext(true);
-      console.log("End of Slideshow")
+      console.log("End of Slideshow");
     }
   };
 

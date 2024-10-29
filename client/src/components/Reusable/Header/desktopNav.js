@@ -22,11 +22,10 @@ export default function DesktopNav() {
           {/* Subscribe to Email, Social Link */}
           <button className="m-2 p-[5px] rounded-lg hover:text-[#B36551]">
             <Link
-              target="_blank"
               rel="noreferrer"
-              to="https://linktr.ee/chocolateinyourpocket"
+              to="/music"
             >
-              Listen
+              Music
             </Link>
           </button>
           {/* Link to LinkTree */}
