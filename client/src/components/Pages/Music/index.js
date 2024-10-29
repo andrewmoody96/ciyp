@@ -9,21 +9,21 @@ import "swiper/css/navigation";
 const projects = [
   {
     title: "Back To Life",
-    artURL:
-      "https://storage.googleapis.com/ciyp-photos/Album%20Art/Album%20Art_B2LArt.webp",
-    bonusURL: "/backtolife",
+    art: "https://storage.googleapis.com/ciyp-photos/Album%20Art/Album%20Art_B2LArt.webp",
+    streaming: "",
+    bonus: "/backtolife",
   },
   {
     title: "melting. (rewrapped)",
-    artURL:
-      "https://storage.googleapis.com/ciyp-photos/Album%20Art/melting.%20(rewrapped)%20-%20ARTWORK.webp",
-    bonusURL: "/melting",
+    art: "https://storage.googleapis.com/ciyp-photos/Album%20Art/melting.%20(rewrapped)%20-%20ARTWORK.webp",
+    streaming: "",
+    bonus: "/melting",
   },
   {
     title: "Die Trying",
-    artURL:
-      "https://storage.googleapis.com/ciyp-photos/Album%20Art/Die%20Trying%20-%20ARTWORK.webp",
-    bonusURL: "/dietrying",
+    art: "https://storage.googleapis.com/ciyp-photos/Album%20Art/Die%20Trying%20-%20ARTWORK.webp",
+    streaming: "",
+    bonus: "/dietrying",
   },
 ];
 
@@ -37,17 +37,17 @@ export default function Music() {
             Music By Chocolate In Your Pocket
           </h1>
           <Swiper className="font-moda w-[80vw] mt-6">
-            <SwiperNav />
+            <SwiperNav projects={projects} />
             {projects.map((project, index) => (
               <SwiperSlide className="flex flex-col justify-center items-center">
                 <div className="flex flex-col w-auto justify-center items-center">
-                  <h2 className="w-[50vw] font-moda text-center text-white bg-gradient-to-b from-black/50 to-zinc-800/50 mb-2 text-2xl rounded-xl">
+                  <h2 className="w-fit p-1 font-moda text-center text-white bg-gradient-to-b from-black/50 to-zinc-800/50 mb-2 text-2xl rounded-xl">
                     {project.title}
                   </h2>
                   <div key={index} className="flex justify-center max-h-[60vh]">
                     <div className="flex justify-center">
                       <img
-                        src={project.artURL}
+                        src={project.art}
                         alt="slideshow"
                         className="rounded-lg drop-shadow-[0_75px_10px_rgba(0,0,0,1)] border-4 border-[#262626]"
                       ></img>
