@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useSwiper } from "swiper/react";
 
 export default function SwiperNav({ projects }) {
@@ -8,16 +9,62 @@ export default function SwiperNav({ projects }) {
 
   let releases = projects;
 
-  let links = [];
-  let streaming = [];
-  let bonus = [];
-  releases.forEach((release) => {
-    streaming.push(release.streaming);
-    bonus.push(release.bonus);
-  });
+  const buttonRenderer = (i) => {
+    console.log(i);
+    if (i === 0) {
+      return (
+        <>
+          <button className="mx-1 text-center text-black bg-[#B36551]/90 font-moda w-fit rounded-md border border-black text-sm py-1 px-3 hover:bg-[#262626]/90 hover:text-white">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={`${releases[0].streaming}`}
+            >
+              Stream
+            </a>{" "}
+          </button>
+          <button className="mx-1 text-center text-black bg-[#B36551]/90 font-moda w-fit rounded-md border border-black text-sm py-1 px-3 hover:bg-[#262626]/90 hover:text-white">
+            <Link to={releases[0].bonus}>Bonus</Link>
+          </button>
+        </>
+      );
+    } else if (i === 1) {
+      return (
+        <>
+          <button className="mx-1 text-center text-black bg-[#B36551]/90 font-moda w-fit rounded-md border border-black text-sm py-1 px-3 hover:bg-[#262626]/90 hover:text-white">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={`${releases[1].streaming}`}
+            >
+              Stream
+            </a>
+          </button>
+          <button className="mx-1 text-center text-black bg-[#B36551]/90 font-moda w-fit rounded-md border border-black text-sm py-1 px-3 hover:bg-[#262626]/90 hover:text-white">
+            <Link to={releases[1].bonus}>Bonus</Link>
+          </button>
+        </>
+      );
+    } else if (i === 2) {
+      return (
+        <>
+          <button className="mx-1 text-center text-black bg-[#B36551]/90 font-moda w-fit rounded-md border border-black text-sm py-1 px-3 hover:bg-[#262626]/90 hover:text-white">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={`${releases[2].streaming}`}
+            >
+              Stream
+            </a>
+          </button>
+          <button className="mx-1 text-center text-black bg-[#B36551]/90 font-moda w-fit rounded-md border border-black text-sm py-1 px-3 hover:bg-[#262626]/90 hover:text-white">
+            <Link to={releases[2].bonus}>Bonus</Link>
+          </button>
+        </>
+      );
+    }
+  };
 
-  links.push(streaming, bonus)
-  console.log(links);
   const prev = () => {
     swiper.slidePrev();
     if (swiper.activeIndex === 1) {
@@ -40,23 +87,26 @@ export default function SwiperNav({ projects }) {
   };
 
   return (
-    <div className="absolute -bottom-2 z-30">
-      <button
-        className={`m-2 text-center text-white bg-[#262626]/90 font-moda w-auto rounded-md rounded-b-none text-lg py-1 px-3 hover:bg-[#B36551]/90 ${
-          noPrev ? "hidden" : ""
-        }`}
-        onClick={() => prev()}
-      >
-        &#8592;<span className="hidden tablet:inline"> Back</span>
-      </button>
-      <button
-        className={`m-2 text-center text-white bg-[#262626]/90 font-moda w-auto rounded-md rounded-b-none text-lg py-1 px-3 hover:bg-[#B36551]/90 ${
-          noNext ? "hidden" : ""
-        }`}
-        onClick={() => next()}
-      >
-        <span className="hidden tablet:inline">Next </span>&#8594;
-      </button>
+    <div className="absolute -bottom-[0.33rem] z-30">
+      <div className="flex justify-between items-center">
+        <button
+          className={`m-2 text-center text-white bg-[#262626]/90 font-moda w-auto rounded-md rounded-b-none text-lg py-1 px-3 hover:bg-[#B36551]/90 ${
+            noPrev ? "pointer-events-none bg-[#262626]/50 text-white/50" : ""
+          }`}
+          onClick={() => prev()}
+        >
+          &#8592;<span className="hidden"> Back</span>
+        </button>
+        {buttonRenderer(swiper.activeIndex)}
+        <button
+          className={`m-2 text-center text-white bg-[#262626]/90 font-moda w-auto rounded-md rounded-b-none text-lg py-1 px-3 hover:bg-[#B36551]/90 ${
+            noNext ? "pointer-events-none bg-[#262626]/50 text-white/50" : ""
+          }`}
+          onClick={() => next()}
+        >
+          <span className="hidden">Next </span>&#8594;
+        </button>
+      </div>
     </div>
   );
 }

@@ -147,7 +147,7 @@ router.get("/homepage", (req, res) => {
   listFilesByPrefix().catch(console.error);
 });
 
-router.get("/p1photos", (req, res) => {
+router.get("/melting", (req, res) => {
   const storage = new Storage({
     projectId: "ciyp-sitecalendar",
     credentials: {
@@ -192,19 +192,19 @@ router.get("/p1photos", (req, res) => {
   listFilesByPrefix().catch(console.error);
 });
 
-// router.get("/lyrics", async (req, res) => {
-//   console.log("/lyrics");
-//   const getLyrics = async (get, send) => {
-//     const lyricCheck = (data) => {
-//       if (!data) {
-//         res.send("Error fetching lyrics.");
-//         console.error("Error fetching lyrics.");
-//       } else {
-//         console.log("Lyrics Found");
-//         // console.log(data);
-//         res.send(data);
-//       }
-//     };
+router.get("/lyrics", async (req, res) => {
+  console.log("/lyrics");
+  const getLyrics = async (get, send) => {
+    const lyricCheck = (data) => {
+      if (!data) {
+        res.send("Error fetching lyrics.");
+        console.error("Error fetching lyrics.");
+      } else {
+        console.log("Lyrics Found");
+        // console.log(data);
+        res.send(data);
+      }
+    };
 
 //     try {
 //       const database = client.db("ciyp_lyrics");
