@@ -13,7 +13,7 @@ export default function Project1GalleryModal({ toggleModal }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`/api/melting`);
+        const res = await fetch(`/api/backtolife`);
         const jsonData = await res.json();
         const pictures = [];
         const videos = [];
