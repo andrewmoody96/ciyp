@@ -18,13 +18,13 @@ export default function Default() {
           <img
             width="1200"
             height="1200"
-            fetchpriority="high"          
+            fetchpriority="high"
             alt="Back To Life Artwork"
-            className="rounded-lg border-2 border-[#B36551] drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)]"
+            className="rounded-lg border-2 border-[#B36551] drop-shadow-[2px_1px_10px_rgba(255,255,255,0.7)]"
             src={featuredArt}
           ></img>
           <div className="absolute bottom-[-5%]">
-            <button className="p-1 mx-2 rounded-xl bg-[#B36551] border border-white font-moda text-white text-base text-center w-[20vw] tablet:w-[25vw] desktop:w-[15vw] hover:bg-red-300 hover:text-black">
+            <button className="shadow-[inset_0_1px_5px_0_rgb(0,0,0);] p-1 mx-2 rounded-xl bg-[#B36551] border border-white font-moda text-white text-base text-center w-[20vw] tablet:w-[25vw] desktop:w-[15vw] hover:bg-red-300 hover:text-black">
               <a
                 href="https://linktr.ee/chocolateinyourpocket"
                 target="_blank"
@@ -32,16 +32,6 @@ export default function Default() {
                 className="mx-auto p-2"
               >
                 Stream
-              </a>
-            </button>
-            <button className="p-1 mx-2 rounded-xl bg-[#B36551] border border-white font-moda text-white text-base text-center w-[20vw] tablet:w-[25vw] desktop:w-[15vw] hover:bg-red-300 hover:text-black">
-              <a
-                href="https://linktr.ee/chocolateinyourpocket"
-                target="_blank"
-                rel="noreferrer"
-                className="mx-auto p-2"
-              >
-                Bonus
               </a>
             </button>
           </div>
