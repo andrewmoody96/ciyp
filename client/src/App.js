@@ -5,9 +5,9 @@ import Footer from "./components/Reusable/Footer";
 import Home from "./components/Pages/Home";
 import NotFound from "./components/Pages/NotFound";
 import Music from "./components/Pages/Music";
-import BackToLife from "./components/Pages/Music/backtolife/More";
-import Melting from "./components/Pages/Music/melting/More";
-import DieTrying from "./components/Pages/Music/dietrying/More";
+import BackToLife from "./components/Pages/Music/backtolife/index";
+import Melting from "./components/Pages/Music/melting/index";
+import DieTrying from "./components/Pages/Music/dietrying/index";
 
 export default function App() {
   return (

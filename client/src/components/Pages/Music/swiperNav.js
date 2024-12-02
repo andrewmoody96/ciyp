@@ -10,7 +10,6 @@ export default function SwiperNav({ projects }) {
   let releases = projects;
 
   const buttonRenderer = (i) => {
-    console.log(i);
     if (i === 0) {
       return (
         <>

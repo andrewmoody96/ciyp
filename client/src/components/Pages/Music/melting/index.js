@@ -4,7 +4,7 @@ import Lyrics from "./modals/Lyrics/lyrics.js";
 import QandA from "./modals/AboutEP/p1QandA.js";
 import Photos from "./modals/Photos/galleryModal.js";
 
-export default function MoreProject1() {
+export default function Melting() {
   const [open, setOpen] = useState("closed");
 
   // Modal Toggles

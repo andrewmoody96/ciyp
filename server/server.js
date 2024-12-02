@@ -15,12 +15,12 @@ const minify = require("express-minify");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(compression({ level: 3 }));
-app.use(
-  minify({
-    css_match: false,
-  })
-);
+// app.use(compression({ level: 3 }));
+// app.use(
+//   minify({
+//     css_match: false,
+//   })
+// );
 
 // MongoDB for Lyric Retrieval
 // const source = process.env.ATLAS_CONNECTION;

@@ -17,8 +17,22 @@ const GOOGLE_CAL_EMAIL = process.env.GOOGLE_CAL_EMAIL;
 const GOOGLE_CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID;
 // Cloud Storage:
 const bucketName = process.env.CS_BUCKET_NAME;
-const EPKprefix = "epk/";
-const homepagePrefix = "homepage/";
+const gcsCredentials = {
+  type: "service_account",
+  project_id: "ciyp-sitecalendar",
+  private_key_id: process.env.GCS_PRIVATE_KEY_ID,
+  private_key: process.env.GCS_KEY.split(String.raw`\n`).join("\n"),
+  client_email: process.env.GCS_EMAIL,
+  client_id: process.env.GCS_CLIENT_ID,
+  auth_uri: "https://accounts.google.com/o/oauth2/auth",
+  token_uri: "https://oauth2.googleapis.com/token",
+  auth_provider_x509_cert_url: process.env.GCS_AUTH_PROVIDER_X509,
+  client_x509_cert_url: process.env.GCS_CLIENT_X509,
+};
+const gcsStorage = new Storage({
+  projectId: process.env.GCS_PROJECT_ID,
+  credentials: gcsCredentials,
+});
 
 // AUTH
 const jwt = new google.auth.JWT(
@@ -59,25 +73,10 @@ router.get("/shows", (req, res) => {
 });
 
 router.get("/epk", (req, res) => {
-  const storage = new Storage({
-    projectId: "ciyp-sitecalendar",
-    credentials: {
-      type: "service_account",
-      project_id: "ciyp-sitecalendar",
-      private_key_id: process.env.GCS_PRIVATE_KEY_ID,
-      private_key: process.env.GCS_KEY.split(String.raw`\n`).join("\n"),
-      client_email: process.env.GCS_EMAIL,
-      client_id: process.env.GCS_CLIENT_ID,
-      auth_uri: "https://accounts.google.com/o/oauth2/auth",
-      token_uri: "https://oauth2.googleapis.com/token",
-      auth_provider_x509_cert_url: process.env.GCS_AUTH_PROVIDER_X509,
-      client_x509_cert_url: process.env.GCS_CLIENT_X509,
-    },
-  });
+  const storage = gcsStorage;
   async function listFilesByPrefix() {
     const options = {
-      prefix: EPKprefix,
-      // delimiter: "/",
+      prefix: "epk/",
     };
 
     const [files] = await storage.bucket(bucketName).getFiles(options);
@@ -104,31 +103,16 @@ router.get("/epk", (req, res) => {
 });
 
 router.get("/homepage", (req, res) => {
-  const storage = new Storage({
-    projectId: "ciyp-sitecalendar",
-    credentials: {
-      type: "service_account",
-      project_id: "ciyp-sitecalendar",
-      private_key_id: process.env.GCS_PRIVATE_KEY_ID,
-      private_key: process.env.GCS_KEY.split(String.raw`\n`).join("\n"),
-      client_email: process.env.GCS_EMAIL,
-      client_id: process.env.GCS_CLIENT_ID,
-      auth_uri: "https://accounts.google.com/o/oauth2/auth",
-      token_uri: "https://oauth2.googleapis.com/token",
-      auth_provider_x509_cert_url: process.env.GCS_AUTH_PROVIDER_X509,
-      client_x509_cert_url: process.env.GCS_CLIENT_X509,
-    },
-  });
+  const storage = gcsStorage;
   async function listFilesByPrefix() {
     const options = {
-      prefix: homepagePrefix,
+      prefix: "homepage/",
     };
 
     const [files] = await storage.bucket(bucketName).getFiles(options);
     const data = [];
     files.forEach((file) => {
-      let fileName = file.name;
-
+      const fileName = file.name;
       async function getMetadata() {
         const [metadata] = await storage
           .bucket(bucketName)
@@ -137,6 +121,7 @@ router.get("/homepage", (req, res) => {
         const info = await metadata;
         data.push(info);
         if (data.length === files.length) {
+          console.log(data);
           res.send(JSON.stringify(data));
         }
       }
@@ -148,25 +133,10 @@ router.get("/homepage", (req, res) => {
 });
 
 router.get("/melting", (req, res) => {
-  const storage = new Storage({
-    projectId: "ciyp-sitecalendar",
-    credentials: {
-      type: "service_account",
-      project_id: "ciyp-sitecalendar",
-      private_key_id: process.env.GCS_PRIVATE_KEY_ID,
-      private_key: process.env.GCS_KEY.split(String.raw`\n`).join("\n"),
-      client_email: process.env.GCS_EMAIL,
-      client_id: process.env.GCS_CLIENT_ID,
-      auth_uri: "https://accounts.google.com/o/oauth2/auth",
-      token_uri: "https://oauth2.googleapis.com/token",
-      auth_provider_x509_cert_url: process.env.GCS_AUTH_PROVIDER_X509,
-      client_x509_cert_url: process.env.GCS_CLIENT_X509,
-    },
-  });
+  const storage = gcsStorage;
   async function listFilesByPrefix() {
     const options = {
       prefix: "melting/",
-      // delimiter: "/",
     };
 
     const [files] = await storage.bucket(bucketName).getFiles(options);
@@ -192,31 +162,47 @@ router.get("/melting", (req, res) => {
   listFilesByPrefix().catch(console.error);
 });
 
-router.get("/dietrying", (req, res) => {
-  const storage = new Storage({
-    projectId: "ciyp-sitecalendar",
-    credentials: {
-      type: "service_account",
-      project_id: "ciyp-sitecalendar",
-      private_key_id: process.env.GCS_PRIVATE_KEY_ID,
-      private_key: process.env.GCS_KEY.split(String.raw`\n`).join("\n"),
-      client_email: process.env.GCS_EMAIL,
-      client_id: process.env.GCS_CLIENT_ID,
-      auth_uri: "https://accounts.google.com/o/oauth2/auth",
-      token_uri: "https://oauth2.googleapis.com/token",
-      auth_provider_x509_cert_url: process.env.GCS_AUTH_PROVIDER_X509,
-      client_x509_cert_url: process.env.GCS_CLIENT_X509,
-    },
-  });
+// router.get("/dietrying", (req, res) => {
+//   const storage = gcsStorage;
+//   async function listFilesByPrefix() {
+//     const options = {
+//       prefix: "dietrying/",
+//     };
+
+//     const [files] = await storage.bucket(bucketName).getFiles(options);
+//     const data = [];
+//     files.forEach((file) => {
+//       const fileName = file.name;
+//       async function getMetadata() {
+//         const [metadata] = await storage
+//           .bucket(bucketName)
+//           .file(fileName)
+//           .getMetadata();
+//         const info = await metadata;
+//         data.push(info);
+//         if (data.length === files.length) {
+//           console.log(data);
+//           res.send(JSON.stringify(data));
+//         }
+//       }
+//       getMetadata();
+//     });
+//   }
+
+//   listFilesByPrefix().catch(console.error);
+// });
+
+router.get("/btlfeatured", (req, res) => {
+  const storage = gcsStorage;
   async function listFilesByPrefix() {
     const options = {
-      prefix: "dietrying/",
-      // delimiter: "/",
+      prefix: "backtolife/btlfeatured",
     };
 
     const [files] = await storage.bucket(bucketName).getFiles(options);
+    const urlAndType = [];
     const data = [];
-    files.forEach((file) => {
+    files.forEach((file, i) => {
       const fileName = file.name;
       async function getMetadata() {
         const [metadata] = await storage
@@ -225,9 +211,17 @@ router.get("/dietrying", (req, res) => {
           .getMetadata();
         const info = await metadata;
         data.push(info);
-        if (data.length === files.length) {
-          console.log(data);
-          res.send(JSON.stringify(data));
+        if (i === 6) {
+          data.forEach((file, i, data) => {
+            urlAndType.push({
+              name: file.name,
+              url: file.mediaLink,
+              type: file.contentType,
+            });
+            if (i === 6) {
+              res.send(JSON.stringify(urlAndType));
+            }
+          });
         }
       }
       getMetadata();
@@ -237,31 +231,17 @@ router.get("/dietrying", (req, res) => {
   listFilesByPrefix().catch(console.error);
 });
 
-router.get("/backtolife", (req, res) => {
-  const storage = new Storage({
-    projectId: "ciyp-sitecalendar",
-    credentials: {
-      type: "service_account",
-      project_id: "ciyp-sitecalendar",
-      private_key_id: process.env.GCS_PRIVATE_KEY_ID,
-      private_key: process.env.GCS_KEY.split(String.raw`\n`).join("\n"),
-      client_email: process.env.GCS_EMAIL,
-      client_id: process.env.GCS_CLIENT_ID,
-      auth_uri: "https://accounts.google.com/o/oauth2/auth",
-      token_uri: "https://oauth2.googleapis.com/token",
-      auth_provider_x509_cert_url: process.env.GCS_AUTH_PROVIDER_X509,
-      client_x509_cert_url: process.env.GCS_CLIENT_X509,
-    },
-  });
+router.get(`/btlbonus/`, (req, res) => {
+  const storage = gcsStorage;
   async function listFilesByPrefix() {
     const options = {
-      prefix: "backtolife/",
-      // delimiter: "/",
+      prefix: "backtolife/setone",
     };
 
     const [files] = await storage.bucket(bucketName).getFiles(options);
+    const urlAndType = [];
     const data = [];
-    files.forEach((file) => {
+    files.forEach((file, i, files) => {
       const fileName = file.name;
       async function getMetadata() {
         const [metadata] = await storage
@@ -270,9 +250,15 @@ router.get("/backtolife", (req, res) => {
           .getMetadata();
         const info = await metadata;
         data.push(info);
-        if (data.length === files.length) {
-          console.log(data);
-          res.send(JSON.stringify(data));
+        if (i === 22) {
+          data.forEach((file, i, data) => {
+            urlAndType.push({ url: file.mediaLink, type: file.contentType });
+            if (i === 22) {
+              console.log("Set 1: Sent to Client");
+
+              res.send(JSON.stringify(urlAndType));
+            }
+          });
         }
       }
       getMetadata();
