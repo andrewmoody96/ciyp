@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.9.3",
     "@fatso83/retry-dynamic-import": "^2.1.1",
     "@headlessui/react": "^1.6.6",
@@ -12,8 +13,9 @@
     "@testing-library/user-event": "^13.5.0",
     "compass": "^0.1.1",
     "dotenv": "^16.0.1",
+    "eslint-config-react-app": "^7.0.1",
     "moment": "^2.29.4",
-    "moment-timezone": "^0.5.34",
+    "moment-timezone": "^0.5.46",
     "nodemon": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -6,7 +6,6 @@ import Home from "./components/Pages/Home";
 import NotFound from "./components/Pages/NotFound";
 import Epk from "./components/Pages/Epk";
 import NewMusic from "./components/Pages/NewMusic";
-import MoreProject1 from "./components/Pages/NewMusic/Project1/More";
 
 export default function App() {
   return (
@@ -17,8 +16,6 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/epk" element={<Epk />} />
             <Route path="/newmusic" element={<NewMusic />} />
-            <Route path="/melting" element={<MoreProject1 />} />
-            {/* <Route path="/backtolife" element={<NotFound />} /> */}
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </div>

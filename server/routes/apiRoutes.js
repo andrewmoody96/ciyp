@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { MongoClient } = require("mongodb");
-const uri = process.env.ATLAS_CONNECTION;
-const client = new MongoClient(uri);
+// const { MongoClient } = require("mongodb");
+// const uri = process.env.ATLAS_CONNECTION;
+// const client = new MongoClient(uri);
 
 const { google } = require("googleapis");
 const { Storage } = require("@google-cloud/storage");
@@ -192,59 +192,59 @@ router.get("/p1photos", (req, res) => {
   listFilesByPrefix().catch(console.error);
 });
 
-router.get("/lyrics", async (req, res) => {
-  console.log("/lyrics");
-  const getLyrics = async (get, send) => {
-    const lyricCheck = (data) => {
-      if (!data) {
-        res.send("Error fetching lyrics.");
-        console.error("Error fetching lyrics.");
-      } else {
-        console.log("Lyrics Found");
-        // console.log(data);
-        res.send(data);
-      }
-    };
+// router.get("/lyrics", async (req, res) => {
+//   console.log("/lyrics");
+//   const getLyrics = async (get, send) => {
+//     const lyricCheck = (data) => {
+//       if (!data) {
+//         res.send("Error fetching lyrics.");
+//         console.error("Error fetching lyrics.");
+//       } else {
+//         console.log("Lyrics Found");
+//         // console.log(data);
+//         res.send(data);
+//       }
+//     };
 
-    try {
-      const database = client.db("ciyp_lyrics");
-      const lyrics = database.collection("lyrics");
-      const songs = await lyrics.find().toArray();
-      // console.log(songs);
-      lyricCheck(songs);
-    } catch (error) {
-      console.log(error);
-      send.status(500).send("Internal Server error Occured");
-    }
-  };
-  getLyrics(req, res);
-});
+//     try {
+//       const database = client.db("ciyp_lyrics");
+//       const lyrics = database.collection("lyrics");
+//       const songs = await lyrics.find().toArray();
+//       // console.log(songs);
+//       lyricCheck(songs);
+//     } catch (error) {
+//       console.log(error);
+//       send.status(500).send("Internal Server error Occured");
+//     }
+//   };
+//   getLyrics(req, res);
+// });
 
-router.get("/p1answers", async (req, res) => {
-  console.log("/p1answers");
-  const getAnswers = async (get, send) => {
-    const answerCheck = (data) => {
-      if (!data) {
-        res.send("Error fetching answers.");
-        console.error("Error fetching answers.");
-      } else {
-        console.log("Answers Found");
-        res.send(data);
-      }
-    };
+// router.get("/p1answers", async (req, res) => {
+//   console.log("/p1answers");
+//   const getAnswers = async (get, send) => {
+//     const answerCheck = (data) => {
+//       if (!data) {
+//         res.send("Error fetching answers.");
+//         console.error("Error fetching answers.");
+//       } else {
+//         console.log("Answers Found");
+//         res.send(data);
+//       }
+//     };
 
-    try {
-      const database = client.db("ciyp_p1");
-      const p1qa = database.collection("answers");
-      const answers = await p1qa.find().toArray();
-      // console.log(answers);
-      answerCheck(answers);
-    } catch (error) {
-      console.log(error);
-      send.status(500).send("Internal Server error Occured");
-    }
-  };
-  getAnswers(req, res);
-});
+//     try {
+//       const database = client.db("ciyp_p1");
+//       const p1qa = database.collection("answers");
+//       const answers = await p1qa.find().toArray();
+//       // console.log(answers);
+//       answerCheck(answers);
+//     } catch (error) {
+//       console.log(error);
+//       send.status(500).send("Internal Server error Occured");
+//     }
+//   };
+//   getAnswers(req, res);
+// });
 
 module.exports = router;
