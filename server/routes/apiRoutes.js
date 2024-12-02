@@ -1,8 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const { MongoClient } = require("mongodb");
-const uri = process.env.ATLAS_CONNECTION;
-const client = new MongoClient(uri);
 
 const { google } = require("googleapis");
 const { Storage } = require("@google-cloud/storage");
