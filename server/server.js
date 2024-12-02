@@ -7,16 +7,10 @@ const PORT = process.env.PORT || 3001;
 const path = require("path");
 
 const compression = require("compression");
-const minify = require("express-minify");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(compression({ level: 3 }));
-app.use(
-  minify({
-    css_match: false,
-  })
-);
 
 // THE SERVER
 var options = [(etag = true), (maxAge = 31622400000), (lastModified = true)];
