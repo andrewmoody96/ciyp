@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { addressCheck, eventLinkFormatter } from "./formatters";
 import Event from "./Event";
 import dayjs from "dayjs";
-import utc from 'dayjs/plugin/utc'
-import localizedFormat from 'dayjs/plugin/localizedFormat'
-import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
-dayjs.extend(localizedFormat)
+import utc from "dayjs/plugin/utc";
+import localizedFormat from "dayjs/plugin/localizedFormat";
+import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
+dayjs.extend(localizedFormat);
 dayjs.extend(utc);
 dayjs.extend(isSameOrAfter);
 
@@ -57,7 +57,7 @@ export default function Shows() {
           const events = Object.keys(eventObj).map((key) => eventObj[key]);
 
           let upcoming = [];
-          let getNow = dayjs.utc().toISOString()
+          let getNow = dayjs.utc().toISOString();
           let now = getNow.slice(".");
 
           events.forEach((event) => {
@@ -92,7 +92,7 @@ export default function Shows() {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col justify-center items-center tablet:grid tablet:grid-cols-2 desktop:flex desktop:flex-col">
+        <div className="flex flex-col justify-center items-center">
           {/* only display in col view if events.length < 1? */}
           {events?.map((event) => (
             <div key={event.id}>
