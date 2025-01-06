@@ -1,0 +1,26 @@
+{
+  "name": "ciyp",
+  "version": "2025.01",
+  "engines": {
+    "node": "19.5.0",
+    "npm": "9.6.7"
+  },
+  "description": "The Official Website of Chocolate in Your Pocket",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && npm start",
+    "test": "cd client && npm run test",
+    "build": "cd client && npm run build",
+    "install": "cd server && npm i && cd ../client && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewmoody96/ciyp.git"
+  },
+  "author": "Andrew Moody",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewmoody96/ciyp/issues"
+  },
+  "homepage": "https://github.com/andrewmoody96/ciyp#readme"
+}
