@@ -48,5 +48,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/components/Pages/NewMusic/Project1
-/components/Pages/NewMusic/Project2
+/components/Pages/Epk
+/components/Pages/NewMusic
+/components/Pages/Music/

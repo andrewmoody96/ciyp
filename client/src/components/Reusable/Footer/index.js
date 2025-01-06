@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="fixed bottom-0 left-0 right-0 bg-[#262626]/75 text-white font-arvo p-2"
+      className="fixed bottom-0 left-0 right-0 bg-[#262626]/75 text-white font-moda p-2"
     >
       <div className="logo-footer text-center mt-1 w-100">
         <div className="w-100 flex flex-row text-xs items-center justify-evenly">
@@ -32,13 +32,13 @@ export default function Footer() {
             </a>
             <a
               aria-label="{null}"
-              href="https://www.tiktok.com/@chocolateinyourpocket?is_from_webapp=1&sender_device=pc"
-              title="Link to TikTok"
+              href="https://www.youtube.com/@chocolateinyourpocket"
+              title="Link to YouTube"
               target="_blank"
               rel="noreferrer"
               className="hover:text-[#B36551] text-base"
             >
-              <i className="fab fa-tiktok mx-4" aria-hidden="true" />
+              <i className="fa fa-youtube mx-4" aria-hidden="true" />
             </a>
             <a
               aria-label="{null}"
@@ -52,6 +52,16 @@ export default function Footer() {
             </a>
             <a
               aria-label="{null}"
+              href="https://www.tiktok.com/@chocolateinyourpocket?is_from_webapp=1&sender_device=pc"
+              title="Link to TikTok"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-[#B36551] text-base"
+            >
+              <i className="fab fa-tiktok mx-4" aria-hidden="true" />
+            </a>
+            <a
+              aria-label="{null}"
               href="https://www.facebook.com/chocolateinyourpocket/"
               title="Link to Facebook"
               target="_blank"
@@ -62,6 +72,7 @@ export default function Footer() {
             </a>
             <a
               href="https://github.com/andrewmoody96"
+              title="Link to GitHub"
               target="_blank"
               rel="noreferrer"
               className="text-xs hover:text-[#B36551]"

@@ -48,19 +48,19 @@ export default function Booking() {
         <div className="flex flex-col bg-white/90 rounded-lg justify-center pt-5 m-2">
           {!emailSent ? (
             <>
-              <h2 className="text-2xl font-arvo mx-2 text-center">
+              <h2 className="text-2xl font-moda mx-2 text-center">
                 Booking Inquiries
               </h2>
-              <p className="font-arvo text-center mt-2 text-sm">
+              <p className="font-moda text-center mt-2 text-sm">
                 Want to book Chocolate?
               </p>
-              <p className="font-arvo text-center text-sm">
+              <p className="font-moda text-center text-sm">
                 Send us a message.
               </p>
               <form
                 ref={form}
                 onSubmit={sendEmail}
-                className="flex flex-col justify-center font-arvo p-4 w-[90vw] desktop:w-[45vw]"
+                className="flex flex-col justify-center font-moda p-4 w-[90vw] desktop:w-[45vw]"
               >
                 <label>Name</label>
                 <input
@@ -71,7 +71,7 @@ export default function Booking() {
                   placeholder="enter name"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
-                  className="required border-stone-500 border-2 rounded-md p-1 m-2 font-arvo"
+                  className="required border-stone-500 border-2 rounded-md p-1 m-2 font-moda"
                 ></input>
                 <label>Email</label>
                 <input
@@ -81,7 +81,7 @@ export default function Booking() {
                   placeholder="email@email.com"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
-                  className="required border-stone-500 border-2 rounded-md p-1 m-2 font-arvo"
+                  className="required border-stone-500 border-2 rounded-md p-1 m-2 font-moda"
                 ></input>
                 <label>Message</label>
                 <textarea
@@ -90,22 +90,22 @@ export default function Booking() {
                   placeholder="type your message"
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
-                  className="required border-stone-500 border-2 rounded-md p-1 m-2 font-arvo"
+                  className="required border-stone-500 border-2 rounded-md p-1 m-2 font-moda"
                 ></textarea>
                 <input
                   type="submit"
                   value="Send"
-                  className="button cursor-pointer font-arvo bg-[#B36551] rounded-lg p-2 m-2 text-white hover:bg-red-300 hover:text-black text-center"
+                  className="button cursor-pointer font-moda bg-[#B36551] rounded-lg p-2 m-2 text-white hover:bg-red-300 hover:text-black text-center"
                   onClick={sendEmail}
                 ></input>
               </form>
             </>
           ) : (
             <>
-              <h3 className="flex flex-col w-auto font-arvo text-xl text-center visible p-2 m-2">
+              <h3 className="flex flex-col w-auto font-moda text-xl text-center visible p-2 m-2">
                 Thanks for your message!
               </h3>
-              <p className="font-arvo text-center text-sm mb-5">
+              <p className="font-moda text-center text-sm mb-5">
                 We will get back to you soon.
               </p>
             </>

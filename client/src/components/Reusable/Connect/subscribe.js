@@ -3,9 +3,9 @@ import React from "react";
 export default function Subscribe() {
   return (
     <>
-      <div className="flex flex-col justify-between items-center desktop:w-[45vw]">
+      <div className="flex flex-col justify-center items-center desktop:w-[50vw]">
         {/* EMAIL SIGNUP */}
-        <div className="flex flex-col bg-white/90 rounded-lg justify-center m-2">
+        <div className="flex flex-col bg-white/90 border-2 border-[#B36551] rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.6)] justify-center m-2 shadow-[inset_0_1px_5px_0_rgb(0,0,0);]">
           <div className="rounded-lg bg-transparent">
             {/* TODO: onClick to display "Thanks for signing up." ACTION CAN CALL METHOD WHICH CAN PERFORM THE POST?*/}
             <form
@@ -16,22 +16,25 @@ export default function Subscribe() {
               className="validate p-3 w-[90vw] desktop:w-[45vw]"
               noValidate
             >
-              <div id="mc_embed_signup_scroll" className="flex flex-col justify-center items-center">
-                <h2 className="text-2xl font-arvo text-center">Subscribe</h2>
-                <div className="indicates-required text-center mb-5">
-                  <span className="asterisk text-[#B36551]">*</span> required
-                </div>
-                <div className="mc-field-group mb-2 flex justify-center items-center">
-                  <label htmlFor="mce-EMAIL" className="font-arvo text-sm">
+              <div
+                id="mc_embed_signup_scroll"
+                className="flex flex-col justify-center items-center"
+              >
+                <h2 className="text-xl font-moda text-center">
+                  Let's keep in touch.
+                </h2>
+                <div className="mc-field-group flex justify-center items-center">
+                  <label htmlFor="mce-EMAIL" className="font-moda text-sm">
                     Email Address
-                    <span className="asterisk text-[#B36551]">*</span>
+                    <span className="asterisk text-[#C89184]">*</span>
                   </label>
                   <input
                     type="email"
                     name="EMAIL"
-                    className="required email border-stone-500 border-2 rounded-md p-1 m-2 font-arvo"
+                    className="required email border-stone-500 border-2 rounded-md p-1 m-2 font-moda"
                     id="mce-EMAIL"
                     placeholder="email@email.com"
+                    autocomplete="off"
                   />
                 </div>
                 <div
@@ -57,6 +60,9 @@ export default function Subscribe() {
                     defaultValue
                   />
                 </div>
+                <div className="font-moda indicates-required text-center text-xs mb-2">
+                  <span className="asterisk text-[#C89184]">*</span> required
+                </div>
                 <div className="optionalParent">
                   <div className="clear foot flex flex-row items-center justify-between w-full">
                     <input
@@ -64,7 +70,7 @@ export default function Subscribe() {
                       defaultValue="Subscribe"
                       name="subscribe"
                       id="mc-embedded-subscribe"
-                      className="button cursor-pointer font-arvo bg-[#B36551] rounded-lg p-2 text-white hover:bg-red-300 hover:text-black"
+                      className="button cursor-pointer font-moda bg-[#C89184] rounded-lg p-2 text-white hover:bg-red-300 hover:text-black"
                     />
                     <p className="brandingLogo">
                       <a
@@ -72,6 +78,8 @@ export default function Subscribe() {
                         title="Mailchimp - email marketing made easy and fun"
                       >
                         <img
+                          width="220px"
+                          height="42px"
                           src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"
                           className="h-5"
                           alt="Mailchimp Logo"
@@ -83,15 +91,15 @@ export default function Subscribe() {
               </div>
             </form>
           </div>
-          <div className="w-full font-arvo">
-            <article className="mx-2 h-auto">
+          <div className="w-full font-moda">
+            <article className="mx-1 h-auto">
               <div
                 id="socialContainer"
-                className="flex flex-row justify-center"
+                className="flex flex-row justify-center text-xs"
               >
                 <div
                   id="tiktokContainer"
-                  className="flex flex-col items-center justify-center mx-2"
+                  className="flex flex-col items-center justify-center mx-1"
                 >
                   <a
                     aria-label="{null}"
@@ -101,15 +109,14 @@ export default function Subscribe() {
                     rel="noreferrer"
                   >
                     <i
-                      className="fab fa-tiktok m-3 fa-4x hover:text-[#B36551]"
+                      className="fab fa-tiktok m-2 fa-2x hover:text-[#C89184]"
                       aria-hidden="true"
                     />
                   </a>
-                  <h4>TikTok</h4>
                 </div>
                 <div
                   id="instaContainer"
-                  className="flex flex-col items-center justify-center mx-2"
+                  className="flex flex-col items-center justify-center mx-1"
                 >
                   <a
                     aria-label="{null}"
@@ -119,15 +126,14 @@ export default function Subscribe() {
                     rel="noreferrer"
                   >
                     <i
-                      className="fa fa-instagram m-3 fa-4x hover:text-[#B36551]"
+                      className="fa fa-instagram m-2 fa-2x hover:text-[#C89184]"
                       aria-hidden="true"
                     />
                   </a>
-                  <h4>Instagram</h4>
                 </div>
                 <div
                   id="fbContainer"
-                  className="flex flex-col items-center justify-center mx-2"
+                  className="flex flex-col items-center justify-center mx-1"
                 >
                   <a
                     aria-label="{null}"
@@ -137,16 +143,26 @@ export default function Subscribe() {
                     rel="noreferrer"
                   >
                     <i
-                      className="fa fa-facebook m-3 fa-4x hover:text-[#B36551]"
+                      className="fa fa-facebook m-2 fa-2x hover:text-[#C89184]"
                       aria-hidden="true"
                     />
                   </a>
-                  <h4>Facebook</h4>
                 </div>
+                <h3 className="text-sm flex justify-center items-center">
+                  @chocolateinyourpocket
+                </h3>
               </div>
-              <h4 className="text-xl flex justify-center m-4">
-                @chocolateinyourpocket
-              </h4>
+              <br></br>
+              <p className="text-sm text-center flex justify-center mx-4 mb-2">
+                Booking: &nbsp;
+                <a
+                  href="mailto:ciypmanagement@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  ciypmanagement@gmail.com
+                </a>
+              </p>
             </article>
           </div>
         </div>

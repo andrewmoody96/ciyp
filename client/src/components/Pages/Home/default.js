@@ -1,83 +1,69 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 // components
-import Contact from "../../Reusable/Connect";
+import HomeVideo from "./homeVideo.js";
+import Signup from "../../Reusable/Connect/signupForm.js";
 import Shows from "../../Pages/Shows";
-const featuredArt =
-  "https://storage.googleapis.com/ciyp-photos/Album%20Art/Redline%20-%20ARTWORK.webp";
+import featuredArt from "./featuredArt.webp";
 
 export default function Default() {
-  const [view, setView] = useState("shows");
-
-  const changeInfo = () => {
-    if (view === "connect") {
-      return <Contact />;
-    } else {
-      return <Shows />;
-    }
-  };
-
   return (
     <>
-      <div className="bg-[#f5eddc] fixed top-0 left-0 right-0 z-[-1] w-[100vw] h-[100%]"></div>
-      <div className="my-5 m-3 flex flex-col justify-center items-center">
-        <h1 className="text-4xl text-center text-black font-monoton mt-2 p-1">
-          CIYP
-        </h1>
-        <div className="h-[2vh] tablet:h-[5vh] w-[100vw] invisible"></div>
-        {/* CONTAINER */}
-        <div className="desktop:flex justify-center items-center desktop:w-[100vw] desktop:h-auto">
-          {/* FEATURED PANE */}
-          <section className="relative flex flex-col justify-between items-center desktop:w-[45vw]">
-            <p className="text-xl text-center text-black font-arvo p-1">
-              Redline<br></br>
-              <span className="text-lg">Out Now!</span>
-            </p>
-            <img
-              alt="Featured Artwork - Click to Learn More"
-              className="border rounded-lg desktop:w-[40vw] desktop:h-auto"
-              src={featuredArt}
-            ></img>
-            <button className="absolute w-[20vw] desktop:w-[10vw] bottom-0 left-0 right-0 z-[1] p-2 m-auto rounded-t-lg bg-[#B36551] border border-t-black border-l-black border-r-black font-arvo text-white text-[0.6rem] text-center hover:bg-red-300 hover:text-black">
-              <Link to="/newmusic">Learn More</Link>
+      <HomeVideo />
+      <div className="h-[100px] my-10 invisible">dummy div</div>
+      <div
+        className="my-5 m-3 flex flex-col 
+      justify-center items-center"
+      >
+        <div className="relative w-[85vw] tablet:w-[75vw] desktop:w-[50vw] flex justify-center items-center">
+          <img
+            width="1200"
+            height="1200"
+            fetchpriority="high"
+            alt="Back To Life Artwork"
+            className="rounded-lg border-2 border-[#B36551] drop-shadow-[2px_1px_10px_rgba(255,255,255,0.7)]"
+            src={featuredArt}
+          ></img>
+          <div className="absolute bottom-[-5%]">
+            <button className="shadow-[inset_0_1px_5px_0_rgb(0,0,0);] p-1 mx-2 rounded-xl bg-[#B36551] border border-white font-moda text-white text-base text-center w-[20vw] tablet:w-[25vw] desktop:w-[15vw] hover:bg-red-300 hover:text-black">
+              <a
+                href="https://linktr.ee/chocolateinyourpocket"
+                target="_blank"
+                rel="noreferrer"
+                className="mx-auto p-2"
+              >
+                Stream
+              </a>
             </button>
-          </section>
-          <div className="desktop:flex desktop:flex-col desktop:w-[45vw]">
-            {/* SECONDARY PANE BUTTONS */}
-            <div className="flex justify-between desktop:justify-center">
-              <button className="p-2 mx-2 my-10 rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)] bg-[#B36551] border border-black font-arvo text-white text-sm text-center w-[25vw] tablet:w-[25vw] desktop:w-[15vw] hover:bg-red-300 hover:text-black">
-                <a
-                  href="https://linktr.ee/chocolateinyourpocket"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mx-1"
-                >
-                  Listen
-                </a>
-              </button>
-              <button
-                className="p-2 mx-2 my-10 rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)] bg-[#B36551] border border-black font-arvo text-white text-sm text-center w-[25vw] tablet:w-[25vw] desktop:w-[15vw] hover:bg-red-300 hover:text-black"
-                onClick={() => {
-                  setView("shows");
-                }}
-              >
-                Shows
-              </button>
-              <button
-                className="p-2 mx-2 my-10 rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.4)] bg-[#B36551] border border-black font-arvo text-white text-sm text-center w-[25vw] tablet:w-[25vs] desktop:w-[15vw] hover:bg-red-300 hover:text-black"
-                onClick={() => {
-                  setView("connect");
-                }}
-              >
-                Connect
-              </button>
-            </div>
-            {/* SECONDARY PANE */}
-            <section className="flex justify-center items-center w-[97vw] desktop:w-[45vw]">
-              <div className="overflow-x-scroll">{changeInfo()}</div>
-            </section>
           </div>
         </div>
+        <section className="absolute top-[22%] flex flex-col justify-center items-center w-[95vw] mt-4 mb-2 text-center text-white">
+          <p className="font-modaCaps px-4 rounded-lg text-[4rem] drop-shadow-[0_1px_5px_rgba(0,0,0,1)] text-white mb-5">
+            Back To Life
+            <p className="font-moda bg-[#262626]/25 border border-white px-2 rounded-lg text-[0.8rem] drop-shadow-[0_1px_5px_rgba(0,0,0,0.7)] text-white text-center m-auto w-[40%] mb-4">
+              our new album
+            </p>
+          </p>
+        </section>
+        <div
+          id="shows"
+          className="h-[8vh] mt-tablet:h-[5vh] w-[100vw] invisible"
+        ></div>
+        <section className="flex flex-col justify-center items-center w-[97vw] desktop:w-[45vw]">
+          <h1 className="font-modaCaps bg-[#262626]/25 border border-white px-2 rounded-lg text-[2.2rem] drop-shadow-[0_1px_5px_rgba(0,0,0,0.7)] text-white my-5">
+            Shows
+          </h1>
+          <div className="overflow-x-scroll">{<Shows />}</div>
+        </section>
+        <div
+          id="subscribe"
+          className="h-[8vh] tablet:h-[5vh] w-[100vw] invisible"
+        ></div>
+        <section className="flex flex-col justify-center items-center w-[97vw] desktop:w-[45vw]">
+          <h1 className="font-modaCaps bg-[#262626]/25 border border-white px-2 rounded-lg text-[2.2rem] drop-shadow-[0_1px_5px_rgba(0,0,0,0.7)] text-white mb-5">
+            Subscribe
+          </h1>
+          <div className="overflow-x-scroll">{<Signup />}</div>
+        </section>
         <div className="h-[10vh] tablet:h-[5vh] w-[100vw] invisible"></div>
       </div>
     </>
