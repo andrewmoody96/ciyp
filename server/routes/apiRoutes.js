@@ -43,12 +43,17 @@ router.get("/shows", (req, res) => {
     },
     (error, result) => {
       if (error) {
+        console.error(error);
         res.send(JSON.stringify({ error: error }));
       } else {
         if (result.data.items.length) {
           res.send(JSON.stringify({ events: result.data.items }));
+          console.log("\u001b[32m" + "Events sent to frontend.");
         } else {
-          res.send(JSON.stringify({ message: "No upcoming events found." }));
+          res.send(
+            JSON.stringify({ message: "No upcoming events found." })
+          );
+          console.warn("No upcoming events found.");
         }
       }
     }

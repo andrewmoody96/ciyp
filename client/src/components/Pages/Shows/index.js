@@ -21,13 +21,10 @@ let url = null;
 // Event Renderer - renders based on presence of event URL
 const eventLoader = (url) => {
   if (url === "null") {
-    console.log("NULL");
     return (
       <Event className="w-100" description={[date, name, time, location]} />
     );
   } else {
-    console.log("NOT NULL");
-    console.log(url);
     return (
       <Event
         className="w-100"
@@ -46,35 +43,38 @@ export default function Shows() {
       try {
         const res = await fetch("/api/shows");
         const jsonData = await res.json();
-
         if (!jsonData) {
           console.error("load failed");
           setIsUpcoming(false);
         } else {
-          console.log("load successful");
-          let eventObj = jsonData.events;
+          if (jsonData.message === "No upcoming events found.") {
+            setIsUpcoming(false);
+            console.log("No events found");
+          } else {
+            console.log("Events found");
 
-          const events = Object.keys(eventObj).map((key) => eventObj[key]);
+            let eventObj = jsonData.events;
+            const events = Object.keys(eventObj).map((key) => eventObj[key]);
+            let upcoming = [];
+            let getNow = dayjs.utc().toISOString();
+            let now = getNow.slice(".");
 
-          let upcoming = [];
-          let getNow = dayjs.utc().toISOString();
-          let now = getNow.slice(".");
+            events.forEach((event) => {
+              let end = dayjs(event.end.dateTime).toISOString();
+              let compare = dayjs(now).isAfter(end);
 
-          events.forEach((event) => {
-            let end = dayjs(event.end.dateTime).toISOString();
-            let compare = dayjs(now).isAfter(end);
-
-            if (compare === false) {
-              upcoming.push(event);
-              setEvents(upcoming);
-              setIsUpcoming(true);
-            } else {
-              setIsUpcoming(false);
-            }
-          });
+              if (compare === false) {
+                upcoming.push(event);
+                setEvents(upcoming);
+                setIsUpcoming(true);
+              } else {
+                setIsUpcoming(false);
+              }
+            });
+          }
         }
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     };
     fetchEvents();
