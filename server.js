@@ -4,11 +4,11 @@ import { createRequestHandler } from "@remix-run/express";
 import express from "express";
 import dotenv from "dotenv/config";
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 import apiRoutes from "./apiRoutes.cjs";
 import cors from "cors";
 const corsOptions = {
-  origin: `http://localhost:${PORT}`,
+  origin: `http://0.0.0.0:${PORT}`,
 };
 
 app.use(cors(corsOptions));
