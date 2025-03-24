@@ -1,3 +1,14 @@
+import {
+  faInstagram,
+  faFacebook,
+  faTiktok,
+  faYoutube,
+  faGithub,
+  faApple,
+  faSpotify,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 // ------------------------------FOOTER--------------------------------
 // Footer that resides on every page. Allows users to have links to socials & music without needing to leave the current page.
 // --------------------------------------------------------------------
@@ -20,7 +31,7 @@ export default function Footer() {
               rel="noreferrer"
               className="hover:text-[#B36551] text-base"
             >
-              <i className="fab fa-spotify mx-4" aria-hidden="true" />
+              <FontAwesomeIcon className="mx-4" icon={faSpotify} />
             </a>
             <a
               aria-label="{null}"
@@ -30,7 +41,7 @@ export default function Footer() {
               rel="noreferrer"
               className="hover:text-[#B36551] text-base"
             >
-              <i className="fab fa-apple mx-4" aria-hidden="true" />
+              <FontAwesomeIcon className="mx-4" icon={faApple} />
             </a>
             <a
               aria-label="{null}"
@@ -40,7 +51,7 @@ export default function Footer() {
               rel="noreferrer"
               className="hover:text-[#B36551] text-base"
             >
-              <i className="fab fa-youtube mx-4" aria-hidden="true" />
+              <FontAwesomeIcon className="mx-4" icon={faYoutube} />
             </a>
             <a
               aria-label="{null}"
@@ -50,7 +61,7 @@ export default function Footer() {
               rel="noreferrer"
               className="hover:text-[#B36551] text-base"
             >
-              <i className="fab fa-instagram mx-4" aria-hidden="true" />
+              <FontAwesomeIcon className="mx-4" icon={faInstagram} />
             </a>
             <a
               aria-label="{null}"
@@ -60,7 +71,7 @@ export default function Footer() {
               rel="noreferrer"
               className="hover:text-[#B36551] text-base"
             >
-              <i className="fab fa-tiktok mx-4" aria-hidden="true" />
+              <FontAwesomeIcon className="mx-4" icon={faTiktok} />
             </a>
             <a
               aria-label="{null}"
@@ -70,7 +81,7 @@ export default function Footer() {
               rel="noreferrer"
               className="hover:text-[#B36551] text-base"
             >
-              <i className="fab fa-facebook mx-4" aria-hidden="true" />
+              <FontAwesomeIcon className="mx-4" icon={faFacebook} />
             </a>
             <a
               href="https://github.com/andrewmoody96"
@@ -79,7 +90,7 @@ export default function Footer() {
               rel="noreferrer"
               className="text-xs hover:text-[#B36551]"
             >
-              <i className="fab fa-github mx-4" aria-hidden="true" />
+              <FontAwesomeIcon className="mx-4" icon={faGithub} />
             </a>
           </div>
         </div>

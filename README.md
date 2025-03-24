@@ -1,3 +1,5 @@
+<!-- UPDATE WITH APP SPECIFIC INFO -->
+
 # Welcome to Remix!
 
 - 📖 [Remix docs](https://remix.run/docs)

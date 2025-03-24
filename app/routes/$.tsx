@@ -5,8 +5,6 @@ import goBack from "../assets/goBack.webp";
 // Really, there's nothing going on here unless you want to look deep into Trace's eyes.
 // ------------------------------------------------------------------
 
-// FIX - Cleanup spacing & alignment on page.
-
 export default function NotFound() {
   return (
     <>

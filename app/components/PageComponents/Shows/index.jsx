@@ -114,7 +114,7 @@ export default function Shows() {
                   {(ogURL = event.description)}
                   {(url = `${eventLinkFormatter(ogURL)}`)} {/*ticket link URL*/}
                   {(ogDoors = event.description)}
-                  {(doors = `${doorTimeFormatter(ogDoors)}`)}
+                  {(doors = `${doorTimeFormatter(ogDoors)}`)}{" "}
                   {/*door time for event*/}
                 </div>
               </div>

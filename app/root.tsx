@@ -26,9 +26,9 @@ export const links: LinksFunction = () => [
     rel: "stylesheet",
     href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
   },
-  { rel: "stylesheet", href: "../app/assets/fontawesome/css/fontawesome.css" },
-  { rel: "stylesheet", href: "../app/assets/fontawesome/css/brands.css" },
-  { rel: "stylesheet", href: "../app/assets/fontawesome/css/solid.css" },
+  { rel: "stylesheet", href: "./assets/fontawesome/css/fontawesome.css" }, 
+  { rel: "stylesheet", href: "./assets/fontawesome/css/brands.css" },
+  { rel: "stylesheet", href: "./assets/fontawesome/css/solid.css" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {

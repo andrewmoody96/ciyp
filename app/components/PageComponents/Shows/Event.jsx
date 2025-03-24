@@ -1,4 +1,4 @@
-import PropTypes from "prop-types"; // ES6
+import PropTypes from "prop-types";
 
 // UX - Ability to subscribe to Google Calendar to stay up with Chocolate events
 
@@ -12,10 +12,6 @@ export default function Event({ description, tickets, doorTime }) {
   // Ticket URL & Door Time -- *** NOT REQUIRED ***
   let url = tickets; // -- ticket link ***
   let doors = doorTime; // -- doors open time ***
-
-  console.log(typeof description, `${description}`);
-  console.log(typeof tickets, `${tickets}`);
-  console.log(typeof doorTime, `${doorTime}`);
 
   return (
     <div className="flex flex-col w-[75vw] tablet:w-[50vw] desktop:w-[30vw]">

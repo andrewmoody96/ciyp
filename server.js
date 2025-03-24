@@ -1,7 +1,8 @@
 /* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 import { createRequestHandler } from "@remix-run/express";
 import express from "express";
-import dotenv from "dotenv/config"
+import dotenv from "dotenv/config";
 const app = express();
 const PORT = process.env.PORT || 3001;
 import apiRoutes from "./apiRoutes.cjs";

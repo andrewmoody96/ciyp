@@ -1,3 +1,10 @@
+import {
+  faInstagram,
+  faFacebook,
+  faTiktok,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 // -----------------------SIGNUP COMPONENT---------------------------
 // Handles signups for the CIYP email list.
 // ------------------------------------------------------------------
@@ -112,9 +119,9 @@ export default function Signup({ isActive, onShow }) {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <i
-                        className="fab fa-tiktok m-2 fa-2x hover:text-[#C89184]"
-                        aria-hidden="true"
+                      <FontAwesomeIcon
+                        className="m-2 fa-2x hover:text-[#C89184]"
+                        icon={faTiktok}
                       />
                     </a>
                   </div>
@@ -129,9 +136,9 @@ export default function Signup({ isActive, onShow }) {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <i
-                        className="fab fa-instagram m-2 fa-2x hover:text-[#C89184]"
-                        aria-hidden="true"
+                      <FontAwesomeIcon
+                        className="m-2 fa-2x hover:text-[#C89184]"
+                        icon={faInstagram}
                       />
                     </a>
                   </div>
@@ -146,9 +153,9 @@ export default function Signup({ isActive, onShow }) {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <i
-                        className="fab fa-facebook m-2 fa-2x hover:text-[#C89184]"
-                        aria-hidden="true"
+                      <FontAwesomeIcon
+                        className="m-2 fa-2x hover:text-[#C89184]"
+                        icon={faFacebook}
                       />
                     </a>
                   </div>
