@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Hamburger from "./hamburger";
-import { Link } from "react-router-dom";
 
 // -----------------------HAMBURGER NAV BAR----------------------------
 // Hamburger menu component for Mobile view.
@@ -20,9 +19,9 @@ export default function HamburgerNav() {
           className="flex-col items-center tablet:justify-center bg-[#262626] border-r border-b rounded-br-md h-[100vh] w-[50vw] tablet:h-[50vh] tablet:w-[25vw] mt-[3.1rem] absolute font-moda text-white text-4xl "
         >
           <button className="m-2 p-[5px] rounded-lg hover:text-[#B36551]">
-            <Link reloadDocument to="/">
+            <a onClick={() => location.reload()} href="/">
               Home
-            </Link>
+            </a>
           </button>
           {/*Reloads Home Page*/}
           <button className="m-2 p-[5px] rounded-lg hover:text-[#B36551]">
@@ -59,9 +58,9 @@ export default function HamburgerNav() {
           <Hamburger isOpen={burgerOpen} />
         </div>
         <h1 className="fixed top-0 right-0 text-4xl text-center text-white font-moda m-2 my-1 p-1">
-          <Link reloadDocument to="/">
-            CIYP
-          </Link>
+          <a onClick={() => location.reload()} href="/">
+            Home
+          </a>
         </h1>
       </div>
     </>

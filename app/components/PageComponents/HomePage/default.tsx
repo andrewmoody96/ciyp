@@ -7,9 +7,6 @@ import featuredArt from "../../../assets/featuredArt.webp";
 // This is the main homepage view. Featured info/project, shows, & quick links to socials and contact.
 // ------------------------------------------------------------------
 
-// FIX - Cleanup on any broken/misaligned components.
-// FIX - Fix tablet & desktop view alignment. Needs to be centered.
-
 export default function Default() {
   return (
     <>

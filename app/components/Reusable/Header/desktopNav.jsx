@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
-
 // -----------------------DESKTOP NAV BAR----------------------------
-// Nav bar component for Desktop view. 
+// Nav bar component for Desktop view.
 // ------------------------------------------------------------------
 
 export default function DesktopNav() {
@@ -10,9 +8,9 @@ export default function DesktopNav() {
       <div className="hidden desktop:flex">
         <ul className="font-moda text-white">
           <button className="m-2 p-[5px] rounded-lg hover:text-[#B36551]">
-            <Link reloadDocument to="/">
+            <a onClick={() => location.reload()} href="/">
               Home
-            </Link>
+            </a>
           </button>
           {/*Reloads Home Page*/}
           <button className="m-2 p-[5px] rounded-lg hover:text-[#B36551]">

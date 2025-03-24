@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import goBack from "../assets/goBack.webp";
 
 // -------------------TRACE'S PLACE (404 NOT FOUND)------------------
@@ -21,11 +20,13 @@ export default function NotFound() {
                 404: Not Found
               </h2>
               <h3 className="text-xl font-moda text-center drop-shadow-[0_1px_2px_rgba(0,0,0,1)]">
-                Welcome to Trace&apos;s Place. If you&apos;re here, you&apos;re not supposed to
-                be. Check your signal flow and try again.
+                Welcome to Trace&apos;s Place. If you&apos;re here, you&apos;re
+                not supposed to be. Check your signal flow and try again.
               </h3>
               <button className="font-moda bg-black text-white my-5 py-2 px-4 rounded-full">
-                <Link to="/">Homepage</Link>
+                <a onClick={() => location.reload()} href="/">
+                  Home
+                </a>
               </button>
             </section>
           </div>
