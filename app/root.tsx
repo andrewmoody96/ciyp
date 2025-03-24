@@ -8,7 +8,7 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 
 import "../tailwind.css";
-import Header from "../app/components/Reusable/Header/index";
+import Header from "./components/Reusable/Header/index";
 import Footer from "./components/Reusable/Footer/index";
 
 export const links: LinksFunction = () => [
