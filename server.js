@@ -2,16 +2,16 @@
 /* eslint-disable no-unused-vars */
 import { createRequestHandler } from "@remix-run/express";
 import express from "express";
-import dotenv from "dotenv/config"
+import dotenv from "dotenv/config";
 const app = express();
 const PORT = process.env.PORT || 3001;
 import apiRoutes from "./apiRoutes.cjs";
 import cors from "cors";
-// const corsOptions = {
-//   origin: `http://localhost:${PORT}`,
-// };
+const corsOptions = {
+  origin: `http://localhost:${PORT}`,
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 const viteDevServer =
   process.env.NODE_ENV === "production"
