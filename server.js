@@ -2,13 +2,13 @@
 /* eslint-disable no-unused-vars */
 import { createRequestHandler } from "@remix-run/express";
 import express from "express";
-import dotenv from "dotenv/config";
+import dotenv from "dotenv/config"
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 import apiRoutes from "./apiRoutes.cjs";
 import cors from "cors";
 const corsOptions = {
-  origin: `http://0.0.0.0:${PORT}`,
+  origin: `http://localhost:${PORT}`,
 };
 
 app.use(cors(corsOptions));
