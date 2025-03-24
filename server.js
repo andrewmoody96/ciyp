@@ -3,7 +3,7 @@ import { createRequestHandler } from "@remix-run/express";
 import express from "express";
 import dotenv from "dotenv/config"
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3001;
 import apiRoutes from "./apiRoutes.cjs";
 import cors from "cors";
 const corsOptions = {
