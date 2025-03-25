@@ -9,7 +9,7 @@ export default function DesktopNav() {
         <ul className="font-moda text-white">
           <button className="m-2 p-[5px] rounded-lg hover:text-[#B36551]">
             <a onClick={() => location.reload()} href="/">
-              CIYP
+              Home
             </a>
           </button>
           {/*Reloads Home Page*/}
