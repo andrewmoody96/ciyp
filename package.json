@@ -1,26 +1,51 @@
 {
-  "name": "ciyp",
-  "version": "2025.01",
-  "engines": {
-    "node": "19.5.0",
-    "npm": "9.6.7"
-  },
-  "description": "The Official Website of Chocolate in Your Pocket",
-  "main": "index.js",
+  "name": "ciyp-remix.vite.express",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
   "scripts": {
-    "start": "cd server && npm start",
-    "test": "cd client && npm run test",
-    "build": "cd client && npm run build",
-    "install": "cd server && npm i && cd ../client && npm i"
+    "build": "remix vite:build",
+    "dev": "node ./server.js",
+    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "start": "cross-env NODE_ENV=production node ./server.js",
+    "typecheck": "tsc"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andrewmoody96/ciyp.git"
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@remix-run/express": "^2.15.3",
+    "@remix-run/node": "^2.15.3",
+    "@remix-run/react": "^2.15.3",
+    "@types/prop-types": "^15.7.14",
+    "autoprefixer": "^10.4.21",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "googleapis": "^148.0.0",
+    "isbot": "^4.1.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-  "author": "Andrew Moody",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/andrewmoody96/ciyp/issues"
-  },
-  "homepage": "https://github.com/andrewmoody96/ciyp#readme"
+  "devDependencies": {
+    "@remix-run/dev": "^2.15.3",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.38.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.1.6",
+    "vite": "^5.4.15",
+    "vite-tsconfig-paths": "^4.2.1"
+  }
 }

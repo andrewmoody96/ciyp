@@ -1,2 +1,8 @@
 node_modules
+
+/.cache
+/build
 .env
+
+/ciyp-sitecalendar-getevents-2025.json
+/ciypGCAL_Creds_B64.json
