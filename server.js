@@ -4,7 +4,7 @@ import { createRequestHandler } from "@remix-run/express";
 import express from "express";
 import dotenv from "dotenv/config";
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 import apiRoutes from "./apiRoutes.cjs";
 import cors from "cors";
 // const corsOptions = {
@@ -34,6 +34,6 @@ app.use("/api/", apiRoutes);
 
 app.all("*", createRequestHandler({ build }));
 
-app.listen(3000, () => {
-  console.log(`App listening on http://localhost:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Our app is running on port ${PORT}`);
 });
