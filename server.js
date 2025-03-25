@@ -7,11 +7,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 import apiRoutes from "./apiRoutes.cjs";
 import cors from "cors";
-// const corsOptions = {
-//   origin: `http://localhost:${PORT}`,
-// };
+const corsOptions = {
+  origin: `http://localhost:${PORT}`,
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 const viteDevServer =
   process.env.NODE_ENV === "production"
@@ -35,5 +35,5 @@ app.use("/api/", apiRoutes);
 app.all("*", createRequestHandler({ build }));
 
 app.listen(PORT, () => {
-  console.log(`Our app is running on port ${PORT}`);
+  console.log(`App is running on port ${PORT}`);
 });
