@@ -59,7 +59,7 @@ export default function HamburgerNav() {
         </div>
         <h1 className="fixed top-0 right-0 text-4xl text-center text-white font-moda m-2 my-1 p-1">
           <a onClick={() => location.reload()} href="/">
-            Home
+            CIYP
           </a>
         </h1>
       </div>

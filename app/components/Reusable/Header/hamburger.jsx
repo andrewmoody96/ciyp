@@ -14,7 +14,6 @@ export default function Hamburger({ isOpen }) {
         ></div>
         <div
           className={"burger " + (isOpen ? "patty2open" : "patty2closed")}
-          // className="burger"
         ></div>
         <div
           style={{ transform: isOpen ? "rotate(-45deg)" : "rotate(0)" }}
