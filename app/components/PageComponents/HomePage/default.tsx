@@ -12,9 +12,7 @@ export default function Default() {
     <>
       <HomeVideo />
       <div className="h-[100px] my-10 invisible">dummy div</div>{" "}
-      <div
-        className="mx-auto my-5 m-3 flex flex-col justify-center items-center"
-      >
+      <div className="mx-auto my-5 m-3 flex flex-col justify-center items-center">
         <div className="relative w-[85vw] tablet:w-[75vw] desktop:w-[50vw] flex justify-center items-center">
           <img
             width="1200"
@@ -65,7 +63,6 @@ export default function Default() {
           <h1 className="font-modaCaps bg-[#262626]/25 border border-white px-2 rounded-lg text-[2.2rem] drop-shadow-[0_1px_5px_rgba(0,0,0,0.7)] text-white mb-5">
             Subscribe
           </h1>
-          {/* CLEAN UP */}
           <div className="overflow-x-scroll">{<Signup />}</div>
         </section>
         <div className="h-[10vh] tablet:h-[5vh] w-[100vw] invisible"></div>

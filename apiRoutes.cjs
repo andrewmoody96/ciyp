@@ -1,5 +1,5 @@
 const express = require("express");
-require("dotenv")
+require("dotenv");
 const { Buffer } = require("buffer");
 const router = express.Router();
 

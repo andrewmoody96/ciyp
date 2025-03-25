@@ -7,6 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 import apiRoutes from "./apiRoutes.cjs";
 import cors from "cors";
+// WATCH OUT FOR CORS ERRORS
 const corsOptions = {
   origin: `http://0.0.0.0:${PORT}`,
 };

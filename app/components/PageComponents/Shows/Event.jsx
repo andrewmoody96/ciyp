@@ -9,7 +9,7 @@ export default function Event({ description, tickets, doorTime }) {
   let time = description[2]; // -- start time
   let location = description[3]; // -- event address
 
-  // Ticket URL & Door Time -- *** NOT REQUIRED ***
+  // Ticket URL & Door Time -- *** OPTIONAL INFO ***
   let url = tickets; // -- ticket link ***
   let doors = doorTime; // -- doors open time ***
 

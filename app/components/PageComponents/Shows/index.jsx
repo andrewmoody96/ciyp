@@ -14,6 +14,11 @@ dayjs.extend(localizedFormat);
 dayjs.extend(utc);
 dayjs.extend(isSameOrAfter);
 
+// -------------------------SHOWS PAGE-------------------------------
+// This page component is responsible for fetching and rendering the upcoming events from the Google Calendar API.
+// The component will fetch the events from the API and render them as Event components that will display the event date, venue, time, location, and ticket URL.
+// ------------------------------------------------------------------
+
 let eventLocation = "";
 let venue = "";
 let date = null;
@@ -112,10 +117,9 @@ export default function Shows() {
                   {(location = `${addressCheck(eventLocation)}`)};
                   {/* OPTIONAL INFO RENDERING */}
                   {(ogURL = event.description)}
-                  {(url = `${eventLinkFormatter(ogURL)}`)} {/*ticket link URL*/}
+                  {(url = `${eventLinkFormatter(ogURL)}`)}
                   {(ogDoors = event.description)}
-                  {(doors = `${doorTimeFormatter(ogDoors)}`)}{" "}
-                  {/*door time for event*/}
+                  {(doors = `${doorTimeFormatter(ogDoors)}`)}
                 </div>
               </div>
               {eventLoader(url, doors)}

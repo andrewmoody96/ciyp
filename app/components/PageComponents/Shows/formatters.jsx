@@ -6,7 +6,10 @@ dayjs.extend(localizedFormat);
 dayjs.extend(utc);
 dayjs.extend(isSameOrAfter);
 
-// State Formatter
+// STATE FORMATTER
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// INPUT - Google Calendar event.location string.
+// OUTPUT - State value as a String. The code will extract it from the stateZIP array in the function.
 let state = ``;
 
 export function stateCheck(stateZIP) {
@@ -15,7 +18,10 @@ export function stateCheck(stateZIP) {
   return state;
 }
 
-// Address Formatter
+// ADDRESS FORMATTER
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// INPUT - Google Calendar event.location string.
+// OUTPUT - Address value as a String. The code will extract it from the commas array in the function.
 export function addressCheck(address) {
   let commas = address.split(",");
   if (commas.length > 4) {
@@ -37,7 +43,10 @@ export function addressCheck(address) {
 }
 // }
 
-// URL FORMATTER
+// TICKET URL FORMATTER
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// INPUT - Google Calendar event.description string.
+// OUTPUT - URL value as a String. The code will extract it from the og array in the function.
 let url = null;
 
 export function eventLinkFormatter(string) {
