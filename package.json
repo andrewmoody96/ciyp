@@ -15,9 +15,9 @@
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@remix-run/express": "^2.16.3",
-    "@remix-run/node": "^2.15.3",
-    "@remix-run/react": "^2.15.3",
+    "@remix-run/express": "^2.16.5",
+    "@remix-run/node": "^2.16.5",
+    "@remix-run/react": "^2.16.5",
     "@types/prop-types": "^15.7.14",
     "autoprefixer": "^10.4.21",
     "cors": "^2.8.5",
@@ -32,7 +32,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^2.15.3",
+    "@remix-run/dev": "^2.16.5",
     "@types/react": "^18.3.20",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
