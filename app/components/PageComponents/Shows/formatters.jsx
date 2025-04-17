@@ -47,16 +47,41 @@ export function addressCheck(address) {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // INPUT - Google Calendar event.description string.
 // OUTPUT - URL value as a String. The code will extract it from the og array in the function.
-let url = null;
 
-export function eventLinkFormatter(string) {
-  if (string !== undefined) {
-    let og = string.split('"');
-    url = og[1];
+let url = null;
+export function eventLinkFormatter(description) {
+  // Checks for value in description
+  if (description !== undefined) {
+    console.log(description);
+    // splits the description string into an array
+    let splits = description.split(":DOORS:");
+
+    console.log(splits);
+    console.log(splits.length);
+
+    // Check if the first value is not null or an empty string
+    if (splits[0] && splits[0].trim() !== "") {
+      let potentialUrl = splits[0].trim();
+
+      // Check if the value contains an anchor tag or does not start with "https://"
+      if (
+        /<a\s+href=.*?>.*?<\/a>/i.test(potentialUrl) ||
+        !potentialUrl.startsWith("https://")
+      ) {
+        // Extract the portion of the string starting with "https://" up to the next space
+        const match = potentialUrl.match(/https:\/\/\S+/);
+        url = match ? match[0].split(" ")[0] : null;
+      } else {
+        url = potentialUrl;
+      }
+    } else {
+      url = null;
+    }
+    return url;
   } else {
     url = null;
+    return url;
   }
-  return url;
 }
 
 // DOOR TIME FORMATTER
@@ -67,9 +92,15 @@ export function eventLinkFormatter(string) {
 let doors = null;
 
 export function doorTimeFormatter(string) {
+  // console.log(string);
+
   if (string !== undefined) {
     let og = string.split(":DOORS:");
-    doors = og[1];
+    if (og.length <= 1) {
+      doors = null;
+    } else {
+      doors = og[1];
+    }
   } else {
     doors = null;
   }

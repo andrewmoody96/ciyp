@@ -116,6 +116,7 @@ export default function Shows() {
                   {(eventLocation = `${event.location}`)}
                   {(location = `${addressCheck(eventLocation)}`)};
                   {/* OPTIONAL INFO RENDERING */}
+                  {/* call descriptionFormatter(event.description) (1x) instead of (2x) */}                  
                   {(ogURL = event.description)}
                   {(url = `${eventLinkFormatter(ogURL)}`)}
                   {(ogDoors = event.description)}

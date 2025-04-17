@@ -23,11 +23,11 @@ export default function Event({ description, tickets, doorTime }) {
             </h2>
             {doors === "null" ? (
               <h2 className="m-1 text-center text-md text-white font-moda">
-                Starts at {time}
+                {time}
               </h2>
             ) : (
               <h2 className="m-1 text-center text-md text-white font-moda">
-                Starts at {time} -- Doors at {doors}
+                {time} - <em>Doors at {doors}</em>
               </h2>
             )}
             <h2 className="m-1 text-center text-sm text-white font-moda">
