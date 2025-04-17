@@ -105,7 +105,6 @@ export default function Shows() {
         </div>
       ) : (
         <div className="flex flex-col justify-center items-center">
-          {/* UX - only display in col view if events.length < 1? */}
           {events?.map((event) => (
             <div key={event.id}>
               <div className="flex justify-center w-auto">

@@ -87,8 +87,6 @@ export function eventLinkFormatter(description) {
 let doors = null;
 
 export function doorTimeFormatter(string) {
-  // console.log(string);
-
   if (string !== undefined) {
     let og = string.split(":DOORS:");
     if (og.length <= 1) {
