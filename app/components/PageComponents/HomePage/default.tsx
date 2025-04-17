@@ -24,7 +24,7 @@ export default function Default() {
             src={featuredArt}
           ></img>
           <div className="absolute bottom-[-5%]">
-            <button className="shadow-[inset_0_1px_5px_0_rgb(0,0,0);] p-1 mx-2 rounded-xl bg-[#B36551] border border-white font-moda text-white text-base text-center w-[20vw] tablet:w-[25vw] desktop:w-[15vw] hover:bg-red-300 hover:text-black">
+            <button className="shadow-[inset_0_1px_5px_0_rgb(0,0,0);] p-1 mx-2 rounded-xl bg-[#B36551] border border-white font-moda text-white text-base text-center w-auto hover:bg-red-300 hover:text-black">
               <a
                 href="https://distrokid.com/hyperfollow/chocolateinyourpocket/back-to-life-2"
                 target="_blank"
@@ -32,6 +32,16 @@ export default function Default() {
                 className="mx-auto p-2"
               >
                 Stream
+              </a>
+            </button>
+            <button className="shadow-[inset_0_1px_5px_0_rgb(0,0,0);] p-1 mx-2 rounded-xl bg-[#B36551] border border-white font-moda text-white text-base text-center w-auto hover:bg-red-300 hover:text-black">
+              <a
+                href="https://elasticstage.com/chocolateinyourpocket/releases/back-to-life-album"
+                target="_blank"
+                rel="noreferrer"
+                className="mx-auto p-2"
+              >
+                Buy the LP
               </a>
             </button>
           </div>
