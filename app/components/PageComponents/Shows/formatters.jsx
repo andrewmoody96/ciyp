@@ -52,17 +52,12 @@ let url = null;
 export function eventLinkFormatter(description) {
   // Checks for value in description
   if (description !== undefined) {
-    console.log(description);
     // splits the description string into an array
     let splits = description.split(":DOORS:");
-
-    console.log(splits);
-    console.log(splits.length);
 
     // Check if the first value is not null or an empty string
     if (splits[0] && splits[0].trim() !== "") {
       let potentialUrl = splits[0].trim();
-
       // Check if the value contains an anchor tag or does not start with "https://"
       if (
         /<a\s+href=.*?>.*?<\/a>/i.test(potentialUrl) ||
