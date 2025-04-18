@@ -1,5 +1,5 @@
 const express = require("express");
-require("dotenv");
+require("dotenv").config();
 const { Buffer } = require("buffer");
 const router = express.Router();
 
@@ -27,10 +27,9 @@ const calendar = google.calendar({
 });
 
 // GCal API Route
-router.get("/shows", (req, res) => {
-  async function main() {
+router.get("/shows", async (req, res) => {
+  try {
     const auth = new google.auth.GoogleAuth({
-      // Scopes can be specified either as an array or as a single, space-delimited string.
       credentials: GoogleServiceAccountKeys,
       scopes: [
         "https://www.googleapis.com/auth/calendar.events.readonly",
@@ -38,40 +37,28 @@ router.get("/shows", (req, res) => {
       ],
     });
 
-    // Acquire an auth client, and bind it to all future calls
     const authClient = await auth.getClient();
     google.options({ auth: authClient });
 
-    await calendar.events.list(
-      {
-        calendarId: GCAL_ID,
-        timeMin: new Date().toISOString(),
-        maxResults: 6,
-        singleEvents: true,
-        orderBy: "startTime",
-      },
-      (error, result) => {
-        if (error) {
-          console.error(error);
-          res.send(JSON.stringify({ error: error }));
-        } else {
-          if (result.data.items.length) {
-            res.send(JSON.stringify({ events: result.data.items }));
-            console.log("\u001b[32m" + "Events sent to frontend.");
-          } else {
-            res.send(JSON.stringify({ message: "No upcoming events found." }));
-            console.warn("No upcoming events found.");
-          }
-        }
-      }
-    );
-  }
+    const result = await calendar.events.list({
+      calendarId: GCAL_ID,
+      timeMin: new Date().toISOString(),
+      maxResults: 6,
+      singleEvents: true,
+      orderBy: "startTime",
+    });
 
-  main().catch((e) => {
-    console.log("another big old goof... on the backend");
-    console.error(e);
-    throw e;
-  });
+    if (result.data.items.length) {
+      res.json({ events: result.data.items });
+      console.log("\u001b[32mEvents sent to frontend.");
+    } else {
+      res.json({ message: "No upcoming events found." });
+      console.warn("No upcoming events found.");
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
 module.exports = router;

@@ -3,20 +3,20 @@ import Hamburger from "./hamburger";
 
 // -----------------------HAMBURGER NAV BAR----------------------------
 // Hamburger menu component for Mobile view.
-// ------------------------------------------------------------------
+// --------------------------------------------------------------------
 
 export default function HamburgerNav() {
   const [burgerOpen, setBurgerOpen] = useState(false);
-  const toggleBurger = () => {
-    setBurgerOpen(!burgerOpen);
-  };
+
+  const toggleBurger = () => setBurgerOpen((prev) => !prev);
 
   return (
     <>
       <div className="desktop:hidden">
         <ul
-          style={{ display: burgerOpen ? "flex" : "none" }}
-          className="flex-col items-center tablet:justify-center bg-[#262626] border-r border-b rounded-br-md h-[100vh] w-[50vw] tablet:h-[50vh] tablet:w-[25vw] mt-[3.1rem] absolute font-moda text-white text-4xl "
+          className={`flex-col items-center tablet:justify-center bg-[#262626] border-r border-b rounded-br-md h-[100vh] w-[50vw] tablet:h-[50vh] tablet:w-[25vw] mt-[3.1rem] absolute font-moda text-white text-4xl ${
+            burgerOpen ? "flex" : "hidden"
+          }`}
         >
           <button className="m-2 p-[5px] rounded-lg hover:text-[#B36551]">
             <a onClick={() => location.reload()} href="/">
@@ -48,10 +48,10 @@ export default function HamburgerNav() {
           </button>
           {/* Link to LinkTree */}
         </ul>
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
         <div
-          className="hamburger flex items-center  justify-center desktop:hidden"
+          className="hamburger flex items-center justify-center desktop:hidden"
           onClick={toggleBurger}
-          onKeyDown={toggleBurger}
           role="menu"
           tabIndex={0}
         >
