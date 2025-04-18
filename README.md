@@ -14,14 +14,11 @@
 
 ---
 
-## Changed in 2025.03 update:
-
-- **rebuilt upon Heroku 24, using Remix JS, Vite, & Express** for increased security & performance
+## Changed in 2025.04 update:
 
 - **Calendar Improvements:**
-  - if no events are currently in the future, now we the calendar will let you know
-  - when available, users will now see time for Doors at the venue
-  - when available, users will see links to purchase tickets via redirect to seller
+  - improved handling of ticket URLs and Door Times from event descriptions
+  - slight stylistic improvments
 
 ---
 
