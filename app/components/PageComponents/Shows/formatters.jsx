@@ -23,22 +23,26 @@ export function stateCheck(stateZIP) {
 // INPUT - Google Calendar event.location string.
 // OUTPUT - Address value as a String. The code will extract it from the commas array in the function.
 export function addressCheck(address) {
-  let commas = address.split(",");
-  if (commas.length > 4) {
-    commas.shift();
-    let street = `${commas[0]},`;
-    let city = `${commas[1]},`;
-    let stateZIP = `${commas[2]}`;
-    stateCheck(stateZIP);
-    let location = `${street} ${city} ${state}`;
-    return location;
+  if (address === "undefined" || address === null) {
+    return "null";
   } else {
-    let street = `${commas[0]},`;
-    let city = `${commas[1]},`;
-    let stateZIP = `${commas[2]}`;
-    stateCheck(stateZIP);
-    let location = `${street} ${city} ${state}`;
-    return location;
+    let commas = address.split(",");
+    if (commas.length > 4) {
+      commas.shift();
+      let street = `${commas[0]},`;
+      let city = `${commas[1]},`;
+      let stateZIP = `${commas[2]}`;
+      stateCheck(stateZIP);
+      let location = `${street} ${city} ${state}`;
+      return location;
+    } else {
+      let street = `${commas[0]},`;
+      let city = `${commas[1]},`;
+      let stateZIP = `${commas[2]}`;
+      stateCheck(stateZIP);
+      let location = `${street} ${city} ${state}`;
+      return location;
+    }
   }
 }
 // }

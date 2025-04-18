@@ -2,14 +2,14 @@ import PropTypes from "prop-types";
 
 // UX - Ability to subscribe to Google Calendar to stay up with Chocolate events
 
-export default function Event({ description, tickets, doorTime }) {
+export default function Event({ description, tickets, doorTime, location }) {
   // Description Array
   let date = description[0]; // -- date of event
   let venue = description[1]; // -- event venue
   let time = description[2]; // -- start time
-  let location = description[3]; // -- event address
 
-  // Ticket URL & Door Time -- *** OPTIONAL INFO ***
+  // Optional Information
+  let address = location; // -- event address
   let url = tickets; // -- ticket link ***
   let doors = doorTime; // -- doors open time ***
 
@@ -30,9 +30,11 @@ export default function Event({ description, tickets, doorTime }) {
                 {time} - <em>Doors at {doors}</em>
               </h2>
             )}
-            <h2 className="m-1 text-center text-sm text-white font-moda">
-              {location}
-            </h2>
+            {address === "null" ? null : (
+              <h2 className="m-1 text-center text-md text-white font-moda">
+                {address}
+              </h2>
+            )}
             {tickets !== "null" ? (
               <h2 className="m-1 text-center text-md text-black font-moda">
                 <a
@@ -56,4 +58,5 @@ Event.propTypes = {
   description: PropTypes.array.isRequired,
   tickets: PropTypes.string,
   doorTime: PropTypes.string,
+  location: PropTypes.string,
 };

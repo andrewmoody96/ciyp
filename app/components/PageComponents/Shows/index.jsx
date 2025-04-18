@@ -34,9 +34,10 @@ const eventLoader = (url, doors) => {
   return (
     <Event
       className="w-100"
-      description={[date, venue, time, location]}
+      description={[date, venue, time]}
       tickets={url}
       doorTime={doors}
+      location={location}
     />
   );
 };
@@ -115,7 +116,6 @@ export default function Shows() {
                   {(eventLocation = `${event.location}`)}
                   {(location = `${addressCheck(eventLocation)}`)};
                   {/* OPTIONAL INFO RENDERING */}
-                  {/* call descriptionFormatter(event.description) (1x) instead of (2x) */}                  
                   {(ogURL = event.description)}
                   {(url = `${eventLinkFormatter(ogURL)}`)}
                   {(ogDoors = event.description)}
