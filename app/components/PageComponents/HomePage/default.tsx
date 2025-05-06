@@ -7,6 +7,8 @@ import FeaturedArt from "./featuredArt";
 // This is the main homepage view. Featured info/project, shows, & quick links to socials and contact.
 // ------------------------------------------------------------------
 
+// TODO: Shopfiy
+
 export default function Default() {
   return (
     <>
@@ -22,7 +24,7 @@ export default function Default() {
           <h1 className="font-modaCaps bg-[#262626]/25 border border-white px-2 rounded-lg text-[2.2rem] drop-shadow-[0_1px_5px_rgba(0,0,0,0.7)] text-white my-5">
             Shows
           </h1>
-          <div className="overflow-x-scroll">{<Shows />}</div>
+          <div className="">{<Shows />}</div>
         </section>
         <div
           id="subscribe"
@@ -32,7 +34,7 @@ export default function Default() {
           <h1 className="font-modaCaps bg-[#262626]/25 border border-white px-2 rounded-lg text-[2.2rem] drop-shadow-[0_1px_5px_rgba(0,0,0,0.7)] text-white mb-5">
             Subscribe
           </h1>
-          <div className="overflow-x-scroll">{<Signup />}</div>
+          <div className="">{<Signup />}</div>
         </section>
         <div className="h-[10vh] tablet:h-[5vh] w-[100vw] invisible"></div>
       </div>
