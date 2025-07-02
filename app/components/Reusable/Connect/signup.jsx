@@ -172,7 +172,7 @@ export default function Signup({ isActive, onShow }) {
                 </p>
               </article>
             </div>
-            <button className="mx-auto mb-5 shadow-[inset_0_1px_5px_0_rgb(0,0,0);] p-1 rounded-xl bg-[#B36551] border border-black font-moda text-white text-base text-center w-[60%] hover:bg-red-300 hover:text-black">
+            {/* <button className="mx-auto mb-5 shadow-[inset_0_1px_5px_0_rgb(0,0,0);] p-1 rounded-xl bg-[#B36551] border border-black font-moda text-white text-base text-center w-[60%] hover:bg-red-300 hover:text-black">
               <a
                 href="https://calendar.google.com/calendar/ical/2035uvnusekdllmhnqo88ek54o%40group.calendar.google.com/public/basic.ics"
                 target="_blank"
@@ -181,7 +181,7 @@ export default function Signup({ isActive, onShow }) {
               >
                 Subscribe to our Calendar, Never Miss a Show!
               </a>
-            </button>
+            </button> */}
           </div>
           <div className="invisible h-10">dummy div</div>
         </div>
