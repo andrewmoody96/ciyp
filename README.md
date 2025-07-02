@@ -18,7 +18,7 @@
 
 - **Calendar Improvements:**
   - slight stylistic improvments
-  - ~~- ability to subscribe to our Upcoming Shows Calendar has been added~~
+  - ability to subscribe to our Upcoming Shows Calendar using Google or iCal/ICS
 
 ---
 
