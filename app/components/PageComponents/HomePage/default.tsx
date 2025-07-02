@@ -31,7 +31,7 @@ export default function Default() {
             </h1>
             <button
               onClick={toggleCalModal}
-              className="absolute bottom-[-62%] shadow-[inset_0_1px_5px_0_rgb(0,0,0);] p-1 mb-2 rounded-t-none rounded-xl bg-[#FFF] border-l border-r border-b border-t-0 border-white font-moda text-black text-sm text-center hover:bg-black hover:text-white font-semibold px-2"
+              className="absolute bottom-[-69%] shadow-[inset_0_1px_5px_0_rgb(0,0,0);] p-1 mb-2 rounded-t-none rounded-xl bg-[#FFF] border-l border-r border-b border-t-0 border-white font-moda text-black text-sm text-center hover:bg-black hover:text-white font-semibold px-2"
             >
               Subscribe & Never Miss a Show!
             </button>
@@ -39,7 +39,7 @@ export default function Default() {
           <div className="h-auto mt-1 invisible">dummy div</div>{" "}
           <div className="mt-5">{<Shows />}</div>
         </section>
-        <CalModal isOpen={modalOpen} />
+        <CalModal isOpen={modalOpen} onClose={toggleCalModal} />
         <div
           id="subscribe"
           className="h-[8vh] tablet:h-[5vh] w-[100vw] invisible"
