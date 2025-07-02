@@ -172,7 +172,6 @@ export default function Signup({ isActive, onShow }) {
                 </p>
               </article>
             </div>
-            {/* CENTERED */}
           </div>
           <div className="invisible h-10">dummy div</div>
         </div>
