@@ -15,10 +15,10 @@ export default function Signup({ isActive, onShow }) {
   return (
     <>
       {isActive === true ? (
-        <div className="flex flex-col justify-center items-center desktop:w-[50vw]">
+        <div className="flex flex-col justify-center items-center w-[97vw] desktop:w-[50vw]">
           {/* EMAIL SIGNUP */}
-          <div className="flex flex-col bg-white/90 border-2 border-[#B36551] rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.6)] justify-center m-2 shadow-[inset_0_1px_5px_0_rgb(0,0,0);]">
-            <div className="rounded-lg bg-transparent">
+          <div className="bg-white/90 border-2 border-[#B36551] rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.6)] m-2 shadow-[inset_0_1px_5px_0_rgb(0,0,0);]">
+            <div className="flex flex-col justify-center items-center text-center rounded-lg bg-transparent">
               <form
                 action="https://gmail.us9.list-manage.com/subscribe/post?u=35ccf36e917bbf2fc2fff4fb9&id=d3c0491fe1"
                 method="post"
@@ -172,16 +172,7 @@ export default function Signup({ isActive, onShow }) {
                 </p>
               </article>
             </div>
-            <button className="mx-auto mb-5 shadow-[inset_0_1px_5px_0_rgb(0,0,0);] p-1 rounded-xl bg-[#B36551] border border-black font-moda text-white text-base text-center w-[60%] hover:bg-red-300 hover:text-black">
-              <a
-                href="https://calendar.google.com/calendar/ical/2035uvnusekdllmhnqo88ek54o%40group.calendar.google.com/public/basic.ics"
-                target="_blank"
-                rel="noreferrer"
-                className="mx-auto p-2"
-              >
-                Subscribe to our Calendar, Never Miss a Show!
-              </a>
-            </button>
+            {/* CENTERED */}
           </div>
           <div className="invisible h-10">dummy div</div>
         </div>
