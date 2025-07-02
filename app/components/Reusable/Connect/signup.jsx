@@ -81,7 +81,7 @@ export default function Signup({ isActive, onShow }) {
                         defaultValue="Subscribe"
                         name="subscribe"
                         id="mc-embedded-subscribe"
-                        className="button cursor-pointer font-moda bg-[#C89184] rounded-lg p-2 text-white hover:bg-red-300 hover:text-black"
+                        className="button cursor-pointer shadow-[inset_0_1px_5px_0_rgb(0,0,0);] p-1 rounded-xl bg-[#B36551] border border-black font-moda text-white text-base text-center w-[50%] hover:bg-red-300 hover:text-black"
                       />
                       <p className="brandingLogo">
                         <a
@@ -172,6 +172,16 @@ export default function Signup({ isActive, onShow }) {
                 </p>
               </article>
             </div>
+            <button className="mx-auto mb-5 shadow-[inset_0_1px_5px_0_rgb(0,0,0);] p-1 rounded-xl bg-[#B36551] border border-black font-moda text-white text-base text-center w-[60%] hover:bg-red-300 hover:text-black">
+              <a
+                href="https://calendar.google.com/calendar/ical/2035uvnusekdllmhnqo88ek54o%40group.calendar.google.com/public/basic.ics"
+                target="_blank"
+                rel="noreferrer"
+                className="mx-auto p-2"
+              >
+                Subscribe to our Calendar, Never Miss a Show!
+              </a>
+            </button>
           </div>
           <div className="invisible h-10">dummy div</div>
         </div>

@@ -14,7 +14,7 @@ export default function Event({ description, tickets, doorTime, location }) {
   let doors = doorTime; // -- doors open time ***
 
   return (
-    <div className="flex flex-col w-[75vw] tablet:w-[50vw] desktop:w-[30vw]">
+    <div className="flex flex-col w-[75vw] tablet:w-[45vw] desktop:w-[30vw]">
       <div className="m-2 px-2 rounded-2xl shadow-[inset_0_1px_5px_0_rgb(0,0,0);] items-center bg-[#B36551]/90 border-4 border-black">
         <span className="p-2 rounded-md flex flex-col" href="">
           <div className="flex flex-col justify-center">
