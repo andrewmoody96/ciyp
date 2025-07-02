@@ -14,11 +14,11 @@
 
 ---
 
-## Changed in 2025.04 update:
+## Changed in 2025.07 update:
 
 - **Calendar Improvements:**
-  - improved handling of ticket URLs and Door Times from event descriptions
   - slight stylistic improvments
+  - ability to subscribe to our Upcoming Shows Calendar using Google or iCal/ICS
 
 ---
 
@@ -27,7 +27,6 @@
 ## Hopes for the Near Future:
 
 - [ ] Merch Store? :eyes:
-- [ ] Ability to subscribe to Google Calendar to stay up with Chocolate events
 
 ---
 
