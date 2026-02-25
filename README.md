@@ -40,4 +40,4 @@ There is no circumstance in which you may distribute or copy this code without m
 
 ---
 
-###### Microsoft Copilot Used STRICTLY for Refactoring & Cleanup starting in version 2025.04
+###### Copilot Used STRICTLY for Refactoring & Cleanup starting in version 2025.04
