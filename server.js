@@ -1,12 +1,14 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import { createRequestHandler } from "@remix-run/express";
+import "dotenv/config";
+import { createRequestHandler } from "@react-router/express";
 import express from "express";
-import dotenv from "dotenv/config";
-const app = express();
-const PORT = process.env.PORT || 3000;
 import apiRoutes from "./apiRoutes.cjs";
 import cors from "cors";
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
 // WATCH OUT FOR CORS ERRORS
 const corsOptions = {
   origin: `http://0.0.0.0:${PORT}`,
@@ -28,7 +30,7 @@ app.use(
 );
 
 const build = viteDevServer
-  ? () => viteDevServer.ssrLoadModule("virtual:remix/server-build")
+  ? () => viteDevServer.ssrLoadModule("virtual:react-router/server-build")
   : await import("./build/server/index.js");
 
 app.use("/api/", apiRoutes);
