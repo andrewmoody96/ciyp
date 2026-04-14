@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "react-router";
 import Default from "../components/PageComponents/HomePage/default";
 
 export const meta: MetaFunction = () => {
