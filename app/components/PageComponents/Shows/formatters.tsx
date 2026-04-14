@@ -12,7 +12,7 @@ dayjs.extend(isSameOrAfter);
 // OUTPUT - State value as a String. The code will extract it from the stateZIP array in the function.
 let state = ``;
 
-export function stateCheck(stateZIP) {
+export function stateCheck(stateZIP: string): string {
   let stateArr = stateZIP.split(" ");
   state = `${stateArr[0]}${stateArr[1]}`;
   return state;
@@ -22,7 +22,7 @@ export function stateCheck(stateZIP) {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // INPUT - Google Calendar event.location string.
 // OUTPUT - Address value as a String. The code will extract it from the commas array in the function.
-export function addressCheck(address) {
+export function addressCheck(address: string | null): string {
   if (address === "undefined" || address === null) {
     return "null";
   } else {
@@ -52,8 +52,8 @@ export function addressCheck(address) {
 // INPUT - Google Calendar event.description string.
 // OUTPUT - URL value as a String. The code will extract it from the og array in the function.
 
-let url = null;
-export function eventLinkFormatter(description) {
+let url: string | null = null;
+export function eventLinkFormatter(description: string | undefined): string | null {
   // Checks for value in description
   if (description !== undefined) {
     // splits the description string into an array
@@ -88,9 +88,9 @@ export function eventLinkFormatter(description) {
 // INPUT - Google Calendar event.description string.
 // OUTPUT - Time value as a String. following ":DOORS:" in the event descriptpion. The code will extract it from the og array in the function.
 
-let doors = null;
+let doors: string | null = null;
 
-export function doorTimeFormatter(string) {
+export function doorTimeFormatter(string: string | undefined): string | null {
   if (string !== undefined) {
     let og = string.split(":DOORS:");
     if (og.length <= 1) {
@@ -109,19 +109,24 @@ export function doorTimeFormatter(string) {
 // INPUT - Google Calendar event.start.date or events.start.dateTime
 // OUTPUT - Array of formatted Date & Time values determined by event being an All-Day Event or not.
 
-export function dateTimeHandler(e) {
+interface EventStart {
+  dateTime?: string;
+  date?: string;
+}
+
+export function dateTimeHandler(e: EventStart): [string, string] | undefined {
   // for Scheduled Events
   if (e.dateTime) {
-    let scheduled = [];
-    scheduled.push(dayjs(e.dateTime).format("M/D")); // Date
-    scheduled.push(dayjs(e.dateTime).format("LT")); // Scheduled Time Value
-    return scheduled;
+    return [
+      dayjs(e.dateTime).format("M/D"),  // Date
+      dayjs(e.dateTime).format("LT"),   // Scheduled Time Value
+    ];
   }
   // for All-Day Events
   if (e.date) {
-    let allDay = [];
-    allDay.push(dayjs(e.date).format("M/D")); // Date
-    allDay.push("TBD"); // All-Day Time Value
-    return allDay;
+    return [
+      dayjs(e.date).format("M/D"),  // Date
+      "TBD",                         // All-Day Time Value
+    ];
   }
 }

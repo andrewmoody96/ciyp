@@ -9,9 +9,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Handles signups for the CIYP email list.
 // ------------------------------------------------------------------
 
-import PropTypes from "prop-types";
+interface SignupProps {
+  isActive: boolean;
+  onShow: () => void;
+}
 
-export default function Signup({ isActive, onShow }) {
+export default function Signup({ isActive, onShow }: SignupProps) {
   return (
     <>
       {isActive === true ? (
@@ -68,7 +71,7 @@ export default function Signup({ isActive, onShow }) {
                       type="text"
                       name="b_35ccf36e917bbf2fc2fff4fb9_d3c0491fe1"
                       tabIndex={-1}
-                      defaultValue
+                      defaultValue=""
                     />
                   </div>
                   <div className="font-moda indicates-required text-center text-xs mb-2">
@@ -179,8 +182,3 @@ export default function Signup({ isActive, onShow }) {
     </>
   );
 }
-
-Signup.propTypes = {
-  isActive: PropTypes.bool.isRequired,
-  onShow: PropTypes.func.isRequired,
-};

@@ -1,7 +1,11 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 
-export default function CalModal({ isOpen, onClose }) {
+interface CalModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export default function CalModal({ isOpen, onClose }: CalModalProps) {
   const [copied, setCopied] = useState(false);
   const icalUrl =
     "https://calendar.google.com/calendar/ical/2035uvnusekdllmhnqo88ek54o%40group.calendar.google.com/public/basic.ics";
@@ -85,8 +89,3 @@ export default function CalModal({ isOpen, onClose }) {
     </>
   );
 }
-
-CalModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-};
