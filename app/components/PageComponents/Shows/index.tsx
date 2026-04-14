@@ -55,7 +55,7 @@ export default function Shows() {
           console.error("load failed");
           setIsUpcoming(false);
         } else {
-          if (jsonData.message === "No upcoming events found.") {
+          if (jsonData.message === "No upcoming events found." || !jsonData.events) {
             setIsUpcoming(false);
           } else {
             let eventObj = jsonData.events;

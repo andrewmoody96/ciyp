@@ -1,5 +1,4 @@
 const express = require("express");
-require("dotenv").config();
 const { Buffer } = require("buffer");
 const router = express.Router();
 
@@ -10,36 +9,22 @@ const GoogleServiceAccountKeys = JSON.parse(
   Buffer.from(process.env.GOOGLE_KEYS, "base64").toString()
 );
 
-const jwt = new google.auth.JWT(
-  GoogleServiceAccountKeys.client_email,
-  null,
-  GoogleServiceAccountKeys.private_key,
-  [
+const auth = new google.auth.GoogleAuth({
+  credentials: GoogleServiceAccountKeys,
+  scopes: [
     "https://www.googleapis.com/auth/calendar.events.readonly",
     "https://www.googleapis.com/auth/calendar.readonly",
-  ]
-);
+  ],
+});
 
 const calendar = google.calendar({
   version: "v3",
-  project: process.env.GOOGLE_PROJECT_NUMBER,
-  auth: jwt,
+  auth: auth,
 });
 
 // GCal API Route
 router.get("/shows", async (req, res) => {
   try {
-    const auth = new google.auth.GoogleAuth({
-      credentials: GoogleServiceAccountKeys,
-      scopes: [
-        "https://www.googleapis.com/auth/calendar.events.readonly",
-        "https://www.googleapis.com/auth/calendar.readonly",
-      ],
-    });
-
-    const authClient = await auth.getClient();
-    google.options({ auth: authClient });
-
     const result = await calendar.events.list({
       calendarId: GCAL_ID,
       timeMin: new Date().toISOString(),
