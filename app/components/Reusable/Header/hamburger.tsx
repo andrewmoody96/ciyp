@@ -1,10 +1,12 @@
-import PropTypes from "prop-types"; // ES6
-
-// -----------------------DESKTOP NAV BAR----------------------------
-// Nav bar component for Desktop view. 
+// -----------------------HAMBURGER COMPONENT------------------------
+// Hamburger icon component for mobile nav.
 // ------------------------------------------------------------------
 
-export default function Hamburger({ isOpen }) {
+interface HamburgerProps {
+  isOpen: boolean;
+}
+
+export default function Hamburger({ isOpen }: HamburgerProps) {
   return (
     <>
       <div className="hamburger">
@@ -23,7 +25,3 @@ export default function Hamburger({ isOpen }) {
     </>
   );
 }
-
-Hamburger.propTypes = {
-  isOpen: PropTypes.bool.isRequired
-};

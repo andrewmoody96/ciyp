@@ -1,4 +1,3 @@
-import PropTypes from "prop-types"; // ES6
 import { useEffect, useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -8,14 +7,19 @@ import emailjs from "@emailjs/browser";
 
 // UX - Improved visual experience when sending message. (ex. "Thanks! We will get back to you shortly.")
 
-export default function Booking({ isActive, onShow }) {
+interface BookingProps {
+  isActive: boolean;
+  onShow: () => void;
+}
+
+export default function Booking({ isActive, onShow }: BookingProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [emailSent, setEmailSent] = useState(false);
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     console.log("sendEmail started");
     e.preventDefault();
 
@@ -138,8 +142,3 @@ export default function Booking({ isActive, onShow }) {
     </>
   );
 }
-
-Booking.propTypes = {
-  isActive: PropTypes.bool.isRequired,
-  onShow: PropTypes.func.isRequired,
-};
