@@ -12,14 +12,12 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@fortawesome/fontawesome-free": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@remix-run/express": "^2.17.3",
     "@remix-run/node": "^2.17.3",
     "@remix-run/react": "^2.17.3",
-    "@types/prop-types": "^15.7.14",
     "autoprefixer": "^10.4.21",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
@@ -28,7 +26,6 @@
     "express": "^4.22.1",
     "googleapis": "^148.0.0",
     "isbot": "^4.1.0",
-    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
