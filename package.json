@@ -1,5 +1,5 @@
 {
-  "name": "ciyp-remix.vite.express",
+  "name": "ciyp-react-router.vite.express",
   "private": true,
   "sideEffects": false,
   "type": "module",
