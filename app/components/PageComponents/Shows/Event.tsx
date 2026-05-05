@@ -40,11 +40,11 @@ export default function Event({ description, tickets, doorTime, location }: Even
                 {address}
               </h2>
             )}
-            {tickets !== "null" ? (
+            {tickets && tickets !== "null" ? (
               <h2 className="m-1 text-center text-md text-black font-moda">
                 <a
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   href={url}
                   className="hover:text-white hover:underline"
                 >
