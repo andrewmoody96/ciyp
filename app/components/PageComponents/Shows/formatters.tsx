@@ -52,35 +52,58 @@ export function addressCheck(address: string | null): string {
 // INPUT - Google Calendar event.description string.
 // OUTPUT - URL value as a String. The code will extract it from the og array in the function.
 
+const HTML_ENTITIES: Record<string, string> = {
+  "&amp;": "&",
+  "&#39;": "'",
+  "&apos;": "'",
+  "&quot;": '"',
+  "&lt;": "<",
+  "&gt;": ">",
+  "&#x2F;": "/",
+  "&#47;": "/",
+};
+
+function decodeEntities(s: string): string {
+  return s.replace(
+    /&(?:amp|#39|apos|quot|lt|gt|#x2F|#47);/g,
+    (m) => HTML_ENTITIES[m] ?? m,
+  );
+}
+
+function safeHttpUrl(candidate: string): string | null {
+  try {
+    const u = new URL(candidate);
+    if (u.protocol !== "http:" && u.protocol !== "https:") return null;
+    return u.toString();
+  } catch {
+    return null;
+  }
+}
+
 let url: string | null = null;
 export function eventLinkFormatter(description: string | undefined): string | null {
-  // Checks for value in description
-  if (description !== undefined) {
-    // splits the description string into an array
-    let splits = description.split(":DOORS:");
+  url = null;
+  if (!description) return url;
 
-    // Check if the first value is not null or an empty string
-    if (splits[0] && splits[0].trim() !== "") {
-      let potentialUrl = splits[0].trim();
-      // Check if the value contains an anchor tag or does not start with "https://"
-      if (
-        /<a\s+href=.*?>.*?<\/a>/i.test(potentialUrl) ||
-        !potentialUrl.startsWith("https://")
-      ) {
-        // Extract the portion of the string starting with "https://" up to the next space
-        const match = potentialUrl.match(/https:\/\/\S+/);
-        url = match ? match[0].split(" ")[0] : null;
-      } else {
-        url = potentialUrl;
-      }
-    } else {
-      url = null;
-    }
-    return url;
-  } else {
-    url = null;
+  const head = description.split(":DOORS:")[0]?.trim();
+  if (!head) return url;
+
+  // Anchor tag (Google Calendar's default when a link is added via the UI)
+  const anchor = head.match(/<a\b[^>]*\bhref\s*=\s*["']([^"']+)["'][^>]*>/i);
+  if (anchor) {
+    url = safeHttpUrl(decodeEntities(anchor[1].trim()));
     return url;
   }
+
+  // Bare URL — exclude <>"' so we cannot slurp surrounding HTML
+  const bare = head.match(/https?:\/\/[^\s<>"']+/i);
+  if (bare) {
+    const cleaned = bare[0].replace(/[.,;:!?)]+$/, "");
+    url = safeHttpUrl(decodeEntities(cleaned));
+    return url;
+  }
+
+  return url;
 }
 
 // DOOR TIME FORMATTER
