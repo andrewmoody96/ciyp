@@ -1,3 +1,5 @@
+import CartBadge from "../../Store/CartBadge";
+
 // -----------------------DESKTOP NAV BAR----------------------------
 // Nav bar component for Desktop view.
 // ------------------------------------------------------------------
@@ -31,6 +33,13 @@ export default function DesktopNav() {
             </a>
           </button>
           {/* Link to LinkTree */}
+          <button className="m-2 p-[5px] rounded-lg hover:text-[#B36551]">
+            <a href="/store">Merch</a>
+          </button>
+          {/* Merch storefront */}
+          <span className="m-2 p-[5px] inline-block">
+            <CartBadge />
+          </span>
         </ul>
         <h1 className="fixed top-0 right-0 text-4xl text-center text-white font-moda m-2 my-1 p-1">
           CIYP

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Hamburger from "./hamburger";
+import CartBadge from "../../Store/CartBadge";
 
 // -----------------------HAMBURGER NAV BAR----------------------------
 // Hamburger menu component for Mobile view.
@@ -47,6 +48,19 @@ export default function HamburgerNav() {
             </a>
           </button>
           {/* Link to LinkTree */}
+          <button className="m-2 p-[5px] rounded-lg hover:text-[#B36551]">
+            <a onClick={toggleBurger} href="/store">
+              Merch
+            </a>
+          </button>
+          {/* Merch storefront */}
+          <button
+            className="m-2 p-[5px] rounded-lg"
+            onClick={toggleBurger}
+            type="button"
+          >
+            <CartBadge />
+          </button>
         </ul>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
         <div
