@@ -9,14 +9,14 @@ interface EventProps {
 
 export default function Event({ description, tickets, doorTime, location }: EventProps) {
   // Description Array
-  let date = description[0]; // -- date of event
-  let venue = description[1]; // -- event venue
-  let time = description[2]; // -- start time
+  const date = description[0]; // -- date of event
+  const venue = description[1]; // -- event venue
+  const time = description[2]; // -- start time
 
   // Optional Information
-  let address = location; // -- event address
-  let url = tickets; // -- ticket link ***
-  let doors = doorTime; // -- doors open time ***
+  const address = location; // -- event address
+  const url = tickets; // -- ticket link ***
+  const doors = doorTime; // -- doors open time ***
 
   return (
     <div className="flex flex-col w-[75vw] tablet:w-[45vw] desktop:w-[30vw]">
