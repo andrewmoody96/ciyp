@@ -23,6 +23,8 @@ export default function Booking({ isActive, onShow }: BookingProps) {
     console.log("sendEmail started");
     e.preventDefault();
 
+    if (!form.current) return;
+
     emailjs
       .sendForm(
         "service_flbsr3u",
@@ -76,9 +78,9 @@ export default function Booking({ isActive, onShow }: BookingProps) {
                     <label className="my-1">
                       Name
                       <input
-                        required="required"
+                        required
                         type="text"
-                        minLength="1"
+                        minLength={1}
                         name="from_name"
                         placeholder="enter name"
                         onChange={(e) => setName(e.target.value)}
@@ -89,7 +91,7 @@ export default function Booking({ isActive, onShow }: BookingProps) {
                     <label className="my-1">
                       Email
                       <input
-                        required="required"
+                        required
                         type="email"
                         name="user_email"
                         placeholder="email@email.com"
@@ -102,7 +104,7 @@ export default function Booking({ isActive, onShow }: BookingProps) {
                       Message
                       <br></br>
                       <textarea
-                        required="required"
+                        required
                         name="message"
                         placeholder="type your message"
                         onChange={(e) => setMessage(e.target.value)}
@@ -114,7 +116,6 @@ export default function Booking({ isActive, onShow }: BookingProps) {
                       type="submit"
                       value="Send"
                       className="button cursor-pointer font-moda bg-[#B36551] rounded-lg p-2 m-2 text-white hover:bg-red-300 hover:text-black text-center"
-                      onClick={sendEmail}
                     ></input>
                   </form>
                 </>

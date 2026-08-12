@@ -32,6 +32,7 @@
     "@react-router/dev": "^8.3.0",
     "@react-router/fs-routes": "^8.3.0",
     "autoprefixer": "^10.4.21",
+    "@types/node": "^22.20.1",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@typescript-eslint/eslint-plugin": "^6.21.0",

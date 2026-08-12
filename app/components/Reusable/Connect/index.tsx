@@ -17,7 +17,6 @@ export default function Contact() {
         <Booking
           isActive={activeIndex === 1}
           onShow={() => setActiveIndex(0)}
-          resetEmail={null}
         />
       </div>
     </>
