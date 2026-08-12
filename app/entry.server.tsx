@@ -5,7 +5,7 @@
 
 import { PassThrough } from "node:stream";
 
-import type { AppLoadContext, EntryContext } from "react-router";
+import type { EntryContext } from "react-router";
 import { createReadableStreamFromReadable } from "@react-router/node";
 import { ServerRouter } from "react-router";
 import { isbot } from "isbot";
@@ -13,12 +13,16 @@ import { renderToPipeableStream } from "react-dom/server";
 
 const ABORT_DELAY = 5_000;
 
+// React Router reads this to bound how long it waits on a streamed render.
+// Replaces the `abortDelay` prop that <ServerRouter> no longer accepts.
+export const streamTimeout = ABORT_DELAY;
+
 export default function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
   routerContext: EntryContext,
-  _loadContext: AppLoadContext
+  _loadContext: unknown
 ) {
   return isbot(request.headers.get("user-agent") || "")
     ? handleBotRequest(
@@ -44,11 +48,7 @@ function handleBotRequest(
   return new Promise((resolve, reject) => {
     let shellRendered = false;
     const { pipe, abort } = renderToPipeableStream(
-      <ServerRouter
-        context={routerContext}
-        url={request.url}
-        abortDelay={ABORT_DELAY}
-      />,
+      <ServerRouter context={routerContext} url={request.url} />,
       {
         onAllReady() {
           shellRendered = true;
@@ -91,11 +91,7 @@ function handleBrowserRequest(
   return new Promise((resolve, reject) => {
     let shellRendered = false;
     const { pipe, abort } = renderToPipeableStream(
-      <ServerRouter
-        context={routerContext}
-        url={request.url}
-        abortDelay={ABORT_DELAY}
-      />,
+      <ServerRouter context={routerContext} url={request.url} />,
       {
         onShellReady() {
           shellRendered = true;

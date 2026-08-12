@@ -13,7 +13,7 @@ dayjs.extend(isSameOrAfter);
 let state = ``;
 
 export function stateCheck(stateZIP: string): string {
-  let stateArr = stateZIP.split(" ");
+  const stateArr = stateZIP.split(" ");
   state = `${stateArr[0]}${stateArr[1]}`;
   return state;
 }
@@ -26,21 +26,21 @@ export function addressCheck(address: string | null): string {
   if (address === "undefined" || address === null) {
     return "null";
   } else {
-    let commas = address.split(",");
+    const commas = address.split(",");
     if (commas.length > 4) {
       commas.shift();
-      let street = `${commas[0]},`;
-      let city = `${commas[1]},`;
-      let stateZIP = `${commas[2]}`;
+      const street = `${commas[0]},`;
+      const city = `${commas[1]},`;
+      const stateZIP = `${commas[2]}`;
       stateCheck(stateZIP);
-      let location = `${street} ${city} ${state}`;
+      const location = `${street} ${city} ${state}`;
       return location;
     } else {
-      let street = `${commas[0]},`;
-      let city = `${commas[1]},`;
-      let stateZIP = `${commas[2]}`;
+      const street = `${commas[0]},`;
+      const city = `${commas[1]},`;
+      const stateZIP = `${commas[2]}`;
       stateCheck(stateZIP);
-      let location = `${street} ${city} ${state}`;
+      const location = `${street} ${city} ${state}`;
       return location;
     }
   }
@@ -115,7 +115,7 @@ let doors: string | null = null;
 
 export function doorTimeFormatter(string: string | undefined): string | null {
   if (string !== undefined) {
-    let og = string.split(":DOORS:");
+    const og = string.split(":DOORS:");
     if (og.length <= 1) {
       doors = null;
     } else {

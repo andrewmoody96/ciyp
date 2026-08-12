@@ -17,9 +17,6 @@ export default function CalModal({ isOpen, onClose }: CalModalProps) {
       setTimeout(() => setCopied(false), 5000);
     } catch (err) {
       console.log("Failed to copy: ", err);
-      await navigator.clipboard.writeText(err);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 5000);
     }
   };
 

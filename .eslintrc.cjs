@@ -71,6 +71,14 @@ module.exports = {
         "plugin:import/recommended",
         "plugin:import/typescript",
       ],
+      rules: {
+        // Allow intentionally-unused bindings when prefixed with an underscore,
+        // e.g. the `_loadContext` parameter React Router passes to handleRequest.
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+        ],
+      },
     },
 
     // Node
