@@ -21,12 +21,12 @@ export default function Event({ description, tickets, doorTime, location }: Even
   return (
     <div className="flex flex-col w-[75vw] tablet:w-[45vw] desktop:w-[30vw]">
       <div className="m-2 px-2 rounded-2xl shadow-[inset_0_1px_5px_0_rgb(0,0,0);] items-center bg-[#B36551]/90 border-4 border-black">
-        <span className="p-2 rounded-md flex flex-col" href="">
+        <span className="p-2 rounded-md flex flex-col">
           <div className="flex flex-col justify-center">
             <h2 className="m-1 text-center text-lg tablet:text-lg text-white font-moda">
               {date} @ {venue}
             </h2>
-            {doors === "null" ? (
+            {!doors ? (
               <h2 className="m-1 text-center text-md text-white font-moda">
                 {time}
               </h2>
@@ -35,12 +35,12 @@ export default function Event({ description, tickets, doorTime, location }: Even
                 {time} - <em>Doors at {doors}</em>
               </h2>
             )}
-            {address === "null" ? null : (
+            {!address ? null : (
               <h2 className="m-1 text-center text-md text-white font-moda">
                 {address}
               </h2>
             )}
-            {tickets && tickets !== "null" ? (
+            {tickets ? (
               <h2 className="m-1 text-center text-md text-black font-moda">
                 <a
                   target="_blank"

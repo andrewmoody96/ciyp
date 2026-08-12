@@ -11,8 +11,7 @@ export default function FeaturedArt() {
         <img
           width="1200"
           height="1200"
-          // eslint-disable-next-line react/no-unknown-property
-          fetchpriority="high"
+          fetchPriority="high"
           alt="Back To Life Artwork"
           className="rounded-lg border-2 border-[#B36551] drop-shadow-[2px_1px_10px_rgba(255,255,255,0.7)]"
           src={art}

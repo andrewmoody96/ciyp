@@ -19,31 +19,28 @@ dayjs.extend(isSameOrAfter);
 // The component will fetch the events from the API and render them as Event components that will display the event date, venue, time, location, and ticket URL.
 // ------------------------------------------------------------------
 
-let eventLocation = "";
-let venue = "";
-let date = null;
-let time = null;
-let location = null;
-let ogDoors = null;
-let doors = null;
-let ogURL = null;
-let url = null;
+// Shape of the Google Calendar items returned by /api/shows.
+interface GCalEventStart {
+  dateTime?: string;
+  date?: string;
+}
 
-// EVENT COMPONENT RENDERER
-const eventLoader = (url, doors) => {
-  return (
-    <Event
-      className="w-100"
-      description={[date, venue, time]}
-      tickets={url}
-      doorTime={doors}
-      location={location}
-    />
-  );
-};
+interface GCalEvent {
+  id: string;
+  summary?: string;
+  description?: string;
+  location?: string;
+  start: GCalEventStart;
+  end: GCalEventStart;
+}
+
+// The formatters signal "absent" with either null or the literal string "null".
+// Normalize both to undefined so Event can use plain truthiness checks.
+const optional = (value: string | null | undefined): string | undefined =>
+  value && value !== "null" ? value : undefined;
 
 export default function Shows() {
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState<GCalEvent[]>([]);
   const [isUpcoming, setIsUpcoming] = useState(true);
 
   useEffect(() => {
@@ -51,43 +48,33 @@ export default function Shows() {
       try {
         const res = await fetch("/api/shows");
         const jsonData = await res.json();
+
         if (!jsonData) {
           console.error("load failed");
           setIsUpcoming(false);
-        } else {
-          if (jsonData.message === "No upcoming events found." || !jsonData.events) {
-            setIsUpcoming(false);
-          } else {
-            let eventObj = jsonData.events;
-            const events = Object.keys(eventObj).map((key) => eventObj[key]);
-            let upcoming = [];
-            let getNow = dayjs.utc().toISOString();
-            let now = getNow.slice(".");
-            let end = null;
-
-            events.forEach((event) => {
-              // Checks for & Handles All-Day Events
-              if (!event.end.dateTime) {
-                end = dayjs(event.end.date).toISOString();
-              } else {
-                end = dayjs(event.end.dateTime).toISOString();
-              }
-
-              let compare = dayjs(now).isAfter(end);
-
-              if (compare === false) {
-                upcoming.push(event);
-                setEvents(upcoming);
-                setIsUpcoming(true);
-              } else {
-                setIsUpcoming(false);
-              }
-            });
-            // console.log(events);
-          }
+          return;
         }
+
+        if (jsonData.message === "No upcoming events found." || !jsonData.events) {
+          setIsUpcoming(false);
+          return;
+        }
+
+        const all: GCalEvent[] = Object.values(jsonData.events);
+        const now = dayjs.utc().toISOString();
+
+        const upcoming = all.filter((event) => {
+          // Checks for & Handles All-Day Events
+          const end = event.end.dateTime ?? event.end.date;
+          if (!end) return false;
+          return !dayjs(now).isAfter(dayjs(end).toISOString());
+        });
+
+        setEvents(upcoming);
+        setIsUpcoming(upcoming.length > 0);
       } catch (error) {
         console.error(error);
+        setIsUpcoming(false);
       }
     };
     fetchEvents();
@@ -106,25 +93,26 @@ export default function Shows() {
         </div>
       ) : (
         <div className="flex flex-col justify-center items-center">
-          {events?.map((event) => (
-            <div key={event.id}>
-              <div className="flex justify-center w-auto">
-                <div id="hiddenJS" className="hidden">
-                  {(venue = event.summary)}
-                  {(date = dateTimeHandler(event.start)[0])}
-                  {(time = dateTimeHandler(event.start)[1])}
-                  {(eventLocation = `${event.location}`)}
-                  {(location = `${addressCheck(eventLocation)}`)};
-                  {/* OPTIONAL INFO RENDERING */}
-                  {(ogURL = event.description)}
-                  {(url = `${eventLinkFormatter(ogURL)}`)}
-                  {(ogDoors = event.description)}
-                  {(doors = `${doorTimeFormatter(ogDoors)}`)}
-                </div>
+          {events.map((event) => {
+            const [date, time] = dateTimeHandler(event.start) ?? ["TBD", "TBD"];
+            const venue = event.summary ?? "";
+            const location = optional(addressCheck(event.location ?? null));
+
+            // OPTIONAL INFO RENDERING
+            const tickets = optional(eventLinkFormatter(event.description));
+            const doors = optional(doorTimeFormatter(event.description));
+
+            return (
+              <div key={event.id}>
+                <Event
+                  description={[date, venue, time]}
+                  tickets={tickets}
+                  doorTime={doors}
+                  location={location}
+                />
               </div>
-              {eventLoader(url, doors)}
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
     </>
