@@ -35,7 +35,7 @@ const build = viteDevServer
 
 app.use("/api/", apiRoutes);
 
-app.all("*", createRequestHandler({ build }));
+app.all("/{*splat}", createRequestHandler({ build }));
 
 app.listen(PORT, () => {
   console.log(`App is running on port ${PORT}`);
