@@ -19,8 +19,8 @@ export default function Footer() {
       id="footer"
       className="fixed bottom-0 left-0 right-0 bg-[#262626]/75 text-white font-moda p-2"
     >
-      <div className="logo-footer text-center mt-1 w-100">
-        <div className="w-100 flex flex-row text-xs items-center justify-evenly">
+      <div className="logo-footer text-center mt-1">
+        <div className="flex flex-row text-xs items-center justify-evenly">
           {/* &copy; 2025 CIYP */}
           <div className="flex flex-row text-center items-center justify-center">
             <a
@@ -95,7 +95,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="logo-footer w-100 flex flex-row justify-between pt-[5px]"></div>
+      <div className="logo-footer flex flex-row justify-between pt-[5px]"></div>
     </footer>
   );
 }
