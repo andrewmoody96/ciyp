@@ -1,6 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss" source("./app");
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-tablet: 760px;
+  --breakpoint-desktop: 950px;
+  --breakpoint-wide: 1200px;
+
+  --font-monoton: "Monoton", cursive;
+  --font-moda: "Bodoni Moda", serif;
+  --font-modaCaps: "Bodoni Moda SC", serif;
+
+  --background-image-static: url("./app/assets/tvStatic.gif");
+}
+
+@utility container {
+  margin-inline: auto;
+}
+
+/* Tailwind v3 defaults that changed in v4, kept so the site looks the same. */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-gray-400);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
 
 /* RULES */
 /* ---------------------------------------------------- */

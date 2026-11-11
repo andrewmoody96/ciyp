@@ -58,7 +58,7 @@ export default function Booking({ isActive, onShow }: BookingProps) {
           {/* EMAIL SIGNUP */}
           <div className="rounded-lg bg-transparent">
             {/* BOOKING EMAIL FORM */}
-            <div className="flex flex-col bg-white/90 border-2 border-[#B36551] rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.6)] justify-center items-center mx-auto shadow-[inset_0_1px_5px_0_rgb(0,0,0);]">
+            <div className="flex flex-col bg-white/90 border-2 border-[#B36551] rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.6)] justify-center items-center mx-auto shadow-[inset_0_1px_5px_0_rgb(0,0,0)]">
               {!emailSent ? (
                 <>
                   <h2 className="text-2xl font-moda mx-2 mt-2 text-center">
