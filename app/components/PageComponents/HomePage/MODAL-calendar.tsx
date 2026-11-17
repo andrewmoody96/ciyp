@@ -23,7 +23,7 @@ export default function CalModal({ isOpen, onClose }: CalModalProps) {
   return (
     <>
       <div
-        className={`fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity ${
+        className={`fixed inset-0 z-50 flex items-center justify-center bg-black/50 transition-opacity ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >

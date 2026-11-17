@@ -20,7 +20,7 @@ export default function Signup({ isActive, onShow }: SignupProps) {
       {isActive === true ? (
         <div className="flex flex-col justify-center items-center w-[97vw] desktop:w-[50vw]">
           {/* EMAIL SIGNUP */}
-          <div className="bg-white/90 border-2 border-[#B36551] rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.6)] m-2 shadow-[inset_0_1px_5px_0_rgb(0,0,0);]">
+          <div className="bg-white/90 border-2 border-[#B36551] rounded-lg drop-shadow-[0_1px_5px_rgba(255,255,255,0.6)] m-2 shadow-[inset_0_1px_5px_0_rgb(0,0,0)]">
             <div className="flex flex-col justify-center items-center text-center rounded-lg bg-transparent">
               <form
                 action="https://gmail.us9.list-manage.com/subscribe/post?u=35ccf36e917bbf2fc2fff4fb9&id=d3c0491fe1"
@@ -84,7 +84,7 @@ export default function Signup({ isActive, onShow }: SignupProps) {
                         defaultValue="Subscribe"
                         name="subscribe"
                         id="mc-embedded-subscribe"
-                        className="button cursor-pointer shadow-[inset_0_1px_5px_0_rgb(0,0,0);] p-1 rounded-xl bg-[#B36551] border border-black font-moda text-white text-base text-center w-[50%] hover:bg-red-300 hover:text-black"
+                        className="button cursor-pointer shadow-[inset_0_1px_5px_0_rgb(0,0,0)] p-1 rounded-xl bg-[#B36551] border border-black font-moda text-white text-base text-center w-[50%] hover:bg-red-300 hover:text-black"
                       />
                       <p className="brandingLogo">
                         <a

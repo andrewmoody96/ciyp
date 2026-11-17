@@ -85,7 +85,7 @@ export default function Shows() {
       {!isUpcoming ? (
         <div className="flex flex-col justify-center items-center desktop:w-[45vw]">
           <div className="invisible">dummy div for spacing</div>
-          <div className="w-100 desktop:w-[45vw] bg-white/90 rounded-lg justify-center text-center">
+          <div className="desktop:w-[45vw] bg-white/90 rounded-lg justify-center text-center">
             <h2 className="flex flex-col w-auto font-moda text-xl text-center visible p-2">
               No upcoming events.
             </h2>
